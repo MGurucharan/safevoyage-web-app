@@ -373,6 +373,27 @@ const HotelDetailView = () => {
             </div>
           </div>
 
+          <section className="bg-white p-8 rounded-2xl shadow-lg mb-8">
+            <h2 className="text-xl font-bold mb-2">
+              AI Summarized Feedback & Reviews
+            </h2>
+            <p className="text-gray-700 mb-2">
+              "Visitors love the scenic beauty and vibrant atmosphere of this
+              place. The local cuisine receives rave reviews, and the guided
+              tours are highly recommended. Some feedback mentions crowding
+              during peak hours, but most experiences are positive and
+              memorable."
+            </p>
+            <div className="flex-col space-y-3 text-md">
+              <p>Scenery : ⭐⭐⭐⭐⭐</p>
+              <p>Food : ⭐⭐⭐⭐⭐</p>
+              <p>Hygiene : ⭐⭐⭐⭐⭐</p>
+              <p>Service : ⭐⭐⭐</p>
+            </div>
+          </section>
+
+
+
           {/* Reviews Section */}
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
