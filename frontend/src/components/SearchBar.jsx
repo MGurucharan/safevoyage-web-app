@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Search, MapPin } from 'lucide-react';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, placeholder = "Search destinations by country, state, district, or city...", popularSearches = ['Paris', 'Tokyo', 'New York', 'Bali', 'Dubai', 'London'] }) => {
   const [query, setQuery] = useState('');
 
   const handleSubmit = (e) => {
@@ -27,7 +27,7 @@ const SearchBar = ({ onSearch }) => {
             type="text"
             value={query}
             onChange={handleInputChange}
-            placeholder="Search destinations by country, state, district, or city..."
+            placeholder={placeholder}
             className="w-full pl-12 pr-16 py-4 text-lg bg-white border border-gray-300 rounded-xl shadow-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
           />
           <button
@@ -44,7 +44,7 @@ const SearchBar = ({ onSearch }) => {
       {/* Search suggestions or popular destinations */}
       <div className="mt-4 flex flex-wrap justify-center gap-2">
         <span className="text-blue-100 text-sm">Popular searches:</span>
-        {['Paris', 'Tokyo', 'New York', 'Bali', 'Dubai', 'London'].map((city) => (
+        {popularSearches.map((city) => (
           <button
             key={city}
             onClick={() => {

@@ -8,6 +8,8 @@ import DigitalID from './pages/DigitalID';
 import Alerts from './pages/Alert';
 import ExplorePlaces from './pages/ExplorePlaces';
 import PlaceDetailView from './pages/PlaceDetailView';
+import BookHotels from './pages/BookHotels';
+import HotelDetailView from './pages/HotelDetailView';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/explore-places" element={<ExplorePlaces />} />
             <Route path="/explore-places/:id" element={<PlaceDetailView />} />
+            <Route path="/book-hotels" element={<BookHotels />} />
+            <Route path="/book-hotels/:id" element={<HotelDetailView />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/digital-id" element={<DigitalID />} />
             <Route path="/alerts" element={<Alerts />} />
