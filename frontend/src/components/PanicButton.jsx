@@ -38,7 +38,7 @@ const PanicButton = () => {
 
       {/* Emergency Confirmation Modal */}
       {showConfirmation && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-60 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-10 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center animate-scale-in">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Phone className="h-8 w-8 text-red-600 animate-bounce" />

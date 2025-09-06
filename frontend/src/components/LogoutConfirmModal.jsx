@@ -9,7 +9,7 @@ export default function LogoutConfirmModal({ isOpen, onClose, onConfirm, message
     <>
       {/* Blurred backdrop */}
       <div 
-        className="fixed inset-0 backdrop-blur-lg bg-white/60"
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-60 flex items-center justify-center p-4"
         style={{ 
           zIndex: 9998,
           top: '64px',

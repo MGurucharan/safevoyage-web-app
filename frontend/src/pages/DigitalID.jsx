@@ -27,15 +27,31 @@ const DigitalID = () => {
     e.preventDefault();
     setIsGenerating(true);
     
-    // Simulate ID generation process
-    setTimeout(() => {
+    try {
+      const response = await fetch('http://localhost:5000/api/digital-id', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setShowSuccess(true);
+        setTimeout(() => {
+          setShowSuccess(false);
+          setHasDigitalID(true);
+        }, 3000);
+      } else {
+        throw new Error(data.message);
+      }
+    } catch (error) {
+      alert('Error creating Digital ID: ' + error.message);
+    } finally {
       setIsGenerating(false);
-      setShowSuccess(true);
-      setTimeout(() => {
-        setShowSuccess(false);
-        setHasDigitalID(true);
-      }, 3000);
-    }, 2000);
+    }
   };
 
   const digitalIDData = {
