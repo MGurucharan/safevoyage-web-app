@@ -40,8 +40,8 @@ const DigitalID = () => {
 
   const digitalIDData = {
     id: 'SVG-2025-001847',
-    name: 'John Michael Smith',
-    nationality: 'United States',
+    name: formData.fullName,
+    nationality: formData.nationality,
     issueDate: '2025-01-15',
     expiryDate: '2026-01-15',
     photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400'
