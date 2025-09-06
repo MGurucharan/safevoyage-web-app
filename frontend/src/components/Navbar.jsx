@@ -11,6 +11,17 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { isAdmin, logout } = useAdminAuth();
 
+  const handleModalClose = () => {
+    setModalState({ isOpen: false, targetPath: null });
+  };
+
+  const handleModalConfirm = () => {
+    const targetPath = modalState.targetPath;
+    handleLogout();
+    navigate(targetPath);
+    handleModalClose();
+  };
+
   const handleLogout = (targetPath = '/') => {
     logout();
     navigate(targetPath);
@@ -23,8 +34,7 @@ const Navbar = () => {
     { name: 'Explore Places', path: '/explore-places' },
     { name: 'Book Hotels', path: '/book-hotels' },
     { name: 'Digital ID', path: '/digital-id' },
-    { name: 'Dashboard', path: '/dashboard', admin: true },
-    { name: 'Alerts', path: '/alerts', admin: true }
+    { name: 'Admin', path: '/admin', admin: true },
   ];
 
   const handleNavigation = (link) => {
@@ -49,14 +59,23 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <div
+            onClick={() => {
+              if (isAdmin) {
+                setModalState({ isOpen: true, targetPath: '/' });
+              } else {
+                navigate('/');
+              }
+            }}
+            className="flex items-center space-x-2 group cursor-pointer"
+          >
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg group-hover:scale-105 transition-transform">
               <Shield className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               SafeVoyage
             </span>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -146,10 +165,16 @@ const Navbar = () => {
                     {link.name}
                   </button>
                 ) : (
-                  <Link
+                  <button
                     key={link.name}
-                    to={link.path}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      if (isAdmin) {
+                        setModalState({ isOpen: true, targetPath: link.path });
+                      } else {
+                        navigate(link.path);
+                      }
+                    }}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       isActive(link.path)
                         ? 'bg-blue-100 text-blue-700'
@@ -157,13 +182,20 @@ const Navbar = () => {
                     }`}
                   >
                     {link.name}
-                  </Link>
+                  </button>
                 )
               ))}
             </div>
           </div>
         )}
       </div>
+      
+      <LogoutConfirmModal
+        isOpen={modalState.isOpen}
+        onClose={handleModalClose}
+        onConfirm={handleModalConfirm}
+        message="You are currently in Admin mode. You need to log out before accessing other pages. Would you like to logout now?"
+      />
     </nav>
   );
 };

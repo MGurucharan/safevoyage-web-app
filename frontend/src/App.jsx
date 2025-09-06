@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { ModalProvider } from './context/ModalContext';
 import LandingPage from './pages/LandingPage';
-import Dashboard from './pages/Dashboard';
+import Admin from './pages/Admin';
 import DigitalID from './pages/DigitalID';
-import Alerts from './pages/Alert';
 import ExplorePlaces from './pages/ExplorePlaces';
 import PlaceDetailView from './pages/PlaceDetailView';
 import BookHotels from './pages/BookHotels';
@@ -32,21 +32,16 @@ function AppContent() {
       {/* Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <Navbar />
-      <main className="relative z-10">
+      <main className="relative z-10" style={{ transition: 'filter 0.2s ease-in-out' }}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/explore-places" element={<ExplorePlaces />} />
           <Route path="/explore-places/:id" element={<PlaceDetailView />} />
           <Route path="/book-hotels" element={<BookHotels />} />
           <Route path="/book-hotels/:id" element={<HotelDetailView />} />
-          <Route path="/dashboard" element={
+          <Route path="/admin" element={
             <RequireAdmin>
-              <Dashboard />
-            </RequireAdmin>
-          } />
-          <Route path="/alerts" element={
-            <RequireAdmin>
-              <Alerts />
+              <Admin />
             </RequireAdmin>
           } />
           <Route path="/digital-id" element={<DigitalID />} />
@@ -63,7 +58,9 @@ function App() {
   return (
     <Router basename='/safevoyage-web-app'>
       <AdminAuthProvider>
-        <AppContent />
+        <ModalProvider>
+          <AppContent />
+        </ModalProvider>
       </AdminAuthProvider>
     </Router>
   );
