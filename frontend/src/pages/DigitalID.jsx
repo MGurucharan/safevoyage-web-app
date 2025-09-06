@@ -27,37 +27,21 @@ const DigitalID = () => {
     e.preventDefault();
     setIsGenerating(true);
     
-    try {
-      const response = await fetch('http://localhost:5000/api/digital-id', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setShowSuccess(true);
-        setTimeout(() => {
-          setShowSuccess(false);
-          setHasDigitalID(true);
-        }, 3000);
-      } else {
-        throw new Error(data.message);
-      }
-    } catch (error) {
-      alert('Error creating Digital ID: ' + error.message);
-    } finally {
+    // Simulate ID generation process
+    setTimeout(() => {
       setIsGenerating(false);
-    }
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+        setHasDigitalID(true);
+      }, 3000);
+    }, 2000);
   };
 
   const digitalIDData = {
     id: 'SVG-2025-001847',
-    name: 'John Michael Smith',
-    nationality: 'United States',
+    name: formData.fullName,
+    nationality: formData.nationality,
     issueDate: '2025-01-15',
     expiryDate: '2026-01-15',
     photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400'
