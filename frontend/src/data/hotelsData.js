@@ -152,7 +152,7 @@ export const mockHotelsData = [
     country: "Japan",
     district: "Roppongi",
     category: "international",
-    mainImage: "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=500&h=300&fit=crop",
+    mainImage: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&h=600&fit=crop",
     images: [
       "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
