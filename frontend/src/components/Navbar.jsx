@@ -35,7 +35,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Explore Places', path: '/explore-places' },
     { name: 'Book Hotels', path: '/book-hotels' },
-    { name: 'Digital ID', path: '/digital-id', adminOnly: true }, // Only visible to admins
+    { name: 'Digital ID', path: '/admin/digital-id', adminOnly: true }, // Only visible to admins
     { name: 'Admin', path: '/admin', admin: true },
   ];
 

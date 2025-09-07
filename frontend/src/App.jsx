@@ -15,6 +15,12 @@ import { AdminAuthProvider } from './context/AdminAuthProvider';
 import { useAdminAuth } from './hooks/useAdminAuth';
 
 
+
+import AdminDigitalID from './pages/AdminDigitalID';
+
+
+
+
 function RequireAdmin({ children }) {
   const { isAdmin } = useAdminAuth();
   const location = useLocation();
@@ -26,7 +32,7 @@ function RequireAdmin({ children }) {
 
 function AppContent() {
   const { login } = useAdminAuth();
-  
+
   return (
     <div className="min-h-screen bg-gray-50 relative overflow-hidden">
       {/* Grid Background */}
@@ -39,6 +45,8 @@ function AppContent() {
           <Route path="/explore-places/:id" element={<PlaceDetailView />} />
           <Route path="/book-hotels" element={<BookHotels />} />
           <Route path="/book-hotels/:id" element={<HotelDetailView />} />
+          <Route path="/admin/digital-id" element={<AdminDigitalID />} />
+          <Route path="/digital-id" element={<DigitalID />} />
           <Route path="/admin" element={
             <RequireAdmin>
               <Admin />
