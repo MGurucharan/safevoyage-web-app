@@ -39,6 +39,17 @@ const itemSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    blockchainHash: {
+        type: String,
+        unique: true
+    },
+    transactionId: {
+        type: String,
+        unique: true
+    },
+    blockchainTimestamp: {
+        type: Date
     }
 });
 
