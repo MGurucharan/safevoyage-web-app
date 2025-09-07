@@ -31,20 +31,16 @@ const Navbar = () => {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [pendingNavigation, setPendingNavigation] = useState(null);
 
-  // Updated navLinks with admin-only Digital ID
+  // Updated navLinks - removed Digital ID (now part of Admin main page)
   const navLinks = [
     { name: 'Explore Places', path: '/explore-places' },
     { name: 'Book Hotels', path: '/book-hotels' },
-    { name: 'Digital ID', path: '/admin/digital-id', adminOnly: true }, // Only visible to admins
     { name: 'Admin', path: '/admin', admin: true },
   ];
 
   // Filter nav links based on admin status
   const visibleNavLinks = navLinks.filter(link => {
-    if (link.adminOnly) {
-      return isAdmin; // Only show Digital ID if user is admin
-    }
-    return true; // Show all other links
+    return true; // Show all links
   });
 
   const handleNavigation = (link) => {
@@ -54,9 +50,6 @@ const Navbar = () => {
       } else {
         navigate('/admin-login', { state: { from: link.path } });
       }
-    } else if (link.adminOnly) {
-      // Digital ID is admin-only, so admin can access directly
-      navigate(link.path);
     } else if (isAdmin) {
       setPendingNavigation(link.path);
       setShowLogoutModal(true);
@@ -125,10 +118,7 @@ const Navbar = () => {
                   <button
                     key={link.name}
                     onClick={() => {
-                      if (link.adminOnly) {
-                        // Digital ID - admin can access directly
-                        navigate(link.path);
-                      } else if (isAdmin) {
+                      if (isAdmin) {
                         setModalState({ isOpen: true, targetPath: link.path });
                       } else {
                         navigate(link.path);
@@ -186,10 +176,7 @@ const Navbar = () => {
                       key={link.name}
                       onClick={() => {
                         setIsMenuOpen(false);
-                        if (link.adminOnly) {
-                          // Digital ID - admin can access directly
-                          navigate(link.path);
-                        } else if (isAdmin) {
+                        if (isAdmin) {
                           setModalState({ isOpen: true, targetPath: link.path });
                         } else {
                           navigate(link.path);
