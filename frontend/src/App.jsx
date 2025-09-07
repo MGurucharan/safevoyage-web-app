@@ -11,6 +11,7 @@ import PlaceDetailView from './pages/PlaceDetailView';
 import BookHotels from './pages/BookHotels';
 import HotelDetailView from './pages/HotelDetailView';
 import AdminLogin from './pages/AdminLogin';
+import Verification from './pages/Verification';
 import { AdminAuthProvider } from './context/AdminAuthProvider';
 import { useAdminAuth } from './hooks/useAdminAuth';
 
@@ -47,12 +48,12 @@ function AppContent() {
           <Route path="/book-hotels/:id" element={<HotelDetailView />} />
           <Route path="/admin/digital-id" element={<AdminDigitalID />} />
           <Route path="/digital-id" element={<DigitalID />} />
+          <Route path="/verification" element={<Verification />} />
           <Route path="/admin" element={
             <RequireAdmin>
               <Admin />
             </RequireAdmin>
           } />
-          <Route path="/digital-id" element={<DigitalID />} />
           <Route path="/admin-login" element={<AdminLogin onLogin={login} />} />
           <Route path="/explore" element={<ExplorePlaces />} />
         </Routes>
