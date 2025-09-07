@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { CreditCard, User, FileText, CheckCircle, Upload, Calendar, MapPin } from 'lucide-react';
+import digitalIDService from '../services/digitalIDService';
 
 const DigitalID = () => {
   const [hasDigitalID, setHasDigitalID] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [qrCode, setQrCode] = useState(null);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -26,16 +29,43 @@ const DigitalID = () => {
   const handleGenerateID = async (e) => {
     e.preventDefault();
     setIsGenerating(true);
-    
-    // Simulate ID generation process
-    setTimeout(() => {
-      setIsGenerating(false);
+    setError(null);
+
+    try {
+      // Prepare user data for digital ID generation
+      const userData = {
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address,
+        additionalInfo: {
+          dateOfBirth: formData.dateOfBirth,
+          nationality: formData.nationality,
+          passportNumber: formData.passportNumber,
+          aadhaarNumber: formData.aadhaarNumber
+        }
+      };
+
+      // Call backend to generate digital ID
+      const result = await digitalIDService.generateDigitalID(userData);
+      
+      // Set QR code from response (it's a base64 image)
+      setQrCode(result.data.qrCode);
+      
+      // Show success message
       setShowSuccess(true);
+      
+      // Update UI after success
       setTimeout(() => {
         setShowSuccess(false);
         setHasDigitalID(true);
       }, 3000);
-    }, 2000);
+    } catch (err) {
+      setError(err.message || 'Failed to generate Digital ID');
+      setShowSuccess(false);
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const digitalIDData = {
@@ -58,7 +88,24 @@ const DigitalID = () => {
           <p className="text-gray-600 mb-6">
             Your digital ID has been created and is now active. You can use it for secure tourist verification.
           </p>
-          <div className="space-y-2 text-sm text-gray-500">
+          
+          {qrCode && (
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Your Digital ID QR Code:</h3>
+              <div className="flex justify-center">
+                <img 
+                  src={qrCode} 
+                  alt="Digital ID QR Code"
+                  className="border-2 border-gray-300 p-2 rounded-lg shadow-md max-w-48 max-h-48"
+                />
+              </div>
+              <p className="text-sm text-gray-500 mt-2">
+                Scan this QR code for verification
+              </p>
+            </div>
+          )}
+          
+          <div className="space-y-2 text-sm text-gray-500">`
             <p>✓ Blockchain verification complete</p>
             <p>✓ KYC validation successful</p>
             <p>✓ Digital signature applied</p>
@@ -351,6 +398,13 @@ const DigitalID = () => {
                 </div>
               </div>
             </div>
+
+            {error && (
+              <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg border border-red-300">
+                <p className="text-sm font-medium">Error generating Digital ID:</p>
+                <p className="text-sm">{error}</p>
+              </div>
+            )}
 
             <button
               type="submit"
