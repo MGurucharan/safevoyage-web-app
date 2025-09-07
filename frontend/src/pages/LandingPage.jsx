@@ -34,7 +34,7 @@ const LandingPage = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-8">
@@ -47,21 +47,6 @@ const LandingPage = () => {
               Revolutionary platform ensuring tourist safety through cutting-edge technology, 
               real-time monitoring, and intelligent threat detection.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/digital-id"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-              >
-                Get Digital ID
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/dashboard"
-                className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-300 hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-              >
-                View Dashboard
-              </Link>
-            </div>
           </div>
         </div>
       </section>
