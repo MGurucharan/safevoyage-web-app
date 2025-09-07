@@ -6,29 +6,8 @@ export default function LogoutConfirmModal({ isOpen, onClose, onConfirm, message
   if (!isOpen) return null;
 
   return (
-    <>
-      {/* Blurred backdrop */}
-      <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-60 flex items-center justify-center p-4"
-        style={{ 
-          zIndex: 9998,
-          top: '64px',
-          height: 'calc(100vh - 64px)'
-        }}
-      />
-      {/* Clear modal container */}
-      <div 
-        className="fixed inset-0 flex items-center justify-center pointer-events-none"
-        style={{ 
-          zIndex: 9999,
-          top: '64px',
-          height: 'calc(100vh - 64px)'
-        }}
-      >
-        <div 
-          className="relative bg-white rounded-xl p-8 w-[90%] max-w-md shadow-2xl border border-gray-100 animate-fadeIn pointer-events-auto"
-          style={{ transform: 'translateY(-32px)' }}
-        >
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[10000] flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl p-8 w-[90%] max-w-md shadow-2xl border border-gray-100 animate-fadeIn relative">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 transition-colors"
@@ -57,9 +36,8 @@ export default function LogoutConfirmModal({ isOpen, onClose, onConfirm, message
             </button>
           </div>
         </div>
-          </div>
-        </div>
-    </>
+      </div>
+    </div>
   );
 }
 
