@@ -1,0 +1,301 @@
+id,situation,response
+1,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 6 minutes.
+2,Injured during trek around kilometer 2,Apply pressure to the wound at kilometer 2 and await rescue.
+3,Phone battery dead while camping at 9pm,Remain at your campsite until help arrives; your last ping was at 9pm.
+4,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+5,Floodwaters rising near the rocky ridge,Move to higher ground away from the rocky ridge and wait for rescue.
+6,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+7,Vehicle breakdown at 8am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+8,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+9,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+10,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.
+11,Lost in forest near a cliff,Stay put near the cliff and signal with a whistle every 10 minutes.
+12,Injured during trek around kilometer 12,Apply pressure to the wound at kilometer 12 and await rescue.
+13,Phone battery dead while camping at 7pm,Remain at your campsite until help arrives; your last ping was at 7pm.
+14,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+15,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+16,Caught in wildfire close to a old fort,Cover your nose and move opposite the wind near the old fort.
+17,Vehicle breakdown at 6am on desert highway,Stay inside the vehicle on desert highway and call roadside assistance.
+18,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+19,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+20,Wild animal nearby while resting near a ridge,Back away from the ridge slowly and alert rangers immediately.
+21,Lost in forest near a dense grove,Stay put near the dense grove and signal with a whistle every 8 minutes.
+22,Injured during trek around kilometer 22,Apply pressure to the wound at kilometer 22 and await rescue.
+23,Phone battery dead while camping at 17pm,Remain at your campsite until help arrives; your last ping was at 17pm.
+24,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+25,Floodwaters rising near the dense grove,Move to higher ground away from the dense grove and wait for rescue.
+26,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+27,Vehicle breakdown at 4am on forest road,Stay inside the vehicle on forest road and call roadside assistance.
+28,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+29,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+30,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+31,Lost in forest near a cliff,Stay put near the cliff and signal with a whistle every 6 minutes.
+32,Injured during trek around kilometer 32,Apply pressure to the wound at kilometer 32 and await rescue.
+33,Phone battery dead while camping at 15pm,Remain at your campsite until help arrives; your last ping was at 15pm.
+34,Stranger following me through a suburban street,Head toward a crowded area away from the suburban street and contact authorities.
+35,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+36,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+37,Vehicle breakdown at 2am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+38,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+39,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+40,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.
+41,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 10 minutes.
+42,Injured during trek around kilometer 42,Apply pressure to the wound at kilometer 42 and await rescue.
+43,Phone battery dead while camping at 13pm,Remain at your campsite until help arrives; your last ping was at 13pm.
+44,Stranger following me through a city market,Head toward a crowded area away from the city market and contact authorities.
+45,Floodwaters rising near the rocky ridge,Move to higher ground away from the rocky ridge and wait for rescue.
+46,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+47,Vehicle breakdown at 12am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+48,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+49,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+50,Wild animal nearby while resting near a clearing,Back away from the clearing slowly and alert rangers immediately.
+51,Lost in forest near a dense grove,Stay put near the dense grove and signal with a whistle every 8 minutes.
+52,Injured during trek around kilometer 52,Apply pressure to the wound at kilometer 52 and await rescue.
+53,Phone battery dead while camping at 11pm,Remain at your campsite until help arrives; your last ping was at 11pm.
+54,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+55,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+56,Caught in wildfire close to a old fort,Cover your nose and move opposite the wind near the old fort.
+57,Vehicle breakdown at 10am on forest road,Stay inside the vehicle on forest road and call roadside assistance.
+58,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+59,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+60,Wild animal nearby while resting near a clearing,Back away from the clearing slowly and alert rangers immediately.
+61,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 6 minutes.
+62,Injured during trek around kilometer 62,Apply pressure to the wound at kilometer 62 and await rescue.
+63,Phone battery dead while camping at 9pm,Remain at your campsite until help arrives; your last ping was at 9pm.
+64,Stranger following me through a city market,Head toward a crowded area away from the city market and contact authorities.
+65,Floodwaters rising near the cliff,Move to higher ground away from the cliff and wait for rescue.
+66,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+67,Vehicle breakdown at 8am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+68,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+69,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+70,Wild animal nearby while resting near a cave,Back away from the cave slowly and alert rangers immediately.
+71,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 10 minutes.
+72,Injured during trek around kilometer 72,Apply pressure to the wound at kilometer 72 and await rescue.
+73,Phone battery dead while camping at 7pm,Remain at your campsite until help arrives; your last ping was at 7pm.
+74,Stranger following me through a suburban street,Head toward a crowded area away from the suburban street and contact authorities.
+75,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+76,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+77,Vehicle breakdown at 6am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+78,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+79,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+80,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.
+81,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 8 minutes.
+82,Injured during trek around kilometer 82,Apply pressure to the wound at kilometer 82 and await rescue.
+83,Phone battery dead while camping at 17pm,Remain at your campsite until help arrives; your last ping was at 17pm.
+84,Stranger following me through a city market,Head toward a crowded area away from the city market and contact authorities.
+85,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+86,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+87,Vehicle breakdown at 4am on forest road,Stay inside the vehicle on forest road and call roadside assistance.
+88,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+89,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+90,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+91,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 6 minutes.
+92,Injured during trek around kilometer 92,Apply pressure to the wound at kilometer 92 and await rescue.
+93,Phone battery dead while camping at 15pm,Remain at your campsite until help arrives; your last ping was at 15pm.
+94,Stranger following me through a city market,Head toward a crowded area away from the city market and contact authorities.
+95,Floodwaters rising near the rocky ridge,Move to higher ground away from the rocky ridge and wait for rescue.
+96,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+97,Vehicle breakdown at 2am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+98,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+99,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+100,Wild animal nearby while resting near a clearing,Back away from the clearing slowly and alert rangers immediately.
+101,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 10 minutes.
+102,Injured during trek around kilometer 102,Apply pressure to the wound at kilometer 102 and await rescue.
+103,Phone battery dead while camping at 13pm,Remain at your campsite until help arrives; your last ping was at 13pm.
+104,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+105,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+106,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+107,Vehicle breakdown at 12am on highway 48,Stay inside the vehicle on highway 48 and call roadside assistance.
+108,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+109,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+110,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+111,Lost in forest near a river,Stay put near the river and signal with a whistle every 8 minutes.
+112,Injured during trek around kilometer 112,Apply pressure to the wound at kilometer 112 and await rescue.
+113,Phone battery dead while camping at 11pm,Remain at your campsite until help arrives; your last ping was at 11pm.
+114,Stranger following me through a forest trail,Head toward a crowded area away from the forest trail and contact authorities.
+115,Floodwaters rising near the rocky ridge,Move to higher ground away from the rocky ridge and wait for rescue.
+116,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+117,Vehicle breakdown at 10am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+118,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+119,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+120,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.
+121,Lost in forest near a dense grove,Stay put near the dense grove and signal with a whistle every 6 minutes.
+122,Injured during trek around kilometer 122,Apply pressure to the wound at kilometer 122 and await rescue.
+123,Phone battery dead while camping at 9pm,Remain at your campsite until help arrives; your last ping was at 9pm.
+124,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+125,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+126,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+127,Vehicle breakdown at 8am on forest road,Stay inside the vehicle on forest road and call roadside assistance.
+128,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+129,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+130,Wild animal nearby while resting near a cave,Back away from the cave slowly and alert rangers immediately.
+131,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 10 minutes.
+132,Injured during trek around kilometer 132,Apply pressure to the wound at kilometer 132 and await rescue.
+133,Phone battery dead while camping at 7pm,Remain at your campsite until help arrives; your last ping was at 7pm.
+134,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+135,Floodwaters rising near the cliff,Move to higher ground away from the cliff and wait for rescue.
+136,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+137,Vehicle breakdown at 6am on desert highway,Stay inside the vehicle on desert highway and call roadside assistance.
+138,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+139,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+140,Wild animal nearby while resting near a ridge,Back away from the ridge slowly and alert rangers immediately.
+141,Lost in forest near a river,Stay put near the river and signal with a whistle every 8 minutes.
+142,Injured during trek around kilometer 142,Apply pressure to the wound at kilometer 142 and await rescue.
+143,Phone battery dead while camping at 17pm,Remain at your campsite until help arrives; your last ping was at 17pm.
+144,Stranger following me through a forest trail,Head toward a crowded area away from the forest trail and contact authorities.
+145,Floodwaters rising near the cliff,Move to higher ground away from the cliff and wait for rescue.
+146,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+147,Vehicle breakdown at 4am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+148,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+149,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+150,Wild animal nearby while resting near a ridge,Back away from the ridge slowly and alert rangers immediately.
+151,Lost in forest near a dense grove,Stay put near the dense grove and signal with a whistle every 6 minutes.
+152,Injured during trek around kilometer 152,Apply pressure to the wound at kilometer 152 and await rescue.
+153,Phone battery dead while camping at 15pm,Remain at your campsite until help arrives; your last ping was at 15pm.
+154,Stranger following me through a city market,Head toward a crowded area away from the city market and contact authorities.
+155,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+156,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+157,Vehicle breakdown at 2am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+158,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+159,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+160,Wild animal nearby while resting near a cave,Back away from the cave slowly and alert rangers immediately.
+161,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 10 minutes.
+162,Injured during trek around kilometer 162,Apply pressure to the wound at kilometer 162 and await rescue.
+163,Phone battery dead while camping at 13pm,Remain at your campsite until help arrives; your last ping was at 13pm.
+164,Stranger following me through a suburban street,Head toward a crowded area away from the suburban street and contact authorities.
+165,Floodwaters rising near the dense grove,Move to higher ground away from the dense grove and wait for rescue.
+166,Caught in wildfire close to a abandoned hut,Cover your nose and move opposite the wind near the abandoned hut.
+167,Vehicle breakdown at 12am on desert highway,Stay inside the vehicle on desert highway and call roadside assistance.
+168,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+169,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+170,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.
+171,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 8 minutes.
+172,Injured during trek around kilometer 172,Apply pressure to the wound at kilometer 172 and await rescue.
+173,Phone battery dead while camping at 11pm,Remain at your campsite until help arrives; your last ping was at 11pm.
+174,Stranger following me through a forest trail,Head toward a crowded area away from the forest trail and contact authorities.
+175,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+176,Caught in wildfire close to a abandoned hut,Cover your nose and move opposite the wind near the abandoned hut.
+177,Vehicle breakdown at 10am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+178,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+179,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+180,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+181,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 6 minutes.
+182,Injured during trek around kilometer 182,Apply pressure to the wound at kilometer 182 and await rescue.
+183,Phone battery dead while camping at 9pm,Remain at your campsite until help arrives; your last ping was at 9pm.
+184,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+185,Floodwaters rising near the cliff,Move to higher ground away from the cliff and wait for rescue.
+186,Caught in wildfire close to a abandoned hut,Cover your nose and move opposite the wind near the abandoned hut.
+187,Vehicle breakdown at 8am on highway 48,Stay inside the vehicle on highway 48 and call roadside assistance.
+188,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+189,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+190,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+191,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 10 minutes.
+192,Injured during trek around kilometer 192,Apply pressure to the wound at kilometer 192 and await rescue.
+193,Phone battery dead while camping at 7pm,Remain at your campsite until help arrives; your last ping was at 7pm.
+194,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+195,Floodwaters rising near the rocky ridge,Move to higher ground away from the rocky ridge and wait for rescue.
+196,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+197,Vehicle breakdown at 6am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+198,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+199,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+200,Wild animal nearby while resting near a clearing,Back away from the clearing slowly and alert rangers immediately.
+201,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 8 minutes.
+202,Injured during trek around kilometer 202,Apply pressure to the wound at kilometer 202 and await rescue.
+203,Phone battery dead while camping at 17pm,Remain at your campsite until help arrives; your last ping was at 17pm.
+204,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+205,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+206,Caught in wildfire close to a abandoned hut,Cover your nose and move opposite the wind near the abandoned hut.
+207,Vehicle breakdown at 4am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+208,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+209,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+210,Wild animal nearby while resting near a ridge,Back away from the ridge slowly and alert rangers immediately.
+211,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 6 minutes.
+212,Injured during trek around kilometer 212,Apply pressure to the wound at kilometer 212 and await rescue.
+213,Phone battery dead while camping at 15pm,Remain at your campsite until help arrives; your last ping was at 15pm.
+214,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+215,Floodwaters rising near the dense grove,Move to higher ground away from the dense grove and wait for rescue.
+216,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+217,Vehicle breakdown at 2am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+218,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+219,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+220,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+221,Lost in forest near a river,Stay put near the river and signal with a whistle every 10 minutes.
+222,Injured during trek around kilometer 222,Apply pressure to the wound at kilometer 222 and await rescue.
+223,Phone battery dead while camping at 13pm,Remain at your campsite until help arrives; your last ping was at 13pm.
+224,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+225,Floodwaters rising near the rocky ridge,Move to higher ground away from the rocky ridge and wait for rescue.
+226,Caught in wildfire close to a campsite,Cover your nose and move opposite the wind near the campsite.
+227,Vehicle breakdown at 12am on coastal road,Stay inside the vehicle on coastal road and call roadside assistance.
+228,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+229,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+230,Wild animal nearby while resting near a clearing,Back away from the clearing slowly and alert rangers immediately.
+231,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 8 minutes.
+232,Injured during trek around kilometer 232,Apply pressure to the wound at kilometer 232 and await rescue.
+233,Phone battery dead while camping at 11pm,Remain at your campsite until help arrives; your last ping was at 11pm.
+234,Stranger following me through a suburban street,Head toward a crowded area away from the suburban street and contact authorities.
+235,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+236,Caught in wildfire close to a old fort,Cover your nose and move opposite the wind near the old fort.
+237,Vehicle breakdown at 10am on desert highway,Stay inside the vehicle on desert highway and call roadside assistance.
+238,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+239,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+240,Wild animal nearby while resting near a ridge,Back away from the ridge slowly and alert rangers immediately.
+241,Lost in forest near a rocky ridge,Stay put near the rocky ridge and signal with a whistle every 6 minutes.
+242,Injured during trek around kilometer 242,Apply pressure to the wound at kilometer 242 and await rescue.
+243,Phone battery dead while camping at 9pm,Remain at your campsite until help arrives; your last ping was at 9pm.
+244,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+245,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+246,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+247,Vehicle breakdown at 8am on highway 48,Stay inside the vehicle on highway 48 and call roadside assistance.
+248,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+249,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+250,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+251,Lost in forest near a dense grove,Stay put near the dense grove and signal with a whistle every 10 minutes.
+252,Injured during trek around kilometer 252,Apply pressure to the wound at kilometer 252 and await rescue.
+253,Phone battery dead while camping at 7pm,Remain at your campsite until help arrives; your last ping was at 7pm.
+254,Stranger following me through a city market,Head toward a crowded area away from the city market and contact authorities.
+255,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+256,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+257,Vehicle breakdown at 6am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+258,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+259,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+260,Wild animal nearby while resting near a cave,Back away from the cave slowly and alert rangers immediately.
+261,Lost in forest near a river,Stay put near the river and signal with a whistle every 8 minutes.
+262,Injured during trek around kilometer 262,Apply pressure to the wound at kilometer 262 and await rescue.
+263,Phone battery dead while camping at 17pm,Remain at your campsite until help arrives; your last ping was at 17pm.
+264,Stranger following me through a mountain pass,Head toward a crowded area away from the mountain pass and contact authorities.
+265,Floodwaters rising near the river,Move to higher ground away from the river and wait for rescue.
+266,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+267,Vehicle breakdown at 4am on forest road,Stay inside the vehicle on forest road and call roadside assistance.
+268,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+269,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+270,Wild animal nearby while resting near a clearing,Back away from the clearing slowly and alert rangers immediately.
+271,Lost in forest near a waterfall,Stay put near the waterfall and signal with a whistle every 6 minutes.
+272,Injured during trek around kilometer 272,Apply pressure to the wound at kilometer 272 and await rescue.
+273,Phone battery dead while camping at 15pm,Remain at your campsite until help arrives; your last ping was at 15pm.
+274,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+275,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+276,Caught in wildfire close to a old fort,Cover your nose and move opposite the wind near the old fort.
+277,Vehicle breakdown at 2am on hill route,Stay inside the vehicle on hill route and call roadside assistance.
+278,Severe dehydration after 5 hours of hiking,Sip water slowly after hiking 5 hours and rest in shade.
+279,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+280,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.
+281,Lost in forest near a dense grove,Stay put near the dense grove and signal with a whistle every 10 minutes.
+282,Injured during trek around kilometer 282,Apply pressure to the wound at kilometer 282 and await rescue.
+283,Phone battery dead while camping at 13pm,Remain at your campsite until help arrives; your last ping was at 13pm.
+284,Stranger following me through a village road,Head toward a crowded area away from the village road and contact authorities.
+285,Floodwaters rising near the waterfall,Move to higher ground away from the waterfall and wait for rescue.
+286,Caught in wildfire close to a bridge,Cover your nose and move opposite the wind near the bridge.
+287,Vehicle breakdown at 12am on forest road,Stay inside the vehicle on forest road and call roadside assistance.
+288,Severe dehydration after 3 hours of hiking,Sip water slowly after hiking 3 hours and rest in shade.
+289,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+290,Wild animal nearby while resting near a stream,Back away from the stream slowly and alert rangers immediately.
+291,Lost in forest near a cliff,Stay put near the cliff and signal with a whistle every 8 minutes.
+292,Injured during trek around kilometer 292,Apply pressure to the wound at kilometer 292 and await rescue.
+293,Phone battery dead while camping at 11pm,Remain at your campsite until help arrives; your last ping was at 11pm.
+294,Stranger following me through a forest trail,Head toward a crowded area away from the forest trail and contact authorities.
+295,Floodwaters rising near the dense grove,Move to higher ground away from the dense grove and wait for rescue.
+296,Caught in wildfire close to a watchtower,Cover your nose and move opposite the wind near the watchtower.
+297,Vehicle breakdown at 10am on desert highway,Stay inside the vehicle on desert highway and call roadside assistance.
+298,Severe dehydration after 7 hours of hiking,Sip water slowly after hiking 7 hours and rest in shade.
+299,Heatstroke symptoms while walking in 44C heat,Cool your body in the 44C heat with damp cloths and await medical support.
+300,Wild animal nearby while resting near a valley,Back away from the valley slowly and alert rangers immediately.

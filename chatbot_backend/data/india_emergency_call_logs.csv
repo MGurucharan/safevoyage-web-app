@@ -1,0 +1,301 @@
+log_id,state,service_type,month,year,count
+E1000,Andaman and Nicobar Islands,police,November,2023,355
+E1001,Nagaland,police,July,2023,286
+E1002,Uttar Pradesh,fire,August,2025,235
+E1003,Bihar,police,August,2024,15
+E1004,Gujarat,fire,October,2025,293
+E1005,Mizoram,ambulance,December,2024,60
+E1006,Uttar Pradesh,police,May,2025,489
+E1007,Kerala,police,October,2024,251
+E1008,Arunachal Pradesh,fire,June,2025,150
+E1009,Andhra Pradesh,ambulance,October,2024,99
+E1010,Goa,police,February,2023,498
+E1011,Meghalaya,fire,May,2023,100
+E1012,Tamil Nadu,fire,October,2023,18
+E1013,Goa,fire,March,2024,148
+E1014,Lakshadweep,police,July,2025,99
+E1015,West Bengal,ambulance,April,2023,236
+E1016,Delhi,fire,November,2024,339
+E1017,Uttar Pradesh,ambulance,July,2024,210
+E1018,Ladakh,ambulance,August,2023,326
+E1019,Punjab,fire,May,2025,292
+E1020,Tamil Nadu,fire,June,2024,8
+E1021,Chhattisgarh,fire,May,2023,448
+E1022,Puducherry,police,October,2024,378
+E1023,Puducherry,fire,August,2024,346
+E1024,Chhattisgarh,police,November,2025,395
+E1025,Jharkhand,ambulance,July,2024,481
+E1026,Goa,fire,October,2023,296
+E1027,Madhya Pradesh,fire,May,2024,241
+E1028,Lakshadweep,police,October,2024,1
+E1029,West Bengal,ambulance,August,2024,393
+E1030,Delhi,ambulance,April,2024,215
+E1031,Delhi,ambulance,September,2025,98
+E1032,Kerala,ambulance,May,2023,41
+E1033,Odisha,ambulance,November,2023,160
+E1034,Chhattisgarh,police,July,2023,264
+E1035,Manipur,ambulance,September,2023,467
+E1036,Rajasthan,ambulance,October,2024,494
+E1037,Uttarakhand,ambulance,February,2025,189
+E1038,Tamil Nadu,ambulance,September,2024,259
+E1039,Chhattisgarh,fire,July,2023,468
+E1040,Kerala,ambulance,May,2023,482
+E1041,Ladakh,ambulance,September,2023,272
+E1042,Madhya Pradesh,ambulance,July,2023,58
+E1043,Punjab,police,February,2023,347
+E1044,Jharkhand,fire,July,2024,34
+E1045,Uttar Pradesh,ambulance,June,2023,44
+E1046,Telangana,police,March,2025,320
+E1047,Ladakh,fire,August,2023,330
+E1048,Himachal Pradesh,ambulance,June,2024,30
+E1049,Andaman and Nicobar Islands,fire,November,2025,186
+E1050,Tamil Nadu,police,September,2024,279
+E1051,Goa,fire,July,2025,396
+E1052,Tamil Nadu,fire,December,2025,240
+E1053,Mizoram,fire,November,2024,210
+E1054,Andaman and Nicobar Islands,police,September,2024,111
+E1055,Meghalaya,fire,February,2023,106
+E1056,Tripura,police,June,2024,325
+E1057,Meghalaya,police,February,2024,59
+E1058,Arunachal Pradesh,ambulance,March,2025,252
+E1059,Telangana,police,June,2024,448
+E1060,Madhya Pradesh,police,February,2024,323
+E1061,Puducherry,ambulance,February,2025,64
+E1062,Jharkhand,ambulance,November,2023,70
+E1063,Tripura,fire,February,2025,298
+E1064,Ladakh,fire,May,2025,154
+E1065,Tamil Nadu,police,August,2024,14
+E1066,Punjab,police,March,2025,218
+E1067,Sikkim,fire,June,2023,129
+E1068,Punjab,police,March,2023,151
+E1069,Andaman and Nicobar Islands,fire,February,2025,57
+E1070,Meghalaya,fire,November,2024,240
+E1071,Tripura,police,June,2025,471
+E1072,Arunachal Pradesh,fire,April,2024,392
+E1073,Haryana,fire,April,2023,143
+E1074,Nagaland,fire,July,2025,425
+E1075,Punjab,ambulance,March,2023,120
+E1076,West Bengal,police,October,2023,438
+E1077,Bihar,ambulance,August,2025,332
+E1078,Odisha,police,February,2023,72
+E1079,Uttar Pradesh,police,July,2025,385
+E1080,Madhya Pradesh,police,June,2023,109
+E1081,Odisha,ambulance,April,2023,100
+E1082,Odisha,fire,March,2023,41
+E1083,Manipur,police,April,2025,487
+E1084,Uttar Pradesh,fire,February,2025,426
+E1085,Jammu and Kashmir,police,February,2023,105
+E1086,West Bengal,police,March,2024,46
+E1087,Maharashtra,police,March,2025,293
+E1088,Jharkhand,police,June,2023,354
+E1089,Assam,fire,March,2024,88
+E1090,Goa,fire,May,2025,78
+E1091,Odisha,police,September,2025,79
+E1092,Lakshadweep,police,May,2024,306
+E1093,Arunachal Pradesh,police,September,2023,266
+E1094,Lakshadweep,police,February,2025,251
+E1095,Tamil Nadu,fire,September,2024,68
+E1096,Andaman and Nicobar Islands,ambulance,December,2025,203
+E1097,West Bengal,fire,December,2025,255
+E1098,Manipur,police,December,2024,472
+E1099,Lakshadweep,police,March,2023,45
+E1100,Haryana,fire,October,2023,322
+E1101,Meghalaya,fire,November,2025,406
+E1102,Chhattisgarh,fire,September,2024,460
+E1103,Himachal Pradesh,fire,October,2023,494
+E1104,Himachal Pradesh,police,October,2025,206
+E1105,Assam,police,September,2025,496
+E1106,Lakshadweep,ambulance,September,2023,469
+E1107,Delhi,ambulance,January,2024,494
+E1108,Puducherry,ambulance,May,2024,453
+E1109,Rajasthan,fire,February,2024,42
+E1110,Uttar Pradesh,police,July,2025,218
+E1111,Himachal Pradesh,fire,February,2025,268
+E1112,Uttar Pradesh,fire,January,2025,233
+E1113,Lakshadweep,ambulance,March,2024,153
+E1114,Puducherry,ambulance,February,2024,225
+E1115,Bihar,fire,August,2024,409
+E1116,Jammu and Kashmir,police,June,2024,340
+E1117,Manipur,ambulance,May,2025,493
+E1118,Nagaland,ambulance,April,2025,178
+E1119,Puducherry,ambulance,June,2025,375
+E1120,Goa,police,June,2024,66
+E1121,Gujarat,police,October,2023,396
+E1122,Karnataka,police,December,2023,190
+E1123,Gujarat,ambulance,January,2024,214
+E1124,Chhattisgarh,ambulance,April,2024,27
+E1125,Tamil Nadu,fire,April,2023,95
+E1126,Chhattisgarh,ambulance,May,2023,339
+E1127,Chhattisgarh,ambulance,June,2025,288
+E1128,Haryana,ambulance,March,2025,95
+E1129,Meghalaya,fire,March,2024,255
+E1130,Manipur,police,July,2024,441
+E1131,Punjab,ambulance,March,2024,108
+E1132,Rajasthan,ambulance,August,2023,306
+E1133,Himachal Pradesh,police,June,2023,452
+E1134,Haryana,ambulance,April,2025,492
+E1135,Chhattisgarh,ambulance,March,2023,240
+E1136,Jammu and Kashmir,police,September,2023,495
+E1137,Odisha,police,February,2024,102
+E1138,Himachal Pradesh,fire,October,2024,284
+E1139,Mizoram,fire,January,2024,300
+E1140,Karnataka,fire,October,2024,283
+E1141,Arunachal Pradesh,ambulance,April,2023,290
+E1142,Ladakh,police,June,2024,356
+E1143,Kerala,ambulance,April,2023,96
+E1144,Manipur,police,July,2023,415
+E1145,Gujarat,fire,April,2024,213
+E1146,Ladakh,fire,June,2025,61
+E1147,Gujarat,police,July,2024,229
+E1148,Andhra Pradesh,police,December,2025,274
+E1149,Arunachal Pradesh,ambulance,September,2023,294
+E1150,Andhra Pradesh,fire,September,2025,245
+E1151,Lakshadweep,fire,October,2025,286
+E1152,Maharashtra,ambulance,August,2025,32
+E1153,Maharashtra,ambulance,September,2023,481
+E1154,Andhra Pradesh,ambulance,March,2024,248
+E1155,Nagaland,ambulance,February,2023,234
+E1156,Goa,police,November,2024,58
+E1157,Delhi,fire,February,2023,128
+E1158,Sikkim,ambulance,August,2023,142
+E1159,Uttar Pradesh,ambulance,January,2023,392
+E1160,Haryana,ambulance,June,2024,33
+E1161,Sikkim,fire,November,2025,358
+E1162,Sikkim,fire,August,2023,266
+E1163,Delhi,fire,June,2024,89
+E1164,Andhra Pradesh,police,December,2023,439
+E1165,Arunachal Pradesh,fire,February,2024,406
+E1166,Ladakh,ambulance,October,2024,200
+E1167,Odisha,police,July,2024,437
+E1168,Uttarakhand,ambulance,August,2023,144
+E1169,Karnataka,ambulance,May,2023,194
+E1170,Jharkhand,fire,August,2025,195
+E1171,Andhra Pradesh,ambulance,December,2025,168
+E1172,Rajasthan,fire,September,2023,175
+E1173,Rajasthan,fire,February,2025,2
+E1174,Maharashtra,police,November,2025,294
+E1175,Mizoram,police,June,2024,406
+E1176,Jammu and Kashmir,fire,June,2024,14
+E1177,Uttarakhand,fire,June,2024,304
+E1178,Punjab,police,November,2024,364
+E1179,Uttar Pradesh,ambulance,August,2025,324
+E1180,Karnataka,ambulance,March,2024,183
+E1181,Bihar,fire,February,2025,289
+E1182,Andaman and Nicobar Islands,ambulance,April,2024,115
+E1183,Goa,police,March,2025,180
+E1184,Gujarat,police,August,2024,464
+E1185,Meghalaya,police,February,2023,218
+E1186,Chhattisgarh,ambulance,March,2023,172
+E1187,Lakshadweep,fire,May,2023,337
+E1188,Himachal Pradesh,fire,January,2024,314
+E1189,Odisha,police,September,2024,236
+E1190,Tamil Nadu,police,October,2024,111
+E1191,Madhya Pradesh,fire,August,2025,175
+E1192,Nagaland,fire,August,2024,422
+E1193,Kerala,police,November,2025,64
+E1194,Tamil Nadu,ambulance,May,2023,163
+E1195,Andaman and Nicobar Islands,ambulance,March,2025,276
+E1196,Goa,fire,March,2024,138
+E1197,Assam,police,April,2023,54
+E1198,Odisha,fire,June,2025,207
+E1199,Tripura,fire,May,2023,22
+E1200,Madhya Pradesh,police,April,2023,376
+E1201,Andaman and Nicobar Islands,ambulance,February,2023,160
+E1202,Ladakh,police,August,2024,175
+E1203,Himachal Pradesh,fire,April,2023,38
+E1204,Haryana,police,November,2023,369
+E1205,Uttar Pradesh,fire,August,2023,177
+E1206,Lakshadweep,ambulance,December,2025,85
+E1207,Rajasthan,fire,September,2023,172
+E1208,Jharkhand,ambulance,May,2024,337
+E1209,Rajasthan,police,July,2025,195
+E1210,Meghalaya,fire,January,2023,412
+E1211,Mizoram,fire,March,2023,321
+E1212,Jammu and Kashmir,fire,October,2023,195
+E1213,Tamil Nadu,fire,April,2025,239
+E1214,Kerala,ambulance,June,2024,287
+E1215,Madhya Pradesh,ambulance,May,2023,340
+E1216,Bihar,ambulance,July,2024,219
+E1217,Nagaland,fire,July,2025,262
+E1218,West Bengal,fire,October,2024,285
+E1219,Karnataka,ambulance,January,2025,440
+E1220,Chhattisgarh,ambulance,March,2024,291
+E1221,Uttar Pradesh,fire,March,2023,161
+E1222,Punjab,fire,March,2024,412
+E1223,Bihar,police,June,2023,288
+E1224,West Bengal,police,March,2025,314
+E1225,Himachal Pradesh,ambulance,June,2025,439
+E1226,Jharkhand,fire,July,2024,368
+E1227,Mizoram,ambulance,March,2025,407
+E1228,Manipur,police,March,2024,79
+E1229,Tripura,fire,December,2024,335
+E1230,Kerala,fire,October,2024,459
+E1231,Karnataka,police,December,2023,492
+E1232,Telangana,police,January,2023,102
+E1233,Andaman and Nicobar Islands,ambulance,March,2023,314
+E1234,West Bengal,fire,March,2023,7
+E1235,Jammu and Kashmir,police,February,2024,413
+E1236,Karnataka,police,August,2024,263
+E1237,Tamil Nadu,fire,May,2024,30
+E1238,Nagaland,ambulance,September,2023,61
+E1239,Tripura,fire,February,2025,98
+E1240,Uttarakhand,fire,December,2023,128
+E1241,Kerala,fire,May,2023,40
+E1242,Assam,police,September,2024,73
+E1243,Ladakh,ambulance,June,2024,188
+E1244,Punjab,ambulance,February,2024,354
+E1245,Karnataka,fire,November,2023,455
+E1246,Jammu and Kashmir,ambulance,June,2024,293
+E1247,Andhra Pradesh,ambulance,June,2024,129
+E1248,Himachal Pradesh,fire,August,2023,49
+E1249,Andhra Pradesh,fire,May,2024,446
+E1250,Lakshadweep,fire,May,2025,10
+E1251,Nagaland,ambulance,April,2024,323
+E1252,Tripura,fire,April,2023,430
+E1253,Lakshadweep,ambulance,October,2024,429
+E1254,Uttar Pradesh,police,March,2025,13
+E1255,Uttarakhand,ambulance,March,2023,316
+E1256,Tamil Nadu,ambulance,August,2023,401
+E1257,Jharkhand,ambulance,August,2025,79
+E1258,Punjab,fire,May,2024,197
+E1259,Mizoram,fire,March,2023,324
+E1260,Sikkim,ambulance,August,2023,359
+E1261,Haryana,police,November,2025,263
+E1262,Meghalaya,fire,June,2023,303
+E1263,Haryana,police,February,2023,135
+E1264,Andaman and Nicobar Islands,ambulance,February,2024,198
+E1265,Lakshadweep,fire,July,2023,173
+E1266,Madhya Pradesh,police,January,2024,131
+E1267,Sikkim,police,August,2023,107
+E1268,Andhra Pradesh,police,June,2025,247
+E1269,Delhi,ambulance,August,2025,385
+E1270,Uttar Pradesh,police,May,2025,315
+E1271,Haryana,police,April,2025,267
+E1272,Chhattisgarh,ambulance,December,2024,388
+E1273,Tamil Nadu,fire,August,2025,9
+E1274,Rajasthan,police,September,2025,87
+E1275,Ladakh,police,March,2024,284
+E1276,Goa,ambulance,April,2025,406
+E1277,Andhra Pradesh,fire,February,2024,359
+E1278,Bihar,police,April,2023,422
+E1279,Bihar,police,September,2023,380
+E1280,Uttarakhand,police,April,2024,493
+E1281,Himachal Pradesh,ambulance,March,2023,99
+E1282,Odisha,police,February,2023,487
+E1283,West Bengal,ambulance,February,2025,213
+E1284,Manipur,fire,March,2023,249
+E1285,Jammu and Kashmir,police,August,2024,306
+E1286,Jammu and Kashmir,ambulance,January,2025,422
+E1287,Meghalaya,ambulance,May,2024,89
+E1288,Mizoram,police,January,2023,164
+E1289,Mizoram,police,January,2024,191
+E1290,Maharashtra,fire,April,2023,360
+E1291,Telangana,fire,November,2025,83
+E1292,Uttar Pradesh,ambulance,April,2025,419
+E1293,Maharashtra,fire,January,2024,134
+E1294,Meghalaya,police,November,2024,62
+E1295,Ladakh,fire,June,2023,409
+E1296,Maharashtra,fire,July,2024,397
+E1297,Goa,fire,December,2025,493
+E1298,Rajasthan,fire,December,2025,376
+E1299,Uttar Pradesh,police,September,2025,31

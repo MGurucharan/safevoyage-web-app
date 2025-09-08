@@ -1,0 +1,301 @@
+case_id,name,location,date_reported,status,details
+MT1000,Divya Shah,Gir Forest,2024-12-30,Missing,Vehicle found abandoned
+MT1001,Anil Kumar,Cherrapunji,2023-08-04,Missing,Reported missing by family
+MT1002,Kavita Sinha,Amritsar,2025-11-02,Resolved,No contact after boat ride
+MT1003,Ritu Sharma,Darjeeling,2025-07-12,Resolved,Did not return to hotel
+MT1004,Priya Nair,Jaipur,2025-04-05,Resolved,Last seen hiking
+MT1005,Rahul Singh,Leh,2024-04-02,Missing,Missed scheduled tour
+MT1006,Ayesha Khan,Gir Forest,2023-02-06,Missing,Lost contact during jungle safari
+MT1007,Lakshmi Menon,Gir Forest,2024-10-20,Resolved,Lost in marketplace
+MT1008,Ayesha Khan,Mahabaleshwar,2024-05-15,Resolved,Phone switched off after trek
+MT1009,Divya Shah,Jaipur,2023-05-01,Missing,Separated from group on bus ride
+MT1010,Amit Sharma,Srinagar,2024-11-08,Missing,Separated from group on bus ride
+MT1011,Rohit Kulkarni,Khajuraho,2024-11-11,Resolved,Missed scheduled tour
+MT1012,Isha Chauhan,Agra,2024-03-09,Missing,Vehicle found abandoned
+MT1013,Meera Joshi,Kanyakumari,2025-06-17,Missing,Vehicle found abandoned
+MT1014,Kiran Desai,Hampi,2025-03-06,Missing,Phone switched off after trek
+MT1015,Harish Kumar,Rishikesh,2023-05-16,Missing,Did not return to hotel
+MT1016,Harish Kumar,Gir Forest,2024-10-11,Resolved,Phone switched off after trek
+MT1017,Deepak Verma,Kanyakumari,2024-04-25,Resolved,Reported missing by family
+MT1018,Nikhil Jain,Leh,2025-09-29,Resolved,Separated from group on bus ride
+MT1019,Nandini Rao,Sikkim,2025-10-29,Missing,Did not return to hotel
+MT1020,Rahul Singh,Bodh Gaya,2024-11-06,Resolved,Vehicle found abandoned
+MT1021,Ananya Bose,Sundarbans,2025-07-22,Resolved,Vehicle found abandoned
+MT1022,Arjun Kapoor,Gir Forest,2024-08-16,Resolved,Reported missing by family
+MT1023,Amit Sharma,Cherrapunji,2025-07-15,Missing,Lost in marketplace
+MT1024,Pooja Gupta,Kutch,2025-11-13,Missing,No contact after boat ride
+MT1025,Amit Sharma,Leh,2023-07-01,Resolved,Did not return to hotel
+MT1026,Sanjay Rao,Bodh Gaya,2025-11-16,Missing,Phone switched off after trek
+MT1027,Shalini Roy,Cherrapunji,2023-11-16,Missing,Vehicle found abandoned
+MT1028,Sneha Patel,Manali,2023-09-04,Missing,No contact after boat ride
+MT1029,Deepak Verma,Kutch,2024-01-14,Missing,Last seen hiking
+MT1030,Harish Kumar,Jaisalmer,2025-01-22,Resolved,Lost contact during jungle safari
+MT1031,Divya Shah,Agra,2024-08-11,Resolved,Did not return to hotel
+MT1032,Divya Shah,Mahabaleshwar,2024-09-11,Missing,No contact after boat ride
+MT1033,Ananya Bose,Coorg,2025-09-03,Resolved,Lost in marketplace
+MT1034,Isha Chauhan,Andaman,2025-05-06,Resolved,Vehicle found abandoned
+MT1035,Kavita Sinha,Coorg,2024-06-16,Resolved,Missed scheduled tour
+MT1036,Kavita Sinha,Munnar,2025-04-26,Resolved,Last seen hiking
+MT1037,Pradeep Yadav,Srinagar,2023-06-16,Missing,Reported missing by family
+MT1038,Gaurav Malhotra,Agra,2023-01-24,Resolved,Last seen hiking
+MT1039,Sanjay Rao,Cherrapunji,2024-03-18,Missing,Phone switched off after trek
+MT1040,Divya Shah,Sundarbans,2023-07-03,Resolved,Missed scheduled tour
+MT1041,Gaurav Malhotra,Sikkim,2025-01-05,Missing,Did not return to hotel
+MT1042,Gaurav Malhotra,Leh,2025-03-14,Resolved,Missed scheduled tour
+MT1043,Ayesha Khan,Kutch,2025-04-03,Resolved,Did not return to hotel
+MT1044,Sneha Patel,Andaman,2025-01-23,Missing,Vehicle found abandoned
+MT1045,Kiran Desai,Pondicherry,2023-12-19,Missing,Last seen hiking
+MT1046,Pradeep Yadav,Darjeeling,2025-05-25,Missing,Missed scheduled tour
+MT1047,Harish Kumar,Rishikesh,2023-11-27,Missing,Vehicle found abandoned
+MT1048,Harish Kumar,Khajuraho,2025-01-14,Resolved,Phone switched off after trek
+MT1049,Meera Joshi,Goa,2025-11-24,Missing,No contact after boat ride
+MT1050,Pooja Gupta,Pondicherry,2025-07-17,Resolved,Missed scheduled tour
+MT1051,Nandini Rao,Shimla,2023-07-22,Missing,Last seen hiking
+MT1052,Arjun Kapoor,Andaman,2025-03-02,Resolved,Lost contact during jungle safari
+MT1053,Meera Joshi,Shimla,2023-01-31,Resolved,Vehicle found abandoned
+MT1054,Suresh Pillai,Sikkim,2024-07-24,Missing,Phone switched off after trek
+MT1055,Sneha Patel,Manali,2025-02-15,Missing,Missed scheduled tour
+MT1056,Tara Iyer,Jaipur,2024-09-08,Missing,Did not return to hotel
+MT1057,Isha Chauhan,Coorg,2023-05-05,Resolved,Lost in marketplace
+MT1058,Isha Chauhan,Manali,2024-12-16,Missing,Reported missing by family
+MT1059,Vikram Das,Goa,2025-08-13,Resolved,Phone switched off after trek
+MT1060,Pooja Gupta,Rishikesh,2024-02-29,Resolved,Lost contact during jungle safari
+MT1061,Sanjay Rao,Munnar,2023-02-28,Resolved,Separated from group on bus ride
+MT1062,Pooja Gupta,Munnar,2023-06-22,Resolved,Lost contact during jungle safari
+MT1063,Rahul Singh,Pondicherry,2025-12-18,Missing,Phone switched off after trek
+MT1064,Rohit Kulkarni,Agra,2023-08-12,Resolved,Lost contact during jungle safari
+MT1065,Arjun Kapoor,Manali,2025-08-06,Resolved,Lost contact during jungle safari
+MT1066,Pradeep Yadav,Munnar,2025-06-03,Missing,Lost in marketplace
+MT1067,Vikram Das,Kaziranga,2025-04-09,Missing,Missed scheduled tour
+MT1068,Priya Nair,Leh,2023-03-11,Resolved,Lost contact during jungle safari
+MT1069,Kiran Desai,Rishikesh,2024-10-26,Missing,Reported missing by family
+MT1070,Deepak Verma,Agra,2025-04-29,Missing,Lost in marketplace
+MT1071,Ayesha Khan,Mahabaleshwar,2025-08-18,Resolved,Separated from group on bus ride
+MT1072,Nandini Rao,Cherrapunji,2024-04-17,Missing,Lost in marketplace
+MT1073,Ayesha Khan,Agra,2025-09-25,Resolved,No contact after boat ride
+MT1074,Sanjay Rao,Lakshadweep,2025-04-14,Resolved,Separated from group on bus ride
+MT1075,Neha Reddy,Shimla,2025-07-29,Missing,Lost contact during jungle safari
+MT1076,Vikram Das,Agra,2024-10-20,Resolved,Lost contact during jungle safari
+MT1077,Isha Chauhan,Hampi,2024-09-05,Resolved,Lost in marketplace
+MT1078,Nikhil Jain,Lakshadweep,2023-12-31,Missing,Phone switched off after trek
+MT1079,Isha Chauhan,Sikkim,2023-03-14,Resolved,Separated from group on bus ride
+MT1080,Vikram Das,Lakshadweep,2024-07-07,Resolved,Did not return to hotel
+MT1081,Amit Sharma,Kodaikanal,2023-05-11,Missing,Lost in marketplace
+MT1082,Kiran Desai,Shimla,2025-08-07,Missing,Phone switched off after trek
+MT1083,Amit Sharma,Srinagar,2025-11-27,Missing,Last seen hiking
+MT1084,Amit Sharma,Agra,2025-11-16,Resolved,Lost contact during jungle safari
+MT1085,Amit Sharma,Leh,2025-11-09,Resolved,Did not return to hotel
+MT1086,Ananya Bose,Gir Forest,2024-08-20,Missing,Lost in marketplace
+MT1087,Priya Nair,Kutch,2023-10-17,Resolved,Lost in marketplace
+MT1088,Deepak Verma,Cherrapunji,2023-10-20,Resolved,Last seen hiking
+MT1089,Sneha Patel,Leh,2025-01-05,Missing,Lost in marketplace
+MT1090,Rahul Singh,Goa,2025-12-06,Resolved,Last seen hiking
+MT1091,Tara Iyer,Sikkim,2025-01-19,Missing,Separated from group on bus ride
+MT1092,Pooja Gupta,Rishikesh,2023-03-06,Resolved,Missed scheduled tour
+MT1093,Harish Kumar,Amritsar,2023-11-16,Resolved,Vehicle found abandoned
+MT1094,Nikhil Jain,Mahabaleshwar,2024-02-21,Resolved,Missed scheduled tour
+MT1095,Rahul Singh,Varanasi,2025-10-10,Missing,Last seen hiking
+MT1096,Pradeep Yadav,Khajuraho,2024-05-03,Resolved,Phone switched off after trek
+MT1097,Sanjay Rao,Kaziranga,2023-08-31,Resolved,Lost contact during jungle safari
+MT1098,Ritu Sharma,Sikkim,2024-02-03,Resolved,Last seen hiking
+MT1099,Ritu Sharma,Kanyakumari,2024-10-19,Resolved,Vehicle found abandoned
+MT1100,Suresh Pillai,Darjeeling,2023-04-01,Resolved,Separated from group on bus ride
+MT1101,Harish Kumar,Agra,2023-08-20,Missing,Lost contact during jungle safari
+MT1102,Sneha Patel,Kaziranga,2025-02-02,Resolved,Vehicle found abandoned
+MT1103,Arjun Kapoor,Rishikesh,2024-08-14,Missing,Missed scheduled tour
+MT1104,Nandini Rao,Coorg,2023-07-20,Missing,Lost in marketplace
+MT1105,Harish Kumar,Shimla,2023-03-12,Resolved,Missed scheduled tour
+MT1106,Anil Kumar,Goa,2023-07-13,Resolved,Last seen hiking
+MT1107,Kiran Desai,Khajuraho,2023-07-03,Resolved,Vehicle found abandoned
+MT1108,Pradeep Yadav,Lakshadweep,2025-01-31,Resolved,Lost in marketplace
+MT1109,Anil Kumar,Khajuraho,2023-05-17,Resolved,No contact after boat ride
+MT1110,Gaurav Malhotra,Sundarbans,2024-12-22,Resolved,Reported missing by family
+MT1111,Lakshmi Menon,Kanyakumari,2023-06-18,Resolved,No contact after boat ride
+MT1112,Nikhil Jain,Leh,2024-09-06,Resolved,Did not return to hotel
+MT1113,Divya Shah,Shimla,2023-08-06,Missing,Separated from group on bus ride
+MT1114,Meera Joshi,Munnar,2023-08-10,Missing,No contact after boat ride
+MT1115,Rahul Singh,Andaman,2025-05-31,Resolved,Reported missing by family
+MT1116,Pradeep Yadav,Lakshadweep,2024-01-23,Missing,No contact after boat ride
+MT1117,Vikram Das,Varanasi,2025-08-10,Missing,Separated from group on bus ride
+MT1118,Arjun Kapoor,Jaipur,2023-11-19,Missing,Separated from group on bus ride
+MT1119,Rohit Kulkarni,Srinagar,2024-11-19,Resolved,Phone switched off after trek
+MT1120,Nandini Rao,Rishikesh,2025-09-10,Missing,Vehicle found abandoned
+MT1121,Anil Kumar,Andaman,2024-04-18,Resolved,Last seen hiking
+MT1122,Shalini Roy,Munnar,2024-11-24,Missing,Vehicle found abandoned
+MT1123,Gaurav Malhotra,Kanyakumari,2023-11-17,Resolved,Vehicle found abandoned
+MT1124,Rahul Singh,Agra,2025-08-08,Missing,Reported missing by family
+MT1125,Priya Nair,Khajuraho,2025-03-13,Missing,Did not return to hotel
+MT1126,Gaurav Malhotra,Manali,2023-08-18,Resolved,Phone switched off after trek
+MT1127,Rahul Singh,Pondicherry,2025-01-31,Resolved,Lost contact during jungle safari
+MT1128,Tara Iyer,Khajuraho,2024-03-19,Missing,Did not return to hotel
+MT1129,Anil Kumar,Andaman,2024-06-16,Resolved,Vehicle found abandoned
+MT1130,Rohit Kulkarni,Cherrapunji,2025-08-24,Missing,Phone switched off after trek
+MT1131,Ravi Mehta,Khajuraho,2023-02-20,Resolved,Vehicle found abandoned
+MT1132,Suresh Pillai,Mahabaleshwar,2023-08-14,Resolved,Last seen hiking
+MT1133,Ritu Sharma,Manali,2023-04-12,Resolved,No contact after boat ride
+MT1134,Priya Nair,Agra,2024-01-20,Resolved,Vehicle found abandoned
+MT1135,Anil Kumar,Varanasi,2025-11-27,Resolved,Phone switched off after trek
+MT1136,Divya Shah,Shimla,2024-03-30,Resolved,Lost contact during jungle safari
+MT1137,Isha Chauhan,Gir Forest,2024-02-16,Missing,Phone switched off after trek
+MT1138,Anil Kumar,Varanasi,2025-12-06,Missing,Missed scheduled tour
+MT1139,Meera Joshi,Munnar,2023-08-25,Missing,Lost contact during jungle safari
+MT1140,Ritu Sharma,Ooty,2024-09-12,Missing,Last seen hiking
+MT1141,Divya Shah,Lakshadweep,2023-01-09,Resolved,Separated from group on bus ride
+MT1142,Rahul Singh,Shimla,2023-03-08,Resolved,Vehicle found abandoned
+MT1143,Sneha Patel,Jaisalmer,2024-10-19,Resolved,Lost contact during jungle safari
+MT1144,Tara Iyer,Jaipur,2023-10-12,Missing,Reported missing by family
+MT1145,Pooja Gupta,Manali,2023-06-14,Resolved,Vehicle found abandoned
+MT1146,Rohit Kulkarni,Srinagar,2023-10-08,Missing,Did not return to hotel
+MT1147,Anil Kumar,Gir Forest,2023-07-20,Missing,Separated from group on bus ride
+MT1148,Meera Joshi,Khajuraho,2025-11-10,Missing,Lost contact during jungle safari
+MT1149,Sanjay Rao,Agra,2024-02-15,Missing,Reported missing by family
+MT1150,Ananya Bose,Manali,2025-11-20,Missing,Lost in marketplace
+MT1151,Pooja Gupta,Hampi,2025-05-03,Resolved,Last seen hiking
+MT1152,Kavita Sinha,Kodaikanal,2024-06-28,Resolved,Did not return to hotel
+MT1153,Meera Joshi,Andaman,2023-05-17,Missing,Last seen hiking
+MT1154,Shalini Roy,Sikkim,2024-12-19,Resolved,Lost contact during jungle safari
+MT1155,Ravi Mehta,Manali,2023-07-13,Resolved,Lost in marketplace
+MT1156,Neha Reddy,Bodh Gaya,2023-12-12,Missing,Lost in marketplace
+MT1157,Isha Chauhan,Jaipur,2023-02-08,Missing,Lost contact during jungle safari
+MT1158,Pooja Gupta,Varanasi,2025-01-16,Resolved,Vehicle found abandoned
+MT1159,Ritu Sharma,Lakshadweep,2024-01-20,Missing,No contact after boat ride
+MT1160,Rohit Kulkarni,Kaziranga,2025-08-23,Resolved,Vehicle found abandoned
+MT1161,Meera Joshi,Andaman,2024-08-03,Missing,Separated from group on bus ride
+MT1162,Rohit Kulkarni,Shimla,2023-10-27,Resolved,Separated from group on bus ride
+MT1163,Ayesha Khan,Sundarbans,2025-09-09,Missing,Separated from group on bus ride
+MT1164,Gaurav Malhotra,Coorg,2025-09-22,Resolved,Lost in marketplace
+MT1165,Ananya Bose,Jaisalmer,2024-05-23,Resolved,No contact after boat ride
+MT1166,Priya Nair,Ooty,2023-02-11,Missing,Reported missing by family
+MT1167,Deepak Verma,Pondicherry,2025-05-05,Resolved,Reported missing by family
+MT1168,Harish Kumar,Kaziranga,2024-05-20,Resolved,No contact after boat ride
+MT1169,Ananya Bose,Manali,2023-07-23,Missing,Lost contact during jungle safari
+MT1170,Shalini Roy,Sikkim,2024-01-03,Resolved,Phone switched off after trek
+MT1171,Ravi Mehta,Andaman,2023-01-07,Resolved,No contact after boat ride
+MT1172,Ravi Mehta,Kaziranga,2024-08-26,Missing,Vehicle found abandoned
+MT1173,Gaurav Malhotra,Kanyakumari,2025-01-29,Resolved,Vehicle found abandoned
+MT1174,Shalini Roy,Pondicherry,2024-04-25,Missing,Phone switched off after trek
+MT1175,Pooja Gupta,Amritsar,2025-01-01,Resolved,Vehicle found abandoned
+MT1176,Anil Kumar,Munnar,2025-10-26,Resolved,No contact after boat ride
+MT1177,Meera Joshi,Sundarbans,2023-11-06,Missing,Reported missing by family
+MT1178,Isha Chauhan,Pondicherry,2025-06-06,Missing,Separated from group on bus ride
+MT1179,Anil Kumar,Kodaikanal,2024-11-18,Resolved,Separated from group on bus ride
+MT1180,Vikram Das,Mahabaleshwar,2023-01-22,Missing,Lost contact during jungle safari
+MT1181,Ayesha Khan,Kanyakumari,2024-01-20,Resolved,Vehicle found abandoned
+MT1182,Ritu Sharma,Munnar,2025-05-16,Resolved,Lost in marketplace
+MT1183,Tara Iyer,Manali,2024-01-31,Missing,Phone switched off after trek
+MT1184,Meera Joshi,Kaziranga,2025-03-30,Missing,Last seen hiking
+MT1185,Deepak Verma,Rishikesh,2025-03-06,Missing,Lost contact during jungle safari
+MT1186,Arjun Kapoor,Kutch,2025-01-17,Resolved,Lost contact during jungle safari
+MT1187,Ananya Bose,Bodh Gaya,2023-05-17,Missing,Last seen hiking
+MT1188,Meera Joshi,Amritsar,2025-08-09,Missing,Last seen hiking
+MT1189,Kiran Desai,Jaisalmer,2025-08-30,Resolved,Last seen hiking
+MT1190,Meera Joshi,Rishikesh,2024-12-24,Missing,Lost in marketplace
+MT1191,Deepak Verma,Lakshadweep,2023-11-16,Resolved,Lost in marketplace
+MT1192,Deepak Verma,Kutch,2025-03-12,Missing,Vehicle found abandoned
+MT1193,Ayesha Khan,Coorg,2024-05-19,Resolved,Missed scheduled tour
+MT1194,Rahul Singh,Hampi,2025-03-21,Missing,Last seen hiking
+MT1195,Sanjay Rao,Jaipur,2024-10-23,Resolved,No contact after boat ride
+MT1196,Harish Kumar,Gir Forest,2024-05-09,Resolved,Missed scheduled tour
+MT1197,Isha Chauhan,Coorg,2023-07-25,Missing,No contact after boat ride
+MT1198,Deepak Verma,Shimla,2024-01-27,Missing,Separated from group on bus ride
+MT1199,Pradeep Yadav,Darjeeling,2025-08-18,Resolved,No contact after boat ride
+MT1200,Ayesha Khan,Varanasi,2023-05-18,Missing,Lost contact during jungle safari
+MT1201,Harish Kumar,Shimla,2024-08-04,Resolved,Lost in marketplace
+MT1202,Suresh Pillai,Srinagar,2025-07-10,Missing,Missed scheduled tour
+MT1203,Lakshmi Menon,Lakshadweep,2025-10-01,Missing,Phone switched off after trek
+MT1204,Suresh Pillai,Cherrapunji,2023-11-22,Missing,Vehicle found abandoned
+MT1205,Suresh Pillai,Leh,2025-12-25,Missing,Phone switched off after trek
+MT1206,Nandini Rao,Andaman,2023-04-27,Resolved,Lost contact during jungle safari
+MT1207,Kavita Sinha,Lakshadweep,2025-11-13,Resolved,Missed scheduled tour
+MT1208,Tara Iyer,Srinagar,2025-11-11,Missing,Phone switched off after trek
+MT1209,Meera Joshi,Lakshadweep,2024-12-25,Missing,Missed scheduled tour
+MT1210,Rohit Kulkarni,Khajuraho,2023-09-19,Missing,Separated from group on bus ride
+MT1211,Rahul Singh,Mahabaleshwar,2024-12-24,Missing,Did not return to hotel
+MT1212,Ananya Bose,Rishikesh,2024-06-16,Missing,Reported missing by family
+MT1213,Suresh Pillai,Shimla,2023-02-04,Resolved,Vehicle found abandoned
+MT1214,Neha Reddy,Agra,2025-04-03,Missing,Reported missing by family
+MT1215,Isha Chauhan,Gir Forest,2024-03-29,Missing,Reported missing by family
+MT1216,Anil Kumar,Khajuraho,2023-01-16,Missing,Vehicle found abandoned
+MT1217,Divya Shah,Jaisalmer,2025-03-14,Missing,Did not return to hotel
+MT1218,Priya Nair,Andaman,2024-08-19,Missing,Vehicle found abandoned
+MT1219,Neha Reddy,Darjeeling,2023-10-21,Resolved,Last seen hiking
+MT1220,Shalini Roy,Goa,2023-12-14,Resolved,Vehicle found abandoned
+MT1221,Rahul Singh,Cherrapunji,2023-06-11,Resolved,Did not return to hotel
+MT1222,Kavita Sinha,Kaziranga,2025-10-12,Resolved,No contact after boat ride
+MT1223,Deepak Verma,Agra,2025-12-25,Resolved,Missed scheduled tour
+MT1224,Kiran Desai,Bodh Gaya,2025-02-23,Missing,Lost contact during jungle safari
+MT1225,Nandini Rao,Leh,2023-05-28,Resolved,Lost in marketplace
+MT1226,Divya Shah,Mahabaleshwar,2025-07-22,Resolved,Did not return to hotel
+MT1227,Isha Chauhan,Jaipur,2025-09-22,Resolved,Reported missing by family
+MT1228,Rohit Kulkarni,Lakshadweep,2025-12-30,Missing,Lost contact during jungle safari
+MT1229,Pooja Gupta,Kodaikanal,2024-04-05,Resolved,Separated from group on bus ride
+MT1230,Meera Joshi,Andaman,2025-12-13,Missing,Vehicle found abandoned
+MT1231,Ritu Sharma,Jaisalmer,2025-11-04,Resolved,Separated from group on bus ride
+MT1232,Ravi Mehta,Manali,2023-11-12,Missing,Separated from group on bus ride
+MT1233,Rohit Kulkarni,Khajuraho,2023-10-21,Missing,Missed scheduled tour
+MT1234,Sanjay Rao,Manali,2024-05-10,Missing,Lost in marketplace
+MT1235,Amit Sharma,Varanasi,2024-09-22,Missing,Missed scheduled tour
+MT1236,Kiran Desai,Jaisalmer,2024-01-31,Resolved,Lost contact during jungle safari
+MT1237,Isha Chauhan,Varanasi,2023-10-26,Missing,Phone switched off after trek
+MT1238,Ravi Mehta,Kanyakumari,2024-12-28,Missing,No contact after boat ride
+MT1239,Vikram Das,Kaziranga,2025-05-31,Resolved,Lost contact during jungle safari
+MT1240,Isha Chauhan,Kutch,2024-07-06,Missing,Missed scheduled tour
+MT1241,Amit Sharma,Sundarbans,2025-02-18,Resolved,No contact after boat ride
+MT1242,Deepak Verma,Hampi,2024-02-25,Resolved,Reported missing by family
+MT1243,Isha Chauhan,Goa,2023-01-21,Resolved,Separated from group on bus ride
+MT1244,Ananya Bose,Andaman,2025-08-28,Missing,Phone switched off after trek
+MT1245,Arjun Kapoor,Kodaikanal,2025-02-14,Resolved,Missed scheduled tour
+MT1246,Pooja Gupta,Jaisalmer,2023-05-05,Missing,Phone switched off after trek
+MT1247,Nandini Rao,Khajuraho,2025-09-03,Missing,Phone switched off after trek
+MT1248,Ananya Bose,Coorg,2024-08-31,Missing,No contact after boat ride
+MT1249,Tara Iyer,Varanasi,2025-02-27,Missing,Last seen hiking
+MT1250,Suresh Pillai,Andaman,2023-10-21,Missing,Lost contact during jungle safari
+MT1251,Ananya Bose,Sikkim,2024-11-15,Resolved,Lost in marketplace
+MT1252,Rohit Kulkarni,Lakshadweep,2023-06-10,Missing,Did not return to hotel
+MT1253,Deepak Verma,Sikkim,2025-04-12,Missing,Did not return to hotel
+MT1254,Ravi Mehta,Ooty,2023-11-14,Resolved,Phone switched off after trek
+MT1255,Kiran Desai,Leh,2024-08-01,Resolved,Separated from group on bus ride
+MT1256,Ritu Sharma,Bodh Gaya,2024-12-23,Missing,Phone switched off after trek
+MT1257,Ayesha Khan,Andaman,2023-06-08,Resolved,Separated from group on bus ride
+MT1258,Tara Iyer,Andaman,2025-04-07,Missing,Reported missing by family
+MT1259,Ritu Sharma,Amritsar,2025-01-18,Resolved,Phone switched off after trek
+MT1260,Neha Reddy,Leh,2024-06-15,Resolved,Last seen hiking
+MT1261,Nandini Rao,Jaisalmer,2024-02-23,Resolved,Phone switched off after trek
+MT1262,Sanjay Rao,Goa,2025-11-17,Missing,Lost in marketplace
+MT1263,Gaurav Malhotra,Mahabaleshwar,2023-06-02,Resolved,No contact after boat ride
+MT1264,Pradeep Yadav,Shimla,2023-04-12,Missing,Lost in marketplace
+MT1265,Tara Iyer,Sundarbans,2025-02-19,Missing,Did not return to hotel
+MT1266,Harish Kumar,Cherrapunji,2025-03-08,Resolved,Separated from group on bus ride
+MT1267,Kiran Desai,Andaman,2023-05-01,Resolved,Phone switched off after trek
+MT1268,Rahul Singh,Hampi,2025-07-30,Resolved,Reported missing by family
+MT1269,Isha Chauhan,Sundarbans,2023-07-17,Missing,Separated from group on bus ride
+MT1270,Kavita Sinha,Manali,2024-05-06,Missing,No contact after boat ride
+MT1271,Vikram Das,Kanyakumari,2025-11-22,Missing,Lost contact during jungle safari
+MT1272,Divya Shah,Khajuraho,2024-03-30,Missing,Lost contact during jungle safari
+MT1273,Rahul Singh,Mahabaleshwar,2024-11-28,Resolved,Reported missing by family
+MT1274,Ananya Bose,Hampi,2023-01-28,Missing,Did not return to hotel
+MT1275,Nandini Rao,Leh,2023-04-09,Missing,Last seen hiking
+MT1276,Tara Iyer,Manali,2023-04-19,Missing,No contact after boat ride
+MT1277,Arjun Kapoor,Rishikesh,2024-10-09,Missing,Missed scheduled tour
+MT1278,Meera Joshi,Jaisalmer,2023-03-07,Resolved,Phone switched off after trek
+MT1279,Amit Sharma,Srinagar,2023-01-26,Missing,Last seen hiking
+MT1280,Isha Chauhan,Munnar,2025-01-17,Resolved,Lost in marketplace
+MT1281,Rohit Kulkarni,Goa,2023-04-30,Missing,Phone switched off after trek
+MT1282,Priya Nair,Coorg,2023-09-21,Resolved,Lost contact during jungle safari
+MT1283,Vikram Das,Bodh Gaya,2024-03-11,Resolved,Phone switched off after trek
+MT1284,Ritu Sharma,Amritsar,2023-04-10,Resolved,Phone switched off after trek
+MT1285,Pooja Gupta,Kodaikanal,2025-03-23,Resolved,Phone switched off after trek
+MT1286,Anil Kumar,Leh,2025-02-09,Missing,Last seen hiking
+MT1287,Meera Joshi,Kanyakumari,2024-05-15,Resolved,Lost in marketplace
+MT1288,Pradeep Yadav,Hampi,2025-11-28,Missing,Separated from group on bus ride
+MT1289,Kavita Sinha,Gir Forest,2024-08-21,Resolved,Did not return to hotel
+MT1290,Ayesha Khan,Andaman,2023-12-17,Resolved,Reported missing by family
+MT1291,Sneha Patel,Agra,2023-05-14,Missing,Lost in marketplace
+MT1292,Gaurav Malhotra,Gir Forest,2023-07-30,Missing,Lost contact during jungle safari
+MT1293,Amit Sharma,Ooty,2024-11-11,Missing,Last seen hiking
+MT1294,Suresh Pillai,Sundarbans,2024-03-10,Missing,Vehicle found abandoned
+MT1295,Sanjay Rao,Shimla,2025-09-27,Resolved,Vehicle found abandoned
+MT1296,Lakshmi Menon,Munnar,2025-11-30,Resolved,Separated from group on bus ride
+MT1297,Ravi Mehta,Shimla,2025-12-02,Missing,Phone switched off after trek
+MT1298,Rohit Kulkarni,Gir Forest,2023-01-08,Missing,Separated from group on bus ride
+MT1299,Ravi Mehta,Hampi,2023-02-09,Missing,Last seen hiking
