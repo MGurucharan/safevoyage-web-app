@@ -3,6 +3,19 @@ import crypto from 'crypto';
 import DigitalID from '../models/DigitalID.js';
 import blockchainService from '../utils/blockchainService.js';
 
+// Helper function to create consistent hash from user details
+function createConsistentHash(userDetails) {
+    // Ensure consistent property order for hash generation
+    const orderedData = {
+        name: userDetails.name,
+        email: userDetails.email,
+        phone: userDetails.phone,
+        address: userDetails.address
+    };
+    const userDataString = JSON.stringify(orderedData);
+    return crypto.createHash('sha256').update(userDataString).digest('hex');
+}
+
 export const generateDigitalID = async (req, res) => {
     try {
         console.log('=== GENERATE DIGITAL ID REQUEST ===');
@@ -27,15 +40,21 @@ export const generateDigitalID = async (req, res) => {
             }
         });
 
-        // Generate a unique hash using userDetails object and createdAt
-        const hashData = {
-            userDetails: digitalID.userDetails,
-            createdAt: digitalID.createdAt
+        // Generate a unique hash using userDetails object only
+        const userDetails = digitalID.userDetails;
+        const hash = createConsistentHash(userDetails);
+        console.log('Generated hash using userDetails ONLY:', hash);
+        console.log('UserDetails used for hash:', userDetails);
+        
+        // For debugging: show the exact data being hashed
+        const orderedData = {
+            name: userDetails.name,
+            email: userDetails.email,
+            phone: userDetails.phone,
+            address: userDetails.address
         };
-        const userDataString = JSON.stringify(hashData);
-        const hash = crypto.createHash('sha256').update(userDataString).digest('hex');
-        console.log('Generated hash using userDetails + createdAt:', hash);
-        console.log('Hash data:', hashData);
+        console.log('Ordered data for hash:', orderedData);
+        console.log('JSON string used for hash:', JSON.stringify(orderedData));
 
         // Store hash on blockchain
         console.log('Attempting to store hash on blockchain...');
@@ -134,7 +153,7 @@ export const verifyDigitalID = async (req, res) => {
         console.log('Tourist details retrieved:', digitalID.userDetails);
         console.log('Document timestamps - createdAt:', digitalID.createdAt, 'updatedAt:', digitalID.updatedAt);
 
-        // Step 1.5: Check for data tampering using timestamps
+        // Step 1.5: Check for data tampering using timestamps (first layer of protection)
         const timeDifference = Math.abs(new Date(digitalID.updatedAt) - new Date(digitalID.createdAt));
         const isDataTampered = timeDifference > 1000; // Allow 1 second difference for processing time
         
@@ -172,22 +191,28 @@ export const verifyDigitalID = async (req, res) => {
         }
         console.log('✅ Transaction hash verified');
 
-        // Step 3: Recompute the hash from current MongoDB record (userDetails + createdAt)
+        // Step 3: Recompute the hash from current MongoDB record (userDetails only - second layer of protection)
         console.log('Step 3: Recomputing hash from current MongoDB record...');
         
         // Get the original stored hash that was stored on blockchain
         const originalStoredHash = digitalID.userHash;
         console.log('Original hash stored on blockchain:', originalStoredHash);
         
-        // Recompute hash using userDetails object and createdAt from MongoDB record
-        const hashData = {
-            userDetails: digitalID.userDetails,
-            createdAt: digitalID.createdAt
-        };
-        const userDataString = JSON.stringify(hashData);
-        const recomputedHash = crypto.createHash('sha256').update(userDataString).digest('hex');
+        // Recompute hash using userDetails object only from MongoDB record
+        const userDetails = digitalID.userDetails;
+        const recomputedHash = createConsistentHash(userDetails);
         console.log('Recomputed hash from current MongoDB record:', recomputedHash);
-        console.log('Hash data used:', hashData);
+        console.log('UserDetails used for recomputation:', userDetails);
+        
+        // For debugging: show the exact data being hashed during verification
+        const orderedData = {
+            name: userDetails.name,
+            email: userDetails.email,
+            phone: userDetails.phone,
+            address: userDetails.address
+        };
+        console.log('Ordered data for recomputation:', orderedData);
+        console.log('JSON string used for recomputation:', JSON.stringify(orderedData));
         
         // Critical Security Check: Compare recomputed hash with stored hash
         const hashesMatch = recomputedHash === originalStoredHash;
