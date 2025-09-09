@@ -4,15 +4,34 @@ dotenv.config();
 import QRCode from 'qrcode';
 import crypto from 'crypto';
 
+// Helper function to create consistent hash from user details (same as controller)
+function createConsistentHash(userDetails) {
+    // Ensure consistent property order for hash generation
+    const orderedData = {
+        name: userDetails.name,
+        email: userDetails.email,
+        phone: userDetails.phone,
+        address: userDetails.address
+    };
+    const userDataString = JSON.stringify(orderedData);
+    return crypto.createHash('sha256').update(userDataString).digest('hex');
+}
+
 async function testGenerate() {
     try {
         console.log('Testing QR code generation...');
         
-        const userData = { name: "Test", email: "test@test.com", phone: "123", address: "Test Address" };
-        const userDataString = JSON.stringify({ ...userData, timestamp: Date.now() });
-        const hash = crypto.createHash('sha256').update(userDataString).digest('hex');
+        const userDetails = { 
+            name: "Test", 
+            email: "test@test.com", 
+            phone: "123", 
+            address: "Test Address" 
+        };
         
-        console.log('Generated hash:', hash);
+        const hash = createConsistentHash(userDetails);
+        
+        console.log('Generated hash using userDetails ONLY:', hash);
+        console.log('UserDetails used:', userDetails);
         
         const qrData = JSON.stringify({
             mongoId: "test-mongo-id",
