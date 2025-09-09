@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from routes.chatbot import router as chatbot_router
 from contextlib import asynccontextmanager
 import logging
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())  # ✅ robust to any folder you run from
+
 
 # Optional logging setup
 logging.basicConfig(level=logging.INFO)
