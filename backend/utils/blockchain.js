@@ -15,17 +15,18 @@ const provider = new HDWalletProvider({
 
 const web3 = new Web3(provider);
 
-export const generateHash = (data) => {
-    // Convert the data object to a sorted string to ensure consistent hashing
-    const sortedData = Object.keys(data)
+export const generateHash = (userDetails) => {
+    // Generate SHA-256 hash directly from userDetails object
+    // Sort the keys to ensure consistent hashing
+    const sortedUserDetails = Object.keys(userDetails)
         .sort()
         .reduce((obj, key) => {
-            obj[key] = data[key];
+            obj[key] = userDetails[key];
             return obj;
         }, {});
 
-    // Generate SHA-256 hash
-    return CryptoJS.SHA256(JSON.stringify(sortedData)).toString();
+    // Generate SHA-256 hash using only userDetails
+    return CryptoJS.SHA256(JSON.stringify(sortedUserDetails)).toString();
 };
 
 export const storeHashOnBlockchain = async (hash) => {

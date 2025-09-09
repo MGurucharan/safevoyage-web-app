@@ -15,9 +15,8 @@ const digitalIDSchema = new mongoose.Schema({
     },
     qrCode: { type: String, required: true }, // Base64 encoded QR code
     isValid: { type: Boolean, default: true }
-}, {
-    timestamps: true // This automatically adds createdAt and updatedAt fields
-});
+},
+);
 
 const DigitalID = mongoose.model('DigitalID', digitalIDSchema);
 
