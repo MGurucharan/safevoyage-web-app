@@ -7,6 +7,7 @@ const DigitalID = () => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [qrCode, setQrCode] = useState(null);
+  const [digitalIDQrCode, setDigitalIDQrCode] = useState(null); // Store QR code for the digital ID card
   const [error, setError] = useState(null);
   const backgroundImageUrl = 'https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=';
   const [formData, setFormData] = useState({
@@ -52,6 +53,7 @@ const DigitalID = () => {
       
       // Set QR code from response (it's a base64 image)
       setQrCode(result.data.qrCode);
+      setDigitalIDQrCode(result.data.qrCode); // Store QR code for the digital ID card
       
       // Show success message
       setShowSuccess(true);
@@ -196,9 +198,30 @@ const DigitalID = () => {
                 </div>
               </div>
             </div>
+
+            {/* QR Code Section */}
+            {digitalIDQrCode && (
+              <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm mt-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-white mb-2">Verification QR Code</h3>
+                    <p className="text-blue-100 text-sm">
+                      Scan this code for instant identity verification
+                    </p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg ml-4">
+                    <img 
+                      src={digitalIDQrCode} 
+                      alt="Digital ID QR Code"
+                      className="w-28 h-28 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-3xl mx-auto">
             <button className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <FileText className="h-5 w-5 text-blue-600" />
               <span className="font-semibold">Download PDF</span>
@@ -206,6 +229,32 @@ const DigitalID = () => {
             <button className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <User className="h-5 w-5 text-green-600" />
               <span className="font-semibold">Update Profile</span>
+            </button>
+            <button 
+              onClick={() => {
+                if (digitalIDQrCode) {
+                  // Create a modal or larger view of QR code
+                  const newWindow = window.open('', '_blank', 'width=400,height=400');
+                  newWindow.document.write(`
+                    <html>
+                      <head><title>Digital ID QR Code</title></head>
+                      <body style="display:flex;justify-content:center;align-items:center;height:100vh;margin:0;background:#f3f4f6;">
+                        <div style="text-align:center;background:white;padding:20px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                          <h3 style="margin-bottom:16px;color:#374151;">Digital ID QR Code</h3>
+                          <img src="${digitalIDQrCode}" alt="QR Code" style="max-width:200px;max-height:200px;border:2px solid #e5e7eb;border-radius:8px;"/>
+                          <p style="margin-top:16px;color:#6b7280;font-size:14px;">Scan for verification</p>
+                        </div>
+                      </body>
+                    </html>
+                  `);
+                }
+              }}
+              className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <svg className="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 16h4.01M7 7h.01M7 11h.01M7 15h.01" />
+              </svg>
+              <span className="font-semibold">Show QR Code</span>
             </button>
             <button className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <MapPin className="h-5 w-5 text-red-600" />

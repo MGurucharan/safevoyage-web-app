@@ -1,11 +1,14 @@
 import express from 'express';
-import { generateDigitalID, verifyDigitalID } from '../controllers/digitalIDController.js';
+import { generateDigitalID, verifyDigitalID, updateTouristDetails } from '../controllers/digitalIDController.js';
 import DigitalID from '../models/DigitalID.js';
 
 const router = express.Router();
 
 router.post('/generate', generateDigitalID);
 router.post('/verify', verifyDigitalID);
+
+// Test route to update tourist details (for testing tampering detection)
+router.put('/update-tourist/:id', updateTouristDetails);
 
 // Add route to list all digital IDs (for debugging)
 router.get('/list', async (req, res) => {
