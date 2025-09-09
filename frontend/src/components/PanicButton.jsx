@@ -1,3 +1,4 @@
+import API from "../services/api";
 import React, { useState } from 'react';
 import { AlertTriangle, Phone } from 'lucide-react';
 
@@ -5,17 +6,42 @@ const PanicButton = () => {
   const [isPressed, setIsPressed] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const handleEmergency = () => {
-    setIsPressed(true);
-    setShowConfirmation(true);
-    
-    // Simulate emergency alert
-    setTimeout(() => {
-      setIsPressed(false);
-      setShowConfirmation(false);
-    }, 5000);
-  };
+  const handleEmergency = async () => {
+  setIsPressed(true);
+  setShowConfirmation(true);
 
+  try {
+    // Send panic alert to backend
+    await API.post("/alerts", {
+      location: "Bangalore",   // TODO: replace with actual GPS coords
+      message: "🚨 Emergency! Tourist needs help",
+    });
+  } catch (err) {
+    console.error("Failed to send alert:", err.response?.data || err.message);
+  }
+
+  // Reset button after 5 seconds
+  setTimeout(() => {
+    setIsPressed(false);
+    setShowConfirmation(false);
+  }, 5000);
+};
+navigator.geolocation.getCurrentPosition(
+  async (position) => {
+    const { latitude, longitude } = position.coords;
+    try {
+      await API.post("/alerts", {
+        location: { lat: latitude, lng: longitude },
+        message: "🚨 Emergency! Tourist needs help",
+      });
+    } catch (err) {
+      console.error("Failed to send alert:", err.response?.data || err.message);
+    }
+  },
+  (error) => {
+    console.error("Location error:", error.message);
+  }
+);
   return (
     <>
       {/* Panic Button */}
