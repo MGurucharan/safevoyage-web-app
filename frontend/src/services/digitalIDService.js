@@ -15,9 +15,20 @@ const digitalIDService = {
     verifyDigitalID: async (verificationData) => {
         try {
             const response = await axios.post(`${API_URL}/digital-id/verify`, verificationData);
-            return response.data;
+            
+            // Handle the new response format
+            if (response.data.success) {
+                return response.data;
+            } else {
+                throw new Error(response.data.error || 'Verification failed');
+            }
         } catch (error) {
-            throw error.response?.data || error.message;
+            // Handle network or parsing errors
+            if (error.response && error.response.data) {
+                throw new Error(error.response.data.error || error.response.data.message || 'Verification failed');
+            } else {
+                throw new Error(error.message || 'Network error during verification');
+            }
         }
     }
 };
