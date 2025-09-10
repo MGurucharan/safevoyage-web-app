@@ -43,30 +43,30 @@ export default function AdminLogin({ onLogin }) {
     >
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 w-full max-w-md px-4">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-100">
+        <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl shadow-xl p-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center mb-8">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-xl mb-4 transform transition hover:scale-105">
+            <div className="bg-gradient-to-r from-blue-400 to-purple-400 p-4 rounded-xl mb-4 transform transition hover:scale-105">
               <Shield className="h-8 w-8 text-white" />
             </div>
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Admin Portal
             </h2>
-            <p className="text-gray-500 mt-2 text-center">
+            <p className="text-gray-300 mt-2 text-center">
               Please log in to access the admin dashboard
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
+              <label className="block text-sm font-medium text-white mb-2">Username</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <User className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
                   type="text"
-                  className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   placeholder="Enter username"
@@ -76,14 +76,14 @@ export default function AdminLogin({ onLogin }) {
             </div>
 
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+              <label className="block text-sm font-medium text-white mb-2">Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
                   type="password"
-                  className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter password"
@@ -93,16 +93,16 @@ export default function AdminLogin({ onLogin }) {
             </div>
 
             {error && (
-              <div className="bg-red-50 text-red-500 p-3 rounded-lg text-sm text-center">
+              <div className="bg-red-500/20 backdrop-blur-sm border border-red-400/30 text-red-300 p-3 rounded-lg text-sm text-center">
                 {error}
               </div>
             )}
 
             <button
               type="submit"
-              className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium 
-                       transform transition-all hover:scale-[1.02] hover:shadow-lg 
-                       focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="w-full py-3 bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-lg font-medium 
+                       hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg
+                       focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
               Login to Dashboard
             </button>
