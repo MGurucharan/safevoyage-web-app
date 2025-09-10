@@ -12,11 +12,14 @@ import BookHotels from './pages/BookHotels';
 import HotelDetailView from './pages/HotelDetailView';
 import AdminLogin from './pages/AdminLogin';
 import Verification from './pages/Verification';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import CompleteProfile from './pages/CompleteProfile';
+import UserDashboard from './pages/UserDashboard';
 import { AdminAuthProvider } from './context/AdminAuthProvider';
+import { UserAuthProvider } from './context/UserAuthContext';
 import { useAdminAuth } from './hooks/useAdminAuth';
-
-
-
+import { useUserAuth } from './hooks/useUserAuth';
 import AdminDigitalID from './pages/AdminDigitalID';
 
 
@@ -27,6 +30,15 @@ function RequireAdmin({ children }) {
   const location = useLocation();
   if (!isAdmin) {
     return <Navigate to="/admin-login" state={{ from: location.pathname }} replace />;
+  }
+  return children;
+}
+
+function RequireAuth({ children }) {
+  const { isAuthenticated } = useUserAuth();
+  const location = useLocation();
+  if (!isAuthenticated) {
+    return <Navigate to="/signin" state={{ from: location.pathname }} replace />;
   }
   return children;
 }
@@ -46,9 +58,29 @@ function AppContent() {
           <Route path="/explore-places/:id" element={<PlaceDetailView />} />
           <Route path="/book-hotels" element={<BookHotels />} />
           <Route path="/book-hotels/:id" element={<HotelDetailView />} />
-          <Route path="/admin/digital-id" element={<AdminDigitalID />} />
+          <Route path="/admin/digital-id" element={
+            <RequireAdmin>
+              <AdminDigitalID />
+            </RequireAdmin>
+          } />
           <Route path="/digital-id" element={<DigitalID />} />
           <Route path="/verification" element={<Verification />} />
+          
+          {/* Authentication Routes */}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          
+          {/* Protected User Routes */}
+          <Route path="/complete-profile" element={
+            <RequireAuth>
+              <CompleteProfile />
+            </RequireAuth>
+          } />
+          <Route path="/user-dashboard" element={
+            <RequireAuth>
+              <UserDashboard />
+            </RequireAuth>
+          } />
           <Route path="/admin" element={
             <RequireAdmin>
               <Admin />
@@ -66,11 +98,13 @@ function AppContent() {
 function App() {
   return (
     <Router basename='/safevoyage-web-app'>
-      <AdminAuthProvider>
-        <ModalProvider>
-          <AppContent />
-        </ModalProvider>
-      </AdminAuthProvider>
+      <UserAuthProvider>
+        <AdminAuthProvider>
+          <ModalProvider>
+            <AppContent />
+          </ModalProvider>
+        </AdminAuthProvider>
+      </UserAuthProvider>
     </Router>
   );
 }
