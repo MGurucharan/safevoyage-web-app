@@ -51,7 +51,7 @@ const ExplorePlaces = () => {
 
   return (
     <div
-      className="relative font-sans min-h-screen overflow-x-hidden"
+      className="relative min-h-screen overflow-x-hidden"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: 'cover',

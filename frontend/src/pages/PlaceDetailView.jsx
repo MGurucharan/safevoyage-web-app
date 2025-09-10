@@ -93,9 +93,9 @@ const PlaceDetailView = () => {
         {/* Header with Back Button */}
         <div className="bg-gray-900/50 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <button
+             <button
               onClick={() => navigate("/explore-places")}
-              className="flex items-center text-white hover:text-blue-400 transition-colors duration-200"
+              className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200"
             >
               <ArrowLeft className="h-5 w-5 mr-2" />
               Back to Explore Places

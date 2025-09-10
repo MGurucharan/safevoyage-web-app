@@ -11,6 +11,10 @@ console.log('📦 Importing digital ID routes...');
 import digitalIDRoutes from './routes/digitalIDRoutes.js';
 console.log('✅ Digital ID routes imported successfully');
 
+console.log('📦 Importing auth routes...');
+import authRoutes from './routes/authRoutes.js';
+console.log('✅ Auth routes imported successfully');
+
 const app = express();
 console.log('🌐 Express app created');
 
@@ -20,6 +24,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/digital-id', digitalIDRoutes);
+app.use('/api/auth', authRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -38,7 +43,12 @@ app.get('/', (req, res) => {
         endpoints: [
             'GET /health',
             'POST /api/digital-id/generate',
-            'POST /api/digital-id/verify'
+            'POST /api/digital-id/verify',
+            'POST /api/auth/signup',
+            'POST /api/auth/signin',
+            'POST /api/auth/profile/:userId',
+            'GET /api/auth/profile/user/:userID',
+            'GET /api/auth/profile/:userId'
         ]
     });
 });

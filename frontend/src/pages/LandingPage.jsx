@@ -144,7 +144,7 @@ const LandingPage = () => {
 
     return (
         <div
-            className="relative font-sans overflow-x-hidden"
+            className="relative overflow-x-hidden"
             style={{
                 backgroundImage: `url(${backgroundImageUrl})`,
                 backgroundSize: 'cover',
@@ -155,7 +155,7 @@ const LandingPage = () => {
             <div className="absolute inset-0 bg-black/50"></div> {/* Dark overlay for better readability */}
             
             {/* Hero Section */}
-            <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-40">
+            <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center">
                         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tighter">
