@@ -92,7 +92,7 @@ const DigitalID = () => {
   if (showSuccess) {
     return (
       <div
-        className="relative font-sans min-h-screen overflow-x-hidden flex items-center justify-center px-4"
+        className="relative min-h-screen overflow-x-hidden flex items-center justify-center px-4"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
           backgroundSize: 'cover',
@@ -139,7 +139,7 @@ const DigitalID = () => {
   if (hasDigitalID) {
     return (
       <div
-        className="relative font-sans min-h-screen overflow-x-hidden py-12 px-4 sm:px-6 lg:px-8"
+        className="relative min-h-screen overflow-x-hidden py-12 px-4 sm:px-6 lg:px-8"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
           backgroundSize: 'cover',
