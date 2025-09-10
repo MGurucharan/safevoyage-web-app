@@ -9,6 +9,7 @@ const DigitalID = () => {
   const [qrCode, setQrCode] = useState(null);
   const [digitalIDQrCode, setDigitalIDQrCode] = useState(null); // Store QR code for the digital ID card
   const [error, setError] = useState(null);
+  const backgroundImageUrl = 'https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=';
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -266,15 +267,25 @@ const DigitalID = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Get Your Digital ID</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Create a secure, blockchain-verified digital identity for safe tourism. 
-            Complete KYC verification with your Aadhaar for instant approval.
-          </p>
-        </div>
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden"
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-3xl font-bold text-white mb-4">Get Your Digital ID</h1>
+            <p className="text-gray-200 max-w-2xl mx-auto">
+              Create a secure, blockchain-verified digital identity for safe tourism. 
+              Complete KYC verification with your Aadhaar for instant approval.
+            </p>
+          </div>
 
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
@@ -480,6 +491,7 @@ const DigitalID = () => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

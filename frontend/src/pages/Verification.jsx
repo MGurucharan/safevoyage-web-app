@@ -67,20 +67,32 @@ const Verification = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 p-4 rounded-xl">
-              <CheckCircle className="h-12 w-12 text-white" />
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden"
+      style={{
+        backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 p-4 rounded-xl">
+                <CheckCircle className="h-12 w-12 text-white" />
+              </div>
             </div>
+            <h1 className="text-3xl font-bold text-blue-100 mb-4 drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.7)]">
+              Digital ID Verification
+            </h1>
+            <p className="text-blue-100 max-w-2xl mx-auto drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.7)]">
+              Verify the authenticity of SafeVoyage Digital IDs using blockchain technology
+            </p>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Digital ID Verification</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Verify the authenticity of SafeVoyage Digital IDs using blockchain technology
-          </p>
-        </div>
 
         {/* Main Content */}
         {!showScanner && !verificationResult && !error && (
@@ -377,6 +389,7 @@ const Verification = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

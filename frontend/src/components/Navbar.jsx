@@ -62,7 +62,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white/80 backdrop-blur-lg border-b border-gray-200 relative z-10">
+  <nav className="bg-gradient-to-r from-gray-900 via-black to-purple-950 backdrop-blur-3xl border-b border-purple-950/60 relative z-10 shadow-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -74,22 +74,22 @@ const Navbar = () => {
                   navigate('/');
                 }
               }}
-              className="flex items-center space-x-2 group cursor-pointer"
+                className="flex items-center space-x-2 group cursor-pointer"
             >
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg group-hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-r from-blue-400 to-purple-500 p-2 rounded-lg group-hover:scale-105 transition-transform">
                 <Shield className="h-6 w-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 SafeVoyage
               </span>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+              <div className="hidden md:flex items-center space-x-8">
               {isAdmin && (
                 <button
                   onClick={() => handleLogout()}
-                  className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50 transition-colors"
+                    className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-red-400 hover:bg-red-900/20 transition-colors"
                 >
                   <LogOut className="h-4 w-4" />
                   <span>Logout</span>
@@ -106,11 +106,11 @@ const Navbar = () => {
                         navigate('/admin-login', { state: { from: link.path } });
                       }
                     }}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(link.path)
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
-                    }`}
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive(link.path)
+                          ? 'bg-gradient-to-r from-blue-400 to-purple-500 text-white'
+                          : 'text-gray-200 hover:text-blue-300 hover:bg-white/10'
+                      }`}
                   >
                     {link.name}
                   </button>
@@ -124,11 +124,11 @@ const Navbar = () => {
                         navigate(link.path);
                       }
                     }}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(link.path)
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
-                    }`}
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive(link.path)
+                          ? 'bg-gradient-to-r from-blue-400 to-purple-500 text-white'
+                          : 'text-gray-200 hover:text-blue-300 hover:bg-white/10'
+                      }`}
                   >
                     {link.name}
                   </button>
@@ -140,7 +140,7 @@ const Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                  className="p-2 rounded-md text-gray-200 hover:text-white hover:bg-white/10"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -150,7 +150,7 @@ const Navbar = () => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 border-t border-white/10">
                 {visibleNavLinks.map((link) => (
                   link.admin ? (
                     <button
@@ -163,11 +163,11 @@ const Navbar = () => {
                           navigate('/admin-login', { state: { from: link.path } });
                         }
                       }}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        isActive(link.path)
-                          ? 'bg-blue-100 text-blue-700'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
-                      }`}
+                        className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                          isActive(link.path)
+                            ? 'bg-gradient-to-r from-blue-400 to-purple-500 text-white'
+                            : 'text-gray-200 hover:text-blue-300 hover:bg-white/10'
+                        }`}
                     >
                       {link.name}
                     </button>
@@ -182,11 +182,11 @@ const Navbar = () => {
                           navigate(link.path);
                         }
                       }}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        isActive(link.path)
-                          ? 'bg-blue-100 text-blue-700'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
-                      }`}
+                        className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                          isActive(link.path)
+                            ? 'bg-gradient-to-r from-blue-400 to-purple-500 text-white'
+                            : 'text-gray-200 hover:text-blue-300 hover:bg-white/10'
+                        }`}
                     >
                       {link.name}
                     </button>
