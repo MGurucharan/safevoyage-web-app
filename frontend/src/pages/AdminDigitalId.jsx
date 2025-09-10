@@ -101,140 +101,100 @@ const AdminDigitalID = () => {
     setUserProfile(null);
   };
 
-    // Apply landing page background and overlay
-    return (
-      <div
-        className="relative font-sans min-h-screen overflow-x-hidden flex items-center justify-center"
-        style={{
-          backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 w-full max-w-md px-4">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-100 flex flex-col items-center">
-            <h1 className="text-2xl font-bold mb-8">Admin Digital ID Options</h1>
-
-            {!showScanner && !verificationResult && (
-              <div className="space-x-4">
+  return (
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden flex items-center justify-center p-4"
+      style={{
+        backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 w-full max-w-2xl">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-100 flex flex-col items-center">
+          <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
+            Admin Digital ID Management
+          </h1>
+          
+          {!showScanner && !showUserIDInput && !verificationResult && !error && (
+            <div className="text-center space-y-6 w-full">
+              <p className="text-gray-600 mb-8">
+                Choose an option to manage Digital IDs
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg"
+                  className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center flex-1"
+                  onClick={() => setShowUserIDInput(true)}
+                >
+                  <span className="mr-2">🆔</span>
+                  Issue ID with User ID
+                </button>
+                <button
+                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center flex-1"
                   onClick={() => navigate('/digital-id')}
                 >
-                  Issue ID
+                  <span className="mr-2">📄</span>
+                  Issue New ID (Manual)
                 </button>
                 <button
-                  className="px-6 py-3 bg-green-600 text-white rounded-lg"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center flex-1"
                   onClick={() => setShowScanner(true)}
                 >
+                  <span className="mr-2">🔍</span>
                   Verify ID
                 </button>
-  return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
-          Admin Digital ID Management
-        </h1>
-        
-        {!showScanner && !showUserIDInput && !verificationResult && !error && (
-          <div className="text-center space-y-6">
-            <p className="text-gray-600 mb-8">
-              Choose an option to manage Digital IDs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                onClick={() => setShowUserIDInput(true)}
-              >
-                <span className="mr-2">🆔</span>
-                Issue ID with User ID
-              </button>
-              <button
-                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                onClick={() => navigate('/digital-id')}
-              >
-                <span className="mr-2">📄</span>
-                Issue New ID (Manual)
-              </button>
-              <button
-                className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                onClick={() => setShowScanner(true)}
-              >
-                <span className="mr-2">🔍</span>
-                Verify ID
-              </button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {showUserIDInput && (
-          <div className="text-center">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">
-              Enter User ID to Issue Digital ID
-            </h2>
-            <form onSubmit={handleUserIDSubmit} className="max-w-md mx-auto">
-              <div className="mb-4">
-                <input
-                  type="text"
-                  value={userID}
-                  onChange={(e) => setUserID(e.target.value)}
-                  placeholder="Enter User ID (e.g., SV-2025-123456)"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  disabled={loading}
-                />
-              </div>
-              <div className="flex gap-3 justify-center">
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="px-6 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white rounded-lg font-semibold transition-colors duration-200"
-                >
-                  {loading ? 'Fetching...' : 'Fetch Profile & Issue ID'}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowUserIDInput(false);
-                    setUserID('');
-                    setError(null);
-                  }}
-                  className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold transition-colors duration-200"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
-
-        {showScanner && (
-          <div className="text-center">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">
-              Scan QR Code to Verify Digital ID
-            </h2>
-            <div className="max-w-md mx-auto bg-black rounded-lg overflow-hidden">
-              <Scanner
-                onScan={handleScan}
-                onError={handleError}
-                constraints={{ 
-                  facingMode: 'environment'
-                }}
-                classNames={{
-                  container: 'w-full'
-                }}
-              />
+          {showUserIDInput && (
+            <div className="text-center w-full">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                Enter User ID to Issue Digital ID
+              </h2>
+              <form onSubmit={handleUserIDSubmit} className="max-w-md mx-auto">
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    value={userID}
+                    onChange={(e) => setUserID(e.target.value)}
+                    placeholder="Enter User ID (e.g., SV-2025-123456)"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    disabled={loading}
+                  />
+                </div>
+                <div className="flex gap-3 justify-center">
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="px-6 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white rounded-lg font-semibold transition-colors duration-200"
+                  >
+                    {loading ? 'Fetching...' : 'Fetch Profile & Issue ID'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowUserIDInput(false);
+                      setUserID('');
+                      setError(null);
+                    }}
+                    className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold transition-colors duration-200"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
             </div>
-            {loading && (
-              <div className="mt-4 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                <span className="ml-2 text-gray-600">Verifying...</span>
-              </div>
-            )}
+          )}
 
-            {showScanner && (
-              <div className="w-full max-w-md">
+          {showScanner && (
+            <div className="text-center w-full">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                Scan QR Code to Verify Digital ID
+              </h2>
+              <div className="max-w-md mx-auto bg-black rounded-lg overflow-hidden relative">
                 <Scanner
                   onScan={handleScan}
                   onError={handleError}
@@ -245,37 +205,52 @@ const AdminDigitalID = () => {
                     container: 'w-full'
                   }}
                 />
+              </div>
+              {loading && (
+                <div className="mt-4 flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                  <span className="ml-2 text-gray-600">Verifying...</span>
+                </div>
+              )}
+              <button
+                className="mt-4 px-6 py-3 bg-red-600 text-white rounded-lg max-w-md mx-auto w-full block"
+                onClick={() => setShowScanner(false)}
+              >
+                Cancel Scanning
+              </button>
+            </div>
+          )}
+
+          {error && (
+            <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-lg w-full text-center">
+              {error}
+              <div className="mt-4">
                 <button
-                  className="mt-4 px-6 py-3 bg-red-600 text-white rounded-lg w-full"
-                  onClick={() => setShowScanner(false)}
+                  className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold transition-colors duration-200"
+                  onClick={() => setError(null)}
                 >
-                  Cancel Scanning
+                  Go Back
                 </button>
               </div>
-            )}
+            </div>
+          )}
 
-            {error && (
-              <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-lg w-full text-center">
-                {error}
-              </div>
-            )}
-
-            {verificationResult && (
-              <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-lg w-full text-center">
-                <h2 className="font-bold mb-2">Verification Result:</h2>
-                <pre>{JSON.stringify(verificationResult, null, 2)}</pre>
-                <button
-                  className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg"
-                  onClick={() => setVerificationResult(null)}
-                >
-                  Verify Another
-                </button>
-              </div>
-            )}
-          </div>
+          {verificationResult && (
+            <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-lg w-full text-center">
+              <h2 className="font-bold mb-2">Verification Result:</h2>
+              <pre className="text-left overflow-x-auto text-sm">{JSON.stringify(verificationResult, null, 2)}</pre>
+              <button
+                className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg"
+                onClick={() => setVerificationResult(null)}
+              >
+                Verify Another
+              </button>
+            </div>
+          )}
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default AdminDigitalID;

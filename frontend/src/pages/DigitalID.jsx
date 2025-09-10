@@ -91,10 +91,26 @@ const DigitalID = () => {
 
   if (showSuccess) {
     return (
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-500 flex items-center justify-center px-4">
         <div className="bg-white rounded-3xl p-12 max-w-md w-full text-center shadow-2xl">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="h-10 w-10 text-green-600" />
+=======
+      <div
+        className="relative min-h-screen overflow-x-hidden flex items-center justify-center px-4"
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-12 max-w-md w-full text-center shadow-2xl">
+          <div className="w-20 h-20 bg-green-400/20 backdrop-blur-sm border border-green-400/30 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="h-10 w-10 text-green-400" />
+>>>>>>> 0264982e (minor fixes-1)
           </div>
           <h2 className="text-2xl font-bold text-white mb-4">ID Generated Successfully!</h2>
           <p className="text-gray-300 mb-6">
@@ -129,8 +145,22 @@ const DigitalID = () => {
 
   if (hasDigitalID) {
     return (
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-500 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
+=======
+      <div
+        className="relative min-h-screen overflow-x-hidden py-12 px-4 sm:px-6 lg:px-8"
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 max-w-4xl mx-auto">
+>>>>>>> 0264982e (minor fixes-1)
           <div className="text-center mb-12">
             <h1 className="text-3xl font-bold text-white mb-4">Your Digital ID</h1>
             <p className="text-gray-300">Blockchain-verified tourist identification</p>
