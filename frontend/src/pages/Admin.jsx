@@ -58,6 +58,8 @@ const Admin = () => {
                 <button
                   onClick={() => navigate('/digital-id')}
                   className="w-full bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-4 rounded-lg transition-colors font-medium"
+                  onClick={() => navigate('/admin/digital-id')}
+                  className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                 >
                   Issue Digital ID
                 </button>
