@@ -82,33 +82,42 @@ const DigitalID = () => {
 
   if (showSuccess) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-        <div className="bg-white rounded-3xl p-12 max-w-md w-full text-center shadow-2xl">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="h-10 w-10 text-green-600" />
+      <div
+        className="relative font-sans min-h-screen overflow-x-hidden flex items-center justify-center px-4"
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-12 max-w-md w-full text-center shadow-2xl">
+          <div className="w-20 h-20 bg-green-400/20 backdrop-blur-sm border border-green-400/30 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="h-10 w-10 text-green-400" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">ID Generated Successfully!</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-2xl font-bold text-white mb-4">ID Generated Successfully!</h2>
+          <p className="text-gray-300 mb-6">
             Your digital ID has been created and is now active. You can use it for secure tourist verification.
           </p>
           
           {qrCode && (
             <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-2">Your Digital ID QR Code:</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Your Digital ID QR Code:</h3>
               <div className="flex justify-center">
                 <img 
                   src={qrCode} 
                   alt="Digital ID QR Code"
-                  className="border-2 border-gray-300 p-2 rounded-lg shadow-md max-w-48 max-h-48"
+                  className="border-2 border-white/20 p-2 rounded-lg shadow-md max-w-48 max-h-48 bg-white"
                 />
               </div>
-              <p className="text-sm text-gray-500 mt-2">
+              <p className="text-sm text-gray-400 mt-2">
                 Scan this QR code for verification
               </p>
             </div>
           )}
           
-          <div className="space-y-2 text-sm text-gray-500">`
+          <div className="space-y-2 text-sm text-gray-300">`
             <p>✓ Blockchain verification complete</p>
             <p>✓ KYC validation successful</p>
             <p>✓ Digital signature applied</p>
@@ -120,14 +129,23 @@ const DigitalID = () => {
 
   if (hasDigitalID) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+      <div
+        className="relative font-sans min-h-screen overflow-x-hidden py-12 px-4 sm:px-6 lg:px-8"
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Your Digital ID</h1>
-            <p className="text-gray-600">Blockchain-verified tourist identification</p>
+            <h1 className="text-3xl font-bold text-white mb-4">Your Digital ID</h1>
+            <p className="text-gray-300">Blockchain-verified tourist identification</p>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white shadow-2xl max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl p-8 text-white shadow-2xl max-w-2xl mx-auto">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center space-x-3">
                 <CreditCard className="h-8 w-8" />
@@ -222,12 +240,12 @@ const DigitalID = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-3xl mx-auto">
-            <button className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <FileText className="h-5 w-5 text-blue-600" />
+            <button className="flex items-center justify-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-white/10 p-4 rounded-xl shadow-lg hover:bg-gray-900/70 transition-all duration-300 text-white">
+              <FileText className="h-5 w-5 text-blue-400" />
               <span className="font-semibold">Download PDF</span>
             </button>
-            <button className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <User className="h-5 w-5 text-green-600" />
+            <button className="flex items-center justify-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-white/10 p-4 rounded-xl shadow-lg hover:bg-gray-900/70 transition-all duration-300 text-white">
+              <User className="h-5 w-5 text-green-400" />
               <span className="font-semibold">Update Profile</span>
             </button>
             <button 
@@ -249,15 +267,15 @@ const DigitalID = () => {
                   `);
                 }
               }}
-              className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              className="flex items-center justify-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-white/10 p-4 rounded-xl shadow-lg hover:bg-gray-900/70 transition-all duration-300 text-white"
             >
-              <svg className="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 16h4.01M7 7h.01M7 11h.01M7 15h.01" />
               </svg>
               <span className="font-semibold">Show QR Code</span>
             </button>
-            <button className="flex items-center justify-center space-x-2 bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <MapPin className="h-5 w-5 text-red-600" />
+            <button className="flex items-center justify-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-white/10 p-4 rounded-xl shadow-lg hover:bg-gray-900/70 transition-all duration-300 text-white">
+              <MapPin className="h-5 w-5 text-red-400" />
               <span className="font-semibold">Share Location</span>
             </button>
           </div>
@@ -287,8 +305,8 @@ const DigitalID = () => {
             </p>
           </div>
 
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">
+        <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl shadow-xl overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-400 to-purple-400 p-8 text-white">
             <div className="flex items-center space-x-3 mb-4">
               <CreditCard className="h-8 w-8" />
               <h2 className="text-2xl font-bold">Digital ID Application</h2>
@@ -301,7 +319,7 @@ const DigitalID = () => {
           <form onSubmit={handleGenerateID} className="p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Full Name *
                 </label>
                 <input
@@ -310,13 +328,13 @@ const DigitalID = () => {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400"
                   placeholder="Enter your full name"
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Email Address *
                 </label>
                 <input
@@ -325,13 +343,13 @@ const DigitalID = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400"
                   placeholder="Enter your email"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Phone Number *
                 </label>
                 <input
@@ -340,13 +358,13 @@ const DigitalID = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Date of Birth *
                 </label>
                 <input
@@ -355,12 +373,12 @@ const DigitalID = () => {
                   value={formData.dateOfBirth}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Nationality *
                 </label>
                 <select
@@ -368,19 +386,19 @@ const DigitalID = () => {
                   value={formData.nationality}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
                 >
-                  <option value="">Select your nationality</option>
-                  <option value="United States">United States</option>
-                  <option value="Canada">Canada</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="India">India</option>
-                  <option value="Australia">Australia</option>
+                  <option value="" className="bg-gray-800">Select your nationality</option>
+                  <option value="United States" className="bg-gray-800">United States</option>
+                  <option value="Canada" className="bg-gray-800">Canada</option>
+                  <option value="United Kingdom" className="bg-gray-800">United Kingdom</option>
+                  <option value="India" className="bg-gray-800">India</option>
+                  <option value="Australia" className="bg-gray-800">Australia</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Passport Number *
                 </label>
                 <input
@@ -389,13 +407,13 @@ const DigitalID = () => {
                   value={formData.passportNumber}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400"
                   placeholder="Enter passport number"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Aadhaar Number *
                 </label>
                 <input
@@ -404,13 +422,13 @@ const DigitalID = () => {
                   value={formData.aadhaarNumber}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400"
                   placeholder="XXXX-XXXX-XXXX"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-white mb-2">
                   Current Address *
                 </label>
                 <textarea
@@ -419,37 +437,37 @@ const DigitalID = () => {
                   onChange={handleInputChange}
                   required
                   rows="3"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400"
                   placeholder="Enter your current address"
                 ></textarea>
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 mb-8">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                <Upload className="h-5 w-5 mr-2 text-blue-600" />
+            <div className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl p-6 mb-8">
+              <h3 className="font-semibold text-white mb-4 flex items-center">
+                <Upload className="h-5 w-5 mr-2 text-blue-400" />
                 Document Upload
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-blue-400 transition-colors cursor-pointer">
+                <div className="border-2 border-dashed border-white/30 rounded-xl p-6 text-center hover:border-blue-400 transition-colors cursor-pointer">
                   <FileText className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                  <p className="text-sm font-medium text-gray-700">Upload Passport Copy</p>
-                  <p className="text-xs text-gray-500 mt-1">PDF, JPG, PNG (Max 5MB)</p>
+                  <p className="text-sm font-medium text-white">Upload Passport Copy</p>
+                  <p className="text-xs text-gray-400 mt-1">PDF, JPG, PNG (Max 5MB)</p>
                 </div>
-                <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-blue-400 transition-colors cursor-pointer">
+                <div className="border-2 border-dashed border-white/30 rounded-xl p-6 text-center hover:border-blue-400 transition-colors cursor-pointer">
                   <FileText className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                  <p className="text-sm font-medium text-gray-700">Upload Aadhaar Copy</p>
-                  <p className="text-xs text-gray-500 mt-1">PDF, JPG, PNG (Max 5MB)</p>
+                  <p className="text-sm font-medium text-white">Upload Aadhaar Copy</p>
+                  <p className="text-xs text-gray-400 mt-1">PDF, JPG, PNG (Max 5MB)</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-xl p-6 mb-8">
+            <div className="bg-blue-400/10 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 mb-8">
               <div className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-blue-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-blue-900 mb-2">Verification Benefits</h4>
-                  <ul className="text-sm text-blue-800 space-y-1">
+                  <h4 className="font-semibold text-white mb-2">Verification Benefits</h4>
+                  <ul className="text-sm text-gray-300 space-y-1">
                     <li>• Instant emergency response activation</li>
                     <li>• Real-time location sharing with authorities</li>
                     <li>• Multi-lingual support and assistance</li>
@@ -460,7 +478,7 @@ const DigitalID = () => {
             </div>
 
             {error && (
-              <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg border border-red-300">
+              <div className="mb-4 p-4 bg-red-500/20 backdrop-blur-sm border border-red-400/30 text-red-300 rounded-lg">
                 <p className="text-sm font-medium">Error generating Digital ID:</p>
                 <p className="text-sm">{error}</p>
               </div>
@@ -469,7 +487,7 @@ const DigitalID = () => {
             <button
               type="submit"
               disabled={isGenerating}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              className="w-full bg-gradient-to-r from-blue-400 to-purple-400 text-white font-semibold py-4 px-6 rounded-xl hover:from-blue-500 hover:to-purple-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
             >
               {isGenerating ? (
                 <div className="flex items-center justify-center space-x-2">
@@ -484,7 +502,7 @@ const DigitalID = () => {
               )}
             </button>
 
-            <p className="text-center text-sm text-gray-500 mt-4">
+            <p className="text-center text-sm text-gray-300 mt-4">
               By generating your Digital ID, you agree to our terms of service and privacy policy.
               Your data is protected by blockchain encryption.
             </p>
