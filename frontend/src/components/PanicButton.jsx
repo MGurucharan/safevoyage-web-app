@@ -39,22 +39,22 @@ const PanicButton = () => {
       {/* Emergency Confirmation Modal */}
       {showConfirmation && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-10 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center animate-scale-in">
-            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Phone className="h-8 w-8 text-red-600 animate-bounce" />
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-md w-full mx-4 text-center animate-scale-in">
+            <div className="w-16 h-16 bg-red-400/20 backdrop-blur-sm border border-red-400/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone className="h-8 w-8 text-red-300 animate-bounce" />
             </div>
-            <h3 className="text-2xl font-bold text-red-600 mb-2">Emergency Alert Sent!</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-2xl font-bold text-red-300 mb-2">Emergency Alert Sent!</h3>
+            <p className="text-gray-300 mb-6">
               Your location and emergency details have been sent to local authorities and emergency contacts.
             </p>
-            <div className="space-y-2 text-sm text-gray-500">
+            <div className="space-y-2 text-sm text-gray-400">
               <p>✓ GPS coordinates shared</p>
-              <p>✓ Emergency services notified</p>
+              <p>✓ Emergency services notified</p> 
               <p>✓ Contacts alerted</p>
             </div>
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-              <p className="text-blue-800 font-medium">Help is on the way!</p>
-              <p className="text-blue-600 text-sm">Stay calm and stay where you are if safe.</p>
+            <div className="mt-6 p-4 bg-blue-400/20 backdrop-blur-sm border border-blue-400/30 rounded-lg">
+              <p className="text-blue-300 font-medium">Help is on the way!</p>
+              <p className="text-blue-200 text-sm">Stay calm and stay where you are if safe.</p>
             </div>
           </div>
         </div>

@@ -86,61 +86,88 @@ const BookHotels = () => {
         </section>
 
         {/* Category Filter Section */}
-        <section className="py-8 bg-white border-b border-gray-200">
+        <section className="py-12 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 tracking-tight">
+                Explore by Hotel Category
+              </h2>
+              <p className="text-lg text-transparent bg-clip-text bg-gradient-to-t from-gray-400 to-gray-100 max-w-2xl mx-auto">
+                Choose your hotel preference and discover amazing stays
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6">
               <button
                 onClick={() => handleCategoryChange('all')}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:-translate-y-1 ${
                   selectedCategory === 'all'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-2xl scale-105'
+                    : 'bg-gray-900/50 backdrop-blur-sm border border-white/10 text-white hover:border-white/20 hover:shadow-xl'
                 }`}
               >
-                All Hotels
+                <div className="flex items-center space-x-2">
+                  <span>All Hotels</span>
+                </div>
+                {selectedCategory === 'all' && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+                )}
               </button>
               <button
                 onClick={() => handleCategoryChange('local')}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:-translate-y-1 ${
                   selectedCategory === 'local'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-2xl scale-105'
+                    : 'bg-gray-900/50 backdrop-blur-sm border border-white/10 text-white hover:border-white/20 hover:shadow-xl'
                 }`}
               >
-                Local Hotels
+                <div className="flex items-center space-x-2">
+                  <span>Local Hotels</span>
+                </div>
+                {selectedCategory === 'local' && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+                )}
               </button>
               <button
                 onClick={() => handleCategoryChange('international')}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:-translate-y-1 ${
                   selectedCategory === 'international'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-2xl scale-105'
+                    : 'bg-gray-900/50 backdrop-blur-sm border border-white/10 text-white hover:border-white/20 hover:shadow-xl'
                 }`}
               >
-                International Hotels
+                <div className="flex items-center space-x-2">
+                  <span>International Hotels</span>
+                </div>
+                {selectedCategory === 'international' && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+                )}
               </button>
             </div>
           </div>
         </section>
 
         {/* Hotels Grid Section */}
-        <section className="py-12">
+        <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {filteredHotels.length === 0 ? (
-              <div className="text-center py-16">
-                <h3 className="text-2xl font-bold text-blue-100 mb-4" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>No hotels found</h3>
-                <p className="text-gray-600">Try adjusting your search criteria or category filter.</p>
+              <div className="text-center py-20">
+                <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-12 max-w-md mx-auto">
+                  <h3 className="text-3xl font-bold text-white mb-4">No hotels found</h3>
+                  <p className="text-transparent bg-clip-text bg-gradient-to-t from-gray-400 to-gray-100">
+                    Try adjusting your search criteria or category filter.
+                  </p>
+                </div>
               </div>
             ) : (
               <>
-                <div className="flex justify-between items-center mb-8">
-                  <h2 className="text-3xl font-bold text-blue-100" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 tracking-tight">
                     {selectedCategory === 'all' ? 'All Hotels' : 
                      selectedCategory === 'local' ? 'Local Hotels' : 'International Hotels'}
                   </h2>
-                  <span className="text-gray-600">
-                    {filteredHotels.length} hotel{filteredHotels.length !== 1 ? 's' : ''} found
-                  </span>
+                  <p className="text-lg text-transparent bg-clip-text bg-gradient-to-t from-gray-400 to-gray-100">
+                    {filteredHotels.length} amazing hotel{filteredHotels.length !== 1 ? 's' : ''} waiting for you
+                  </p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
