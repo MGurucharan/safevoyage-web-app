@@ -56,7 +56,7 @@ const Admin = () => {
                   Generate secure, blockchain-verified digital IDs for tourists with KYC validation and real-time verification capabilities.
                 </p>
                 <button
-                  onClick={() => navigate('/digital-id')}
+                  onClick={() => navigate('/admin/digital-id')}
                   className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                 >
                   Issue Digital ID

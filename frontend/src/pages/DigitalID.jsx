@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { CreditCard, User, FileText, CheckCircle, Upload, Calendar, MapPin } from 'lucide-react';
 import digitalIDService from '../services/digitalIDService';
 
 const DigitalID = () => {
+  const location = useLocation();
   const [hasDigitalID, setHasDigitalID] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -20,6 +22,13 @@ const DigitalID = () => {
     aadhaarNumber: '',
     address: ''
   });
+
+  // Pre-fill form data if coming from admin with user profile
+  useEffect(() => {
+    if (location.state?.prefillData) {
+      setFormData(location.state.prefillData);
+    }
+  }, [location.state]);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -296,6 +305,18 @@ const DigitalID = () => {
             <p className="text-blue-100">
               Fill out the form below to generate your secure digital tourist ID
             </p>
+            
+            {/* Show pre-fill indicator if data was provided by admin */}
+            {location.state?.prefillData && (
+              <div className="mt-4 bg-green-500/20 border border-green-400/50 rounded-lg p-3">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-300" />
+                  <span className="text-green-200 font-medium">
+                    Form pre-filled with user profile data
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
 
           <form onSubmit={handleGenerateID} className="p-8">
@@ -371,11 +392,29 @@ const DigitalID = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="">Select your nationality</option>
-                  <option value="United States">United States</option>
-                  <option value="Canada">Canada</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="India">India</option>
+                  <option value="Afghanistan">Afghanistan</option>
                   <option value="Australia">Australia</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Canada">Canada</option>
+                  <option value="China">China</option>
+                  <option value="France">France</option>
+                  <option value="Germany">Germany</option>
+                  <option value="India">India</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Russia">Russia</option>
+                  <option value="South Korea">South Korea</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="United States">United States</option>
+                  {/* If the pre-filled nationality isn't in the above list, add it as an option */}
+                  {formData.nationality && 
+                   !['', 'Afghanistan', 'Australia', 'Bangladesh', 'Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Indian', 'Japan', 'Nepal', 'Pakistan', 'Russia', 'South Korea', 'Sri Lanka', 'United Kingdom', 'United States'].includes(formData.nationality) && (
+                    <option value={formData.nationality}>{formData.nationality}</option>
+                  )}
                 </select>
               </div>
 
