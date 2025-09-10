@@ -28,13 +28,13 @@ const Dashboard = () => {
   ];
 
   const StatCard = ({ icon, title, value, change, color }) => (
-    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:bg-gray-900/70 transition-all duration-300">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm font-medium text-gray-600">{title}</p>
-          <p className="text-3xl font-bold text-gray-900 mt-1">{value}</p>
+          <p className="text-sm font-medium text-gray-300">{title}</p>
+          <p className="text-3xl font-bold text-white mt-1">{value}</p>
           {change && (
-            <p className={`text-sm mt-1 ${change > 0 ? 'text-green-600' : 'text-red-600'}`}>
+            <p className={`text-sm mt-1 ${change > 0 ? 'text-green-400' : 'text-red-400'}`}>
               {change > 0 ? '+' : ''}{change}% from yesterday
             </p>
           )}
@@ -102,31 +102,38 @@ const Dashboard = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* SOS Triggers Chart */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold text-gray-900">SOS Triggers Overtime</h2>
+              <h2 className="text-xl font-bold text-white">SOS Triggers Overtime</h2>
               <TrendingUp className="h-5 w-5 text-gray-400" />
             </div>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={sosData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="time" />
-                <YAxis />
-                <Tooltip />
+                <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                <XAxis dataKey="time" stroke="#9CA3AF" />
+                <YAxis stroke="#9CA3AF" />
+                <Tooltip 
+                  contentStyle={{
+                    backgroundColor: '#1F2937',
+                    border: '1px solid #374151',
+                    borderRadius: '8px',
+                    color: '#F3F4F6'
+                  }}
+                />
                 <Line 
                   type="monotone" 
                   dataKey="count" 
-                  stroke="#3B82F6" 
+                  stroke="#60A5FA" 
                   strokeWidth={3}
-                  dot={{ fill: '#3B82F6' }}
+                  dot={{ fill: '#60A5FA' }}
                 />
               </LineChart>
             </ResponsiveContainer>
           </div>
 
           {/* Risk Zone Distribution */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Risk Zone Distribution</h2>
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg">
+            <h2 className="text-xl font-bold text-white mb-6">Risk Zone Distribution</h2>
             <div className="flex items-center justify-between">
               <div className="w-1/2">
                 <ResponsiveContainer width="100%" height={200}>
@@ -142,7 +149,14 @@ const Dashboard = () => {
                         <Cell key={`cell-${index}`} fill={entry.color} />
                       ))}
                     </Pie>
-                    <Tooltip />
+                    <Tooltip 
+                      contentStyle={{
+                        backgroundColor: '#1F2937',
+                        border: '1px solid #374151',
+                        borderRadius: '8px',
+                        color: '#F3F4F6'
+                      }}
+                    />
                   </PieChart>
                 </ResponsiveContainer>
               </div>
@@ -154,8 +168,8 @@ const Dashboard = () => {
                       style={{ backgroundColor: item.color }}
                     ></div>
                     <div>
-                      <p className="font-semibold text-gray-900">{item.name}</p>
-                      <p className="text-sm text-gray-600">{item.value}%</p>
+                      <p className="font-semibold text-white">{item.name}</p>
+                      <p className="text-sm text-gray-300">{item.value}%</p>
                     </div>
                   </div>
                 ))}
@@ -166,38 +180,38 @@ const Dashboard = () => {
 
         {/* Heat Map and Tourist Clusters */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Heat Map - High Risk Zones</h2>
-            <div className="bg-gradient-to-br from-red-100 to-orange-100 rounded-xl p-8 text-center">
-              <MapPin className="h-16 w-16 text-red-500 mx-auto mb-4" />
-              <p className="text-gray-700 font-medium">Interactive Heat Map</p>
-              <p className="text-sm text-gray-600 mt-2">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg">
+            <h2 className="text-xl font-bold text-white mb-6">Heat Map - High Risk Zones</h2>
+            <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm border border-red-400/30 rounded-xl p-8 text-center">
+              <MapPin className="h-16 w-16 text-red-400 mx-auto mb-4" />
+              <p className="text-white font-medium">Interactive Heat Map</p>
+              <p className="text-sm text-gray-300 mt-2">
                 Real-time visualization of risk levels across different areas
               </p>
               <div className="mt-4 grid grid-cols-3 gap-2">
-                <div className="bg-green-200 rounded p-2 text-xs">Low Risk</div>
-                <div className="bg-yellow-200 rounded p-2 text-xs">Medium Risk</div>
-                <div className="bg-red-200 rounded p-2 text-xs">High Risk</div>
+                <div className="bg-green-400/20 backdrop-blur-sm border border-green-400/30 rounded p-2 text-xs text-green-300">Low Risk</div>
+                <div className="bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30 rounded p-2 text-xs text-yellow-300">Medium Risk</div>
+                <div className="bg-red-400/20 backdrop-blur-sm border border-red-400/30 rounded p-2 text-xs text-red-300">High Risk</div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tourist Clusters</h2>
-            <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-8 text-center">
-              <Users className="h-16 w-16 text-blue-500 mx-auto mb-4" />
-              <p className="text-gray-700 font-medium">Real-time Visualization</p>
-              <p className="text-sm text-gray-600 mt-2">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg">
+            <h2 className="text-xl font-bold text-white mb-6">Tourist Clusters</h2>
+            <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-400/30 rounded-xl p-8 text-center">
+              <Users className="h-16 w-16 text-blue-400 mx-auto mb-4" />
+              <p className="text-white font-medium">Real-time Visualization</p>
+              <p className="text-sm text-gray-300 mt-2">
                 Live tracking of tourist concentrations and movement patterns
               </p>
               <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
-                <div className="bg-white/50 rounded-lg p-3">
-                  <div className="font-semibold text-blue-600">Times Square</div>
-                  <div className="text-gray-600">2,847 tourists</div>
+                <div className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg p-3">
+                  <div className="font-semibold text-blue-400">Times Square</div>
+                  <div className="text-gray-300">2,847 tourists</div>
                 </div>
-                <div className="bg-white/50 rounded-lg p-3">
-                  <div className="font-semibold text-purple-600">Central Park</div>
-                  <div className="text-gray-600">1,256 tourists</div>
+                <div className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg p-3">
+                  <div className="font-semibold text-purple-400">Central Park</div>
+                  <div className="text-gray-300">1,256 tourists</div>
                 </div>
               </div>
             </div>
@@ -205,31 +219,31 @@ const Dashboard = () => {
         </div>
 
         {/* Live Alerts */}
-        <div className="bg-white rounded-2xl p-6 shadow-lg">
+        <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-gray-900">Live Alerts</h2>
-            <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            <h2 className="text-xl font-bold text-white">Live Alerts</h2>
+            <button className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-lg hover:from-blue-500 hover:to-purple-500 transition-colors">
               <FileText className="h-4 w-4 mr-2" />
               Generate E-FIR
             </button>
           </div>
           <div className="space-y-4">
             {liveAlerts.map((alert) => (
-              <div key={alert.id} className="border border-gray-200 rounded-xl p-4 hover:shadow-md transition-shadow">
+              <div key={alert.id} className="border border-white/20 rounded-xl p-4 hover:bg-black/20 transition-all duration-300 backdrop-blur-sm">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className={`w-3 h-3 rounded-full ${
-                      alert.severity === 'high' ? 'bg-red-500' : 
-                      alert.severity === 'medium' ? 'bg-yellow-500' : 'bg-green-500'
+                      alert.severity === 'high' ? 'bg-red-400' : 
+                      alert.severity === 'medium' ? 'bg-yellow-400' : 'bg-green-400'
                     }`}></div>
                     <div>
-                      <div className="font-semibold text-gray-900">{alert.type}</div>
-                      <div className="text-sm text-gray-600">{alert.location}</div>
+                      <div className="font-semibold text-white">{alert.type}</div>
+                      <div className="text-sm text-gray-300">{alert.location}</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm text-gray-500">{alert.time}</div>
-                    <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                    <div className="text-sm text-gray-400">{alert.time}</div>
+                    <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                       View Details
                     </button>
                   </div>
