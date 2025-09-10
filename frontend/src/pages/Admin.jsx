@@ -23,7 +23,7 @@ const Admin = () => {
   // Apply landing page background and overlay
   return (
     <div
-      className="relative font-sans min-h-screen overflow-x-hidden"
+      className="relative min-h-screen overflow-x-hidden"
       style={{
         backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
         backgroundSize: 'cover',
