@@ -28,18 +28,28 @@ const PlaceDetailView = () => {
   }, [id]);
 
   if (!place) {
+    // Apply landing page background and overlay for not found state
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Place not found
-          </h2>
-          <button
-            onClick={() => navigate("/explore-places")}
-            className="text-blue-600 hover:text-blue-800"
-          >
-            Back to Explore Places
-          </button>
+      <div
+        className="relative font-sans min-h-screen overflow-x-hidden flex items-center justify-center"
+        style={{
+          backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 w-full max-w-md px-4">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-100 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Place not found</h2>
+            <button
+              onClick={() => navigate("/explore-places")}
+              className="text-blue-600 hover:text-blue-800"
+            >
+              Back to Explore Places
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -67,14 +77,21 @@ const PlaceDetailView = () => {
     return "Fair";
   };
 
+  // Apply landing page background and overlay
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden"
+      style={{
+        backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10">
         {/* Header with Back Button */}
-        <div className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <button
               onClick={() => navigate("/explore-places")}
@@ -160,7 +177,7 @@ const PlaceDetailView = () => {
                   </span>
                 </div>
 
-                <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                <h1 className="text-4xl font-bold text-blue-100 mb-2" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>
                   {place.name}
                 </h1>
 
