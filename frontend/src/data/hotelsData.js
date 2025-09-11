@@ -34,7 +34,7 @@ export const mockHotelsData = [
         author: "Priya Mehta",
         rating: 5,
         date: "2024-08-20",
-        comment: "Absolutely amazing experience! The staff was incredibly helpful and the rooms were pristine. The beach access is a huge plus.",
+        comment: "Absolutely amazing experience! The staff was incredibly helpful and the rooms were pristine. The beach access is a huge plus. Felt very safe throughout our stay with excellent security.",
         helpful: 28
       },
       {
@@ -42,7 +42,7 @@ export const mockHotelsData = [
         author: "John Williams",
         rating: 5,
         date: "2024-08-10",
-        comment: "Perfect for honeymoon! Beautiful property with excellent dining options. The spa treatments were heavenly.",
+        comment: "Perfect for honeymoon! Beautiful property with excellent dining options. The spa treatments were heavenly. Hotel security was very professional and made us feel secure.",
         helpful: 22
       },
       {
@@ -50,8 +50,32 @@ export const mockHotelsData = [
         author: "Rajesh Kumar",
         rating: 4,
         date: "2024-07-28",
-        comment: "Great location and facilities. The pool area is beautiful and the breakfast spread is impressive.",
+        comment: "Great location and facilities. The pool area is beautiful and the breakfast spread is impressive. Very clean and well-maintained property.",
         helpful: 19
+      },
+      {
+        id: 4,
+        author: "Sarah Ahmed",
+        rating: 5,
+        date: "2024-08-05",
+        comment: "Excellent safety measures in place. The hotel has 24/7 security guards, CCTV surveillance, and all rooms have electronic locks. The beach area is well-patrolled and safe even during evening walks.",
+        helpful: 35
+      },
+      {
+        id: 5,
+        author: "Dr. Vinod Sharma",
+        rating: 4,
+        date: "2024-07-22",
+        comment: "Very impressed with the cleanliness standards. All staff wear masks, sanitization is done regularly, and the dining areas follow strict hygiene protocols. Medical assistance is available on-site.",
+        helpful: 27
+      },
+      {
+        id: 6,
+        author: "Emily Chen",
+        rating: 5,
+        date: "2024-07-15",
+        comment: "As a solo female traveler, I felt completely safe here. Well-lit pathways, emergency contact numbers in every room, and the staff is very responsive to any safety concerns. The fire safety systems are also clearly marked.",
+        helpful: 41
       }
     ]
   },
@@ -87,7 +111,7 @@ export const mockHotelsData = [
         author: "Anita Singh",
         rating: 5,
         date: "2024-08-25",
-        comment: "Exceptional hospitality and beautiful architecture. The restaurant food is outstanding. Perfect for business trips.",
+        comment: "Exceptional hospitality and beautiful architecture. The restaurant food is outstanding. Perfect for business trips. The hotel has excellent security arrangements and feels very safe.",
         helpful: 31
       },
       {
@@ -95,8 +119,32 @@ export const mockHotelsData = [
         author: "Michael Brown",
         rating: 4,
         date: "2024-08-15",
-        comment: "Great location in the city center. Easy access to major attractions. The rooms are spacious and well-appointed.",
+        comment: "Great location in the city center. Easy access to major attractions. The rooms are spacious and well-appointed. Good security presence at all times.",
         helpful: 24
+      },
+      {
+        id: 3,
+        author: "Deepika Patel",
+        rating: 5,
+        date: "2024-08-12",
+        comment: "Outstanding safety protocols! The hotel follows strict sanitization procedures, has thermal screening at entrance, and maintains social distancing in all common areas. Room service is contactless and very efficient.",
+        helpful: 38
+      },
+      {
+        id: 4,
+        author: "Robert Wilson",
+        rating: 4,
+        date: "2024-08-08",
+        comment: "Impressed by the emergency preparedness. Clear evacuation routes, fire safety equipment in perfect condition, and the security staff is well-trained. Felt secure throughout our business conference.",
+        helpful: 29
+      },
+      {
+        id: 5,
+        author: "Meera Joshi",
+        rating: 5,
+        date: "2024-07-30",
+        comment: "Excellent for family safety! Child-proof amenities, secure pool area with lifeguards, baby-friendly dining options, and the medical assistance is available 24/7. Staff is very attentive to children's safety needs.",
+        helpful: 42
       }
     ]
   },

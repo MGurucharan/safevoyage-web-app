@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Summarization Test</title>
+</head>
+<body>
+    <h1>AI Summarization Test</h1>
+    <button onclick="testAI()">Test AI Endpoint</button>
+    <div id="results"></div>
+    
+    <script>
+        async function testAI() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing AI endpoint...</p>';
+            
+            try {
+                // Test health endpoint first
+                console.log('Testing health endpoint...');
+                const healthResponse = await fetch('http://localhost:5000/health');
+                
+                if (healthResponse.ok) {
+                    const healthData = await healthResponse.json();
+                    console.log('✅ Backend is healthy:', healthData);
+                    results.innerHTML += '<p>✅ Backend is healthy</p>';
+                } else {
+                    throw new Error(`Health check failed: ${healthResponse.status}`);
+                }
+                
+                // Test AI sample endpoint
+                console.log('Testing AI sample endpoint...');
+                const sampleResponse = await fetch('http://localhost:5000/api/ai/sample/hotel');
+                
+                if (sampleResponse.ok) {
+                    const sampleData = await sampleResponse.json();
+                    console.log('✅ AI Sample endpoint works!', sampleData);
+                    results.innerHTML += '<p>✅ AI Sample endpoint works!</p>';
+                    results.innerHTML += `<p>Summary: ${sampleData.data.summary}</p>`;
+                } else {
+                    const errorText = await sampleResponse.text();
+                    console.log('❌ AI Sample failed:', sampleResponse.status, errorText);
+                    results.innerHTML += `<p>❌ AI Sample failed: ${sampleResponse.status}</p>`;
+                }
+                
+                // Test AI summarization endpoint
+                console.log('Testing AI summarization endpoint...');
+                const reviews = [
+                    {
+                        id: 1,
+                        author: "John Test",
+                        rating: 5,
+                        comment: "Amazing hotel with excellent service and beautiful rooms!",
+                        date: "2024-08-20"
+                    }
+                ];
+                
+                const summarizeResponse = await fetch('http://localhost:5000/api/ai/summarize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        reviews: reviews,
+                        type: 'hotel',
+                        name: 'Test Hotel'
+                    })
+                });
+                
+                if (summarizeResponse.ok) {
+                    const summarizeData = await summarizeResponse.json();
+                    console.log('✅ AI Summarization works!', summarizeData);
+                    results.innerHTML += '<p>✅ AI Summarization works!</p>';
+                    results.innerHTML += `<p>Summary: ${summarizeData.data.summary}</p>`;
+                } else {
+                    const errorText = await summarizeResponse.text();
+                    console.log('❌ AI Summarization failed:', summarizeResponse.status, errorText);
+                    results.innerHTML += `<p>❌ AI Summarization failed: ${summarizeResponse.status}</p>`;
+                }
+                
+            } catch (error) {
+                console.error('❌ Test failed with error:', error);
+                results.innerHTML += `<p>❌ Test failed: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
