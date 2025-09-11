@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { User, MapPin, Calendar, CreditCard, Settings, LogOut } from 'lucide-react';
+import { User, MapPin, Calendar, CreditCard, Settings, LogOut, Mail, IdCard, Clock } from 'lucide-react';
 import { useUserAuth } from '../hooks/useUserAuth';
 
 const UserDashboard = () => {
@@ -18,10 +18,19 @@ const UserDashboard = () => {
 //   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-950 py-25 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div 
+      className="min-h-screen py-25 px-4"
+      style={{
+        backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl mb-8">
+        <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl shadow-xl p-8 mb-8">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-3xl font-bold text-white mb-2">Welcome back!</h1>
@@ -42,7 +51,7 @@ const UserDashboard = () => {
           {/* Explore Places */}
           <Link
             to="/explore-places"
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all group"
+            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-xl hover:bg-gray-900/60 transition-all group"
           >
             <div className="flex items-center space-x-4">
               <div className="bg-gradient-to-r from-green-400 to-emerald-500 p-3 rounded-full group-hover:scale-110 transition-transform">
@@ -58,7 +67,7 @@ const UserDashboard = () => {
           {/* Book Hotels */}
           <Link
             to="/book-hotels"
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all group"
+            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-xl hover:bg-gray-900/60 transition-all group"
           >
             <div className="flex items-center space-x-4">
               <div className="bg-gradient-to-r from-blue-400 to-cyan-500 p-3 rounded-full group-hover:scale-110 transition-transform">
@@ -74,7 +83,7 @@ const UserDashboard = () => {
           {/* Complete Profile */}
           <Link
             to="/complete-profile"
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all group"
+            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-xl hover:bg-gray-900/60 transition-all group"
           >
             <div className="flex items-center space-x-4">
               <div className="bg-gradient-to-r from-purple-400 to-pink-500 p-3 rounded-full group-hover:scale-110 transition-transform">
@@ -89,7 +98,7 @@ const UserDashboard = () => {
         </div>
 
         {/* User Info Card */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
+        <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-2xl">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
             <User className="h-6 w-6 mr-2" />
             Your Account
@@ -97,54 +106,74 @@ const UserDashboard = () => {
 
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Email</label>
-                <p className="text-white">{user?.email}</p>
+            <div className="space-y-6">
+              <div className="relative">
+                <label className="block text-sm font-medium text-white mb-2">Email</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Mail className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <div className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg text-white">
+                    {user?.email}
+                  </div>
+                </div>
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Profile Status</label>
-                <div className="flex items-center space-x-2">
-                  <div className={`w-3 h-3 rounded-full ${user?.isProfileComplete ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
-                  <span className="text-white">
+              <div className="relative">
+                <label className="block text-sm font-medium text-white mb-2">Profile Status</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <User className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <div className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg text-white flex items-center">
+                    <div className={`w-3 h-3 rounded-full mr-2 ${user?.isProfileComplete ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
                     {user?.isProfileComplete ? 'Profile Complete' : 'Profile Incomplete'}
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">User ID</label>
-                <div className="flex items-center space-x-3">
-                  <p className="text-white font-mono">
-                    {user?.userID ? user.userID : (
-                      <span className="text-yellow-400">
-                        Complete profile to get your User ID
-                      </span>
+            <div className="space-y-6">
+              <div className="relative">
+                <label className="block text-sm font-medium text-white mb-2">User ID</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <IdCard className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <div className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg text-white flex items-center justify-between">
+                    <span className="font-mono">
+                      {user?.userID ? user.userID : (
+                        <span className="text-yellow-400">
+                          Complete profile to get your User ID
+                        </span>
+                      )}
+                    </span>
+                    {user?.isProfileComplete && !user?.userID && (
+                      <button
+                        onClick={refreshUserData}
+                        className="ml-3 px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-xs rounded transition-colors"
+                      >
+                        Refresh
+                      </button>
                     )}
-                  </p>
-                  {user?.isProfileComplete && !user?.userID && (
-                    <button
-                      onClick={refreshUserData}
-                      className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-xs rounded transition-colors"
-                    >
-                      Refresh
-                    </button>
-                  )}
+                  </div>
                 </div>
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Member Since</label>
-                <p className="text-white">
-                  {new Date().toLocaleDateString('en-US', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
-                </p>
+              <div className="relative">
+                <label className="block text-sm font-medium text-white mb-2">Member Since</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Clock className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <div className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg text-white">
+                    {new Date().toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

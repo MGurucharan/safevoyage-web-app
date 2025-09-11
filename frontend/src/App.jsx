@@ -20,7 +20,7 @@ import { AdminAuthProvider } from './context/AdminAuthProvider';
 import { UserAuthProvider } from './context/UserAuthContext';
 import { useAdminAuth } from './hooks/useAdminAuth';
 import { useUserAuth } from './hooks/useUserAuth';
-import AdminDigitalID from './pages/AdminDigitalID';
+import AdminDigitalId from './pages/AdminDigitalId';
 
 
 
@@ -60,7 +60,7 @@ function AppContent() {
           <Route path="/book-hotels/:id" element={<HotelDetailView />} />
           <Route path="/admin/digital-id" element={
             <RequireAdmin>
-              <AdminDigitalID />
+              <AdminDigitalId />
             </RequireAdmin>
           } />
           <Route path="/digital-id" element={<DigitalID />} />
