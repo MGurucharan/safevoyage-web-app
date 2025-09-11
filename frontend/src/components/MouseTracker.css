@@ -1,0 +1,60 @@
+.mouse-tracker-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.custom-cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9990;
+  transform: translate(-12px, -12px);
+  opacity: 0.7;
+}
+
+.cursor-svg {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(1086%) hue-rotate(236deg) brightness(94%) contrast(96%) drop-shadow(0 4px 8px rgba(139, 92, 246, 0.3));
+  transition: transform 0.2s ease-out;
+  transform-origin: center center;
+}
+
+.custom-cursor-trail.clicking {
+  transform: translate(-12px, -12px) scale(1.05);
+  opacity: 1;
+}
+
+.custom-cursor-trail.clicking .cursor-svg {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(1086%) hue-rotate(236deg) brightness(98%) contrast(98%) drop-shadow(0 4px 8px rgba(139, 92, 246, 0.25));
+}
+
+/* Add a subtle glow effect */
+.cursor-svg::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Hide cursor trail on small screens */
+@media (max-width: 768px) {
+  .mouse-tracker-container {
+    display: none;
+  }
+}
+
+/* Smooth animation when entering/leaving interactive elements */
+.custom-cursor-trail:hover {
+  transform: translate(-12px, -12px) scale(1.1);
+  opacity: 1;
+}
