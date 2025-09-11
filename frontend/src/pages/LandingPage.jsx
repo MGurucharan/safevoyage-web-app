@@ -1,113 +1,11 @@
 import React, { useState } from 'react';
 import { Shield, Bot, Brain, MapPin, ArrowRight, Check } from 'lucide-react';
+import PanicButton from '../components/PanicButton';
 
 // NOTE: To make the <Link> component functional, you would wrap the App
 // in a Router in your main application file (e.g., index.js).
 // For this component file, we'll use a standard <a> tag as a placeholder.
 const Link = ({ to, children, ...props }) => <a href={to} {...props}>{children}</a>;
-
-
-// --- PanicButton Component ---
-// This component provides the SOS button functionality and confirmation modal.
-const PanicButton = () => {
-    const [isLoading, setIsLoading] = useState(false);
-    const [alertSent, setAlertSent] = useState(false);
-
-    const handlePanic = () => {
-        if (isLoading || alertSent) return;
-
-        setIsLoading(true);
-        // Simulate sending an alert, then show the confirmation modal
-        setTimeout(() => {
-            setIsLoading(false);
-            setAlertSent(true);
-        }, 2000);
-    };
-
-    const closeAlert = () => {
-        setAlertSent(false);
-    };
-
-    return (
-        <>
-            <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
-                <button
-                    onClick={handlePanic}
-                    className={`relative flex items-center justify-center h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-red-600 text-white font-bold text-lg shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-red-400 ${isLoading ? 'scale-110 cursor-not-allowed' : ''}`}
-                >
-                    {!isLoading && (
-                         <div className="transition-opacity duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 sm:h-10 sm:w-10">
-                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                                <line x1="12" y1="9" x2="12" y2="13"></line>
-                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                            </svg>
-                        </div>
-                    )}
-                   
-                    {isLoading && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            {/* Simple animation for the SOS button spinner */}
-                            <style>{`
-                                @keyframes spin {
-                                    from { transform: rotate(0deg); }
-                                    to { transform: rotate(360deg); }
-                                }
-                                .animate-spin {
-                                    animation: spin 1s linear infinite;
-                                }
-                            `}</style>
-                            <div className="h-14 w-14 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
-                        </div>
-                    )}
-                </button>
-            </div>
-
-            {alertSent && (
-                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[100] p-4 transition-opacity duration-300">
-                    <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-8 text-center relative transform transition-all duration-300 scale-100">
-                         <button onClick={closeAlert} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-
-                        <div className="mx-auto mb-6 inline-flex items-center justify-center h-16 w-16 rounded-full bg-red-100">
-                           <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
-                        </div>
-                        
-                        <h2 className="text-2xl sm:text-3xl font-bold text-red-600 mb-4">Emergency Alert Sent!</h2>
-                        <p className="text-gray-600 mb-6">
-                            Your location and emergency details have been sent to local authorities and emergency contacts.
-                        </p>
-
-                        <ul className="text-left space-y-3 mb-8 text-gray-700">
-                            <li className="flex items-center">
-                                <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                                <span>GPS coordinates shared</span>
-                            </li>
-                            <li className="flex items-center">
-                                <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                                <span>Emergency services notified</span>
-                            </li>
-                             <li className="flex items-center">
-                                <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                                <span>Contacts alerted</span>
-                            </li>
-                        </ul>
-                        
-                        <div className="bg-blue-50 p-4 rounded-lg text-left">
-                           <p className="font-bold text-blue-800">Help is on the way!</p>
-                           <p className="text-sm text-blue-700">Stay calm and stay where you are if safe.</p>
-                        </div>
-                    </div>
-                </div>
-            )}
-        </>
-    );
-};
 
 
 // --- LandingPage Component ---
@@ -238,15 +136,6 @@ const LandingPage = () => {
                     <p className="text-xl text-gray-300 mb-8">
                         Join millions of tourists who trust our platform for their security needs.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            to="/digital-id"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-                        >
-                            Get Started Now
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </div>
                     
                     <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-300">
                         <div className="flex items-center justify-center space-x-2">
