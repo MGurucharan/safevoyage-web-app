@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import MouseTracker from './components/MouseTracker';
 import { ModalProvider } from './context/ModalContext';
 import LandingPage from './pages/LandingPage';
 import Admin from './pages/Admin';
@@ -20,7 +21,7 @@ import { AdminAuthProvider } from './context/AdminAuthProvider';
 import { UserAuthProvider } from './context/UserAuthContext';
 import { useAdminAuth } from './hooks/useAdminAuth';
 import { useUserAuth } from './hooks/useUserAuth';
-import AdminDigitalID from './pages/AdminDigitalID';
+import AdminDigitalId from './pages/AdminDigitalId';
 
 
 
@@ -47,9 +48,8 @@ function AppContent() {
   const { login } = useAdminAuth();
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div className="min-h-screen relative overflow-hidden">
+      <MouseTracker />
       <Navbar />
       <main className="relative z-10" style={{ transition: 'filter 0.2s ease-in-out' }}>
         <Routes>
@@ -60,7 +60,7 @@ function AppContent() {
           <Route path="/book-hotels/:id" element={<HotelDetailView />} />
           <Route path="/admin/digital-id" element={
             <RequireAdmin>
-              <AdminDigitalID />
+              <AdminDigitalId />
             </RequireAdmin>
           } />
           <Route path="/digital-id" element={<DigitalID />} />
