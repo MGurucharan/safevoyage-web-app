@@ -153,7 +153,6 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
-
             <PanicButton />
         </div>
     );
