@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import MouseTracker from './components/MouseTracker';
 import { ModalProvider } from './context/ModalContext';
 import LandingPage from './pages/LandingPage';
 import Admin from './pages/Admin';
@@ -48,6 +49,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <MouseTracker />
       <Navbar />
       <main className="relative z-10" style={{ transition: 'filter 0.2s ease-in-out' }}>
         <Routes>
