@@ -28,26 +28,58 @@ export const mockPlacesData = [
       {
         id: 1,
         author: "Rahul Sharma",
-        rating: 5,
+        rating: 1,
         date: "2024-08-15",
-        comment: "Absolutely stunning! The beaches are pristine and the food is incredible. Perfect for a relaxing vacation.",
+        comment: "Not at all good ! Very disgusting experience. The place is overhyped and not worth the visit.",
         helpful: 24
       },
       {
         id: 2,
-        author: "Sarah Johnson",
-        rating: 4,
+        author: "Nirajan C",
+        rating: 1,
         date: "2024-07-22",
-        comment: "Great place for water sports. The sunset views are breathtaking. Would definitely visit again!",
+        comment: "I felt very FOMO in Goa. Everyone was having a great time especially Nikhil while I was stuck in my hotel room.",
         helpful: 18
       },
       {
         id: 3,
         author: "Amit Patel",
-        rating: 5,
+        rating: 1,
         date: "2024-08-01",
-        comment: "Perfect blend of relaxation and adventure. The local culture is fascinating and people are very friendly.",
+        comment: "Very bad place ! Poor service!",
         helpful: 31
+      },
+      {
+        id: 4,
+        author: "Priya Menon",
+        rating: 1,
+        date: "2024-08-18",
+        comment: "Felt very safe throughout our Goa trip! The beaches have lifeguards, local police patrol regularly, and the tourist-friendly areas are well-lit. The locals are helpful and the medical facilities are easily accessible.",
+        helpful: 47
+      },
+      {
+        id: 5,
+        author: "David Thompson",
+        rating: 1,
+        date: "2024-08-12",
+        comment: "Great safety measures for water sports. All operators follow proper safety protocols, provide quality life jackets, and have trained instructors. The beach shacks maintain good hygiene standards.",
+        helpful: 38
+      },
+      {
+        id: 6,
+        author: "Anjali Reddy",
+        rating: 1,
+        date: "2024-08-05",
+        comment: "Perfect for solo female travelers! Very safe environment, especially in popular tourist areas. Hotel transfers are reliable, and the local transport like buses and taxis are regulated. Emergency services are responsive.",
+        helpful: 52
+      },
+      {
+        id: 7,
+        author: "Mark Johnson",
+        rating: 1,
+        date: "2024-07-28",
+        comment: "Family-friendly destination with excellent safety standards. Kids' play areas are secure, swimming areas are well-marked for safety, and the food quality meets international hygiene standards. Tourism police are very helpful.",
+        helpful: 34
       }
     ]
   },
@@ -124,25 +156,25 @@ export const mockPlacesData = [
       {
         id: 1,
         author: "Priya Gupta",
-        rating: 5,
+        rating: 1,
         date: "2024-08-12",
-        comment: "Absolutely breathtaking! The intricate details in the marble work are incredible. Best visited at sunrise.",
+        comment: "It's very bad ! Pathetic experience.",
         helpful: 56
       },
       {
-        id: 2,
+        id: 1,
         author: "David Brown",
-        rating: 5,
+        rating: 1,
         date: "2024-07-30",
-        comment: "A masterpiece of architecture! The symmetry and beauty are beyond words. Truly a wonder of the world.",
+        comment: "The service was very bad.",
         helpful: 41
       },
       {
         id: 3,
         author: "Aisha Khan",
-        rating: 4,
+        rating: 1,
         date: "2024-08-03",
-        comment: "Magnificent monument with rich history. The gardens are beautiful. Can get very crowded during peak hours.",
+        comment: "The place is okay",
         helpful: 28
       }
     ]

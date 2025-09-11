@@ -67,7 +67,7 @@ const PlaceCard = ({ place, onSelect }) => {
           </h3>
           <div className="flex items-center text-gray-300 text-sm">
             <MapPin className="h-4 w-4 mr-1" />
-            <span>{place.district}, {place.region}, {place.country}</span>
+            <span>{[place.district, place.region, place.country].filter(Boolean).join(', ') || place.region}</span>
           </div>
         </div>
 
@@ -88,42 +88,49 @@ const PlaceCard = ({ place, onSelect }) => {
         </div>
 
         {/* Sample Review */}
-        <div className="mb-4">
-          <div className="flex items-center mb-2">
-            <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`h-4 w-4 ${
-                    i < Math.floor(place.rating) 
-                      ? 'text-yellow-400 fill-current' 
-                      : 'text-gray-500'
-                  }`}
-                />
-              ))}
+        {(place.reviews && place.reviews.length > 0) && (
+          <div className="mb-4">
+            <div className="flex items-center mb-2">
+              <div className="flex items-center">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`h-4 w-4 ${
+                      i < Math.floor(place.reviews[0]?.rating || 0) 
+                        ? 'text-yellow-400 fill-current' 
+                        : 'text-gray-500'
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="text-sm text-gray-300 ml-2">
+                {place.reviews && place.reviews.length > 0 
+                  ? `${(place.reviews.reduce((acc, review) => acc + review.rating, 0) / place.reviews.length).toFixed(1)} (${place.reviews.length} reviews)`
+                  : 'No reviews'
+                }
+              </span>
             </div>
-            <span className="text-sm text-gray-300 ml-2">
-              {place.rating} ({place.reviewCount} reviews)
-            </span>
+            <p className="text-sm text-gray-300 line-clamp-2 italic">
+              "{place.reviews[0]?.comment || place.sampleReview || 'No review available'}"
+            </p>
           </div>
-          <p className="text-sm text-gray-300 line-clamp-2 italic">
-            "{place.sampleReview}"
-          </p>
-        </div>
+        )}
 
         {/* Price Range */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-            ₹{place.priceRange.min.toLocaleString()} - ₹{place.priceRange.max.toLocaleString()}
+        {place.priceRange && (
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              ₹{place.priceRange.min.toLocaleString()} - ₹{place.priceRange.max.toLocaleString()}
+            </div>
+            <div className="text-sm text-gray-400">
+              per person
+            </div>
           </div>
-          <div className="text-sm text-gray-400">
-            per person
-          </div>
-        </div>
+        )}
 
         {/* Quick Info Tags */}
         <div className="flex flex-wrap gap-2">
-          {place.tags.slice(0, 3).map((tag, index) => (
+          {(place.tags || place.highlights || []).slice(0, 3).map((tag, index) => (
             <span
               key={index}
               className="px-2 py-1 bg-blue-500/20 backdrop-blur-sm text-blue-300 text-xs rounded-full border border-blue-400/30"
@@ -131,9 +138,9 @@ const PlaceCard = ({ place, onSelect }) => {
               {tag}
             </span>
           ))}
-          {place.tags.length > 3 && (
+          {(place.tags || place.highlights || []).length > 3 && (
             <span className="px-2 py-1 bg-gray-500/20 backdrop-blur-sm text-gray-300 text-xs rounded-full border border-gray-400/30">
-              +{place.tags.length - 3} more
+              +{(place.tags || place.highlights || []).length - 3} more
             </span>
           )}
         </div>

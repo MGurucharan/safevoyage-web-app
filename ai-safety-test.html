@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety Score Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .result {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .error {
+            background: #ff4444;
+            color: white;
+        }
+        .success {
+            background: #44ff44;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>🛡️ AI Safety Score Test Dashboard</h1>
+    
+    <div class="container">
+        <h3>Test AI Safety Analysis Endpoints</h3>
+        <p>This page tests the new AI Safety Score functionality for SafeVoyage.</p>
+        
+        <button onclick="testSafetyAnalysis()">Test Safety Analysis</button>
+        <button onclick="testSampleSafety()">Test Sample Safety</button>
+        <button onclick="testFrontendIntegration()">Test Frontend Integration</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:5000/api/ai';
+        
+        // Sample reviews with safety focus
+        const sampleReviews = [
+            {
+                id: 1,
+                author: "Sarah Ahmed",
+                rating: 5,
+                date: "2024-08-20",
+                comment: "Excellent safety measures in place. The hotel has 24/7 security guards, CCTV surveillance, and all rooms have electronic locks. The beach area is well-patrolled and safe even during evening walks."
+            },
+            {
+                id: 2,
+                author: "Dr. Vinod Sharma",
+                rating: 4,
+                date: "2024-07-22",
+                comment: "Very impressed with the cleanliness standards. All staff wear masks, sanitization is done regularly, and the dining areas follow strict hygiene protocols. Medical assistance is available on-site."
+            },
+            {
+                id: 3,
+                author: "Emily Chen",
+                rating: 5,
+                date: "2024-07-15",
+                comment: "As a solo female traveler, I felt completely safe here. Well-lit pathways, emergency contact numbers in every room, and the staff is very responsive to any safety concerns. The fire safety systems are also clearly marked."
+            }
+        ];
+
+        function addResult(title, content, type = 'info') {
+            const resultsDiv = document.getElementById('results');
+            const resultElement = document.createElement('div');
+            resultElement.className = `result ${type}`;
+            resultElement.innerHTML = `<h4>${title}</h4><pre>${JSON.stringify(content, null, 2)}</pre>`;
+            resultsDiv.appendChild(resultElement);
+        }
+
+        async function testSafetyAnalysis() {
+            try {
+                addResult('🔍 Testing Safety Analysis...', 'Making request to analyze-safety endpoint...');
+                
+                const response = await fetch(`${API_BASE_URL}/analyze-safety`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        reviews: sampleReviews,
+                        type: 'hotel',
+                        name: 'Test Hotel Safety Analysis'
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                addResult('✅ Safety Analysis Result', data, 'success');
+
+            } catch (error) {
+                addResult('❌ Safety Analysis Error', { error: error.message }, 'error');
+            }
+        }
+
+        async function testSampleSafety() {
+            try {
+                addResult('🔍 Testing Sample Safety...', 'Making request to sample-safety endpoint...');
+                
+                const response = await fetch(`${API_BASE_URL}/sample-safety/hotel`);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                addResult('✅ Sample Safety Result', data, 'success');
+
+            } catch (error) {
+                addResult('❌ Sample Safety Error', { error: error.message }, 'error');
+            }
+        }
+
+        async function testFrontendIntegration() {
+            try {
+                addResult('🔍 Testing Frontend Integration...', 'Simulating frontend service call...');
+                
+                // Simulate what the frontend service would do
+                const aiSafetyService = {
+                    async analyzeSafety(reviews, type, name) {
+                        const response = await fetch(`${API_BASE_URL}/analyze-safety`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ reviews, type, name })
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        }
+
+                        const data = await response.json();
+                        return {
+                            success: true,
+                            data: data.data
+                        };
+                    }
+                };
+
+                const result = await aiSafetyService.analyzeSafety(
+                    sampleReviews,
+                    'hotel',
+                    'Frontend Integration Test Hotel'
+                );
+
+                addResult('✅ Frontend Integration Result', result, 'success');
+
+            } catch (error) {
+                addResult('❌ Frontend Integration Error', { error: error.message }, 'error');
+            }
+        }
+
+        // Auto-run sample test on page load
+        window.onload = function() {
+            addResult('🚀 AI Safety Score Test Dashboard Loaded', 'Ready to test AI Safety functionality!');
+        };
+    </script>
+</body>
+</html>

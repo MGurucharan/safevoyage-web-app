@@ -20,6 +20,10 @@ import {
   Phone
 } from 'lucide-react';
 import { mockHotelsData } from '../data/hotelsData';
+import { useAISummary } from '../hooks/useAISummary';
+import { useAISafetyAnalysis } from '../hooks/useAISafetyAnalysis';
+import AISummarySection from '../components/AISummarySection';
+import AISafetyScore from '../components/AISafetyScore';
 
 const HotelDetailView = () => {
   const { id } = useParams();
@@ -30,6 +34,33 @@ const HotelDetailView = () => {
   const [checkInDate, setCheckInDate] = useState('');
   const [checkOutDate, setCheckOutDate] = useState('');
   const [guests, setGuests] = useState(1);
+
+  // AI Summary hook
+  const {
+    summary: aiSummary,
+    isLoading: aiLoading,
+    error: aiError,
+    lastGenerated,
+    refreshSummary
+  } = useAISummary(
+    hotel?.reviews || [],
+    'hotel',
+    hotel?.name || 'Hotel',
+    !!hotel // Only enabled when hotel is loaded
+  );
+
+  // AI Safety Analysis hook
+  const {
+    safetyAnalysis,
+    loading: safetyLoading,
+    error: safetyError,
+    refresh: refreshSafetyAnalysis
+  } = useAISafetyAnalysis(
+    hotel?.reviews || [],
+    'hotel',
+    hotel?.name || 'Hotel',
+    !!hotel // Only enabled when hotel is loaded
+  );
 
   useEffect(() => {
     const foundHotel = mockHotelsData.find(h => h.id === parseInt(id));
@@ -73,18 +104,6 @@ const HotelDetailView = () => {
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + hotel.images.length) % hotel.images.length);
-  };
-
-  const getSafetyScoreColor = (score) => {
-    if (score >= 8.5) return 'from-green-500 to-emerald-500';
-    if (score >= 7.0) return 'from-yellow-500 to-orange-500';
-    return 'from-red-500 to-pink-500';
-  };
-
-  const getSafetyScoreText = (score) => {
-    if (score >= 8.5) return 'Excellent';
-    if (score >= 7.0) return 'Good';
-    return 'Fair';
   };
 
   const getAmenityIcon = (amenity) => {
@@ -238,29 +257,12 @@ const HotelDetailView = () => {
               </div>
 
               {/* AI Safety Score */}
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 p-6 rounded-2xl shadow-lg">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <Shield className="h-6 w-6 mr-3 text-gray-300" />
-                    <h3 className="text-xl font-bold text-white">AI Safety Score</h3>
-                  </div>
-                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${getSafetyScoreColor(hotel.aiSafetyScore)} text-white text-lg font-bold shadow-lg`}>
-                    {hotel.aiSafetyScore}/10
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  {getSafetyScoreText(hotel.aiSafetyScore)} safety rating based on comprehensive analysis
-                </p>
-                <div className="text-sm text-gray-400">
-                  • Safety & Security Assessment<br/>
-                  • Cleanliness & Hygiene Standards<br/>
-                  • Guest Satisfaction & Service Quality<br/>
-                  • Location Safety & Accessibility
-                </div>
-                <div className="mt-4 text-xs text-blue-300 bg-blue-500/20 backdrop-blur-sm p-2 rounded border border-blue-400/30">
-                  🔄 This score is dynamically updated using AI algorithms and real-time data
-                </div>
-              </div>
+              <AISafetyScore 
+                safetyAnalysis={safetyAnalysis}
+                loading={safetyLoading}
+                error={safetyError}
+                onRefresh={refreshSafetyAnalysis}
+              />
 
               {/* Check-in/Check-out Info */}
               <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 p-6 rounded-2xl shadow-lg">
@@ -392,24 +394,16 @@ const HotelDetailView = () => {
             </div>
           </div>
 
-          <section className="bg-gray-900/50 backdrop-blur-sm border border-white/10 p-8 rounded-2xl shadow-lg mb-8">
-            <h2 className="text-xl font-bold text-white mb-2">
-              AI Summarized Feedback & Reviews
-            </h2>
-            <p className="text-gray-300 mb-2">
-              "Visitors love the scenic beauty and vibrant atmosphere of this
-              place. The local cuisine receives rave reviews, and the guided
-              tours are highly recommended. Some feedback mentions crowding
-              during peak hours, but most experiences are positive and
-              memorable."
-            </p>
-            <div className="flex-col space-y-3 text-md">
-              <p className="text-gray-300">Scenery : ⭐⭐⭐⭐⭐</p>
-              <p className="text-gray-300">Food : ⭐⭐⭐⭐⭐</p>
-              <p className="text-gray-300">Hygiene : ⭐⭐⭐⭐⭐</p>
-              <p className="text-gray-300">Service : ⭐⭐⭐</p>
-            </div>
-          </section>
+          {/* AI Summarized Feedback & Reviews */}
+          <AISummarySection 
+            summary={aiSummary}
+            isLoading={aiLoading}
+            error={aiError}
+            lastGenerated={lastGenerated}
+            onRefresh={refreshSummary}
+            type="hotel"
+            showRefreshButton={true}
+          />
 
 
 

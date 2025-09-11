@@ -15,6 +15,10 @@ console.log('📦 Importing auth routes...');
 import authRoutes from './routes/authRoutes.js';
 console.log('✅ Auth routes imported successfully');
 
+console.log('📦 Importing AI routes...');
+import aiRoutes from './routes/aiRoutes.js';
+console.log('✅ AI routes imported successfully');
+
 const app = express();
 console.log('🌐 Express app created');
 
@@ -25,6 +29,7 @@ app.use(express.json());
 // Routes
 app.use('/api/digital-id', digitalIDRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/ai', aiRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -48,7 +53,10 @@ app.get('/', (req, res) => {
             'POST /api/auth/signin',
             'POST /api/auth/profile/:userId',
             'GET /api/auth/profile/user/:userID',
-            'GET /api/auth/profile/:userId'
+            'GET /api/auth/profile/:userId',
+            'POST /api/ai/summarize',
+            'POST /api/ai/batch-summarize',
+            'GET /api/ai/sample/:type'
         ]
     });
 });
