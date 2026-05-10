@@ -35,7 +35,7 @@ function AppContent() {
   const { login } = useAdminAuth();
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-500 relative overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <Navbar />

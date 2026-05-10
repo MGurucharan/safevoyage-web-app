@@ -46,23 +46,36 @@ const ExplorePlaces = () => {
     navigate(`/explore-places/${placeId}`);
   };
 
+  // Landing page background image
+  const backgroundImageUrl = 'https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=';
+
   return (
-    <div className="relative min-h-screen bg-gray-50">
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden"
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Explore Amazing Places
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tighter">
+                Explore Amazing
+                <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent pb-4">
+                  Places
+                </span>
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-t from-gray-400 to-gray-100 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Discover safe and beautiful destinations around the world with AI-powered safety insights
               </p>
-              
               {/* Search Bar */}
               <SearchBar onSearch={handleSearch} />
             </div>
@@ -112,13 +125,13 @@ const ExplorePlaces = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {filteredPlaces.length === 0 ? (
               <div className="text-center py-16">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">No places found</h3>
+                <h3 className="text-2xl font-bold text-blue-100 mb-4" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>No places found</h3>
                 <p className="text-gray-600">Try adjusting your search criteria or category filter.</p>
               </div>
             ) : (
               <>
                 <div className="flex justify-between items-center mb-8">
-                  <h2 className="text-3xl font-bold text-gray-900">
+                  <h2 className="text-3xl font-bold text-blue-100" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>
                     {selectedCategory === 'all' ? 'All Destinations' : 
                      selectedCategory === 'local' ? 'Local Destinations' : 'International Destinations'}
                   </h2>

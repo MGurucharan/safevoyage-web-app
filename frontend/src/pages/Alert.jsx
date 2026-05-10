@@ -113,55 +113,65 @@ const Alerts = () => {
     return matchesFilter && matchesSearch;
   });
 
+  // Apply landing page background and overlay
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden"
+      style={{
+        backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Alert Management</h1>
+        <div className="mb-8 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl p-6">
+          <h1 className="text-3xl font-bold text-blue-100 mb-2" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>Alert Management</h1>
           <p className="text-gray-600">Monitor and manage real-time safety alerts for tourists</p>
         </div>
 
         {/* Alert Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white rounded-xl p-6 shadow-lg">
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Active Alerts</p>
-                <p className="text-2xl font-bold text-red-600">3</p>
+                <p className="text-2xl font-bold text-blue-100" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>3</p>
               </div>
               <div className="p-2 bg-red-100 rounded-lg">
                 <AlertTriangle className="h-6 w-6 text-red-600" />
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg">
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Resolved Today</p>
-                <p className="text-2xl font-bold text-green-600">12</p>
+                <p className="text-2xl font-bold text-blue-100" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>12</p>
               </div>
               <div className="p-2 bg-green-100 rounded-lg">
                 <Shield className="h-6 w-6 text-green-600" />
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg">
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Response Time</p>
-                <p className="text-2xl font-bold text-blue-600">3.2m</p>
+                <p className="text-2xl font-bold text-blue-100" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>3.2m</p>
               </div>
               <div className="p-2 bg-blue-100 rounded-lg">
                 <Clock className="h-6 w-6 text-blue-600" />
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg">
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Areas Monitored</p>
-                <p className="text-2xl font-bold text-purple-600">156</p>
+                <p className="text-2xl font-bold text-blue-100" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>156</p>
               </div>
               <div className="p-2 bg-purple-100 rounded-lg">
                 <MapPin className="h-6 w-6 text-purple-600" />
@@ -171,7 +181,7 @@ const Alerts = () => {
         </div>
 
         {/* Filters and Search */}
-        <div className="bg-white rounded-xl p-6 shadow-lg mb-8">
+        <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg mb-8">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
@@ -207,7 +217,7 @@ const Alerts = () => {
         {/* Alerts List */}
         <div className="space-y-6">
           {filteredAlerts.map((alert) => (
-            <div key={alert.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div key={alert.id} className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-4">
@@ -215,7 +225,7 @@ const Alerts = () => {
                       {getTypeIcon(alert.type)}
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-1">{alert.title}</h3>
+                      <h3 className="text-lg font-bold text-blue-100 mb-1" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>{alert.title}</h3>
                       <div className="flex items-center space-x-4 text-sm text-gray-600">
                         <div className="flex items-center space-x-1">
                           <MapPin className="h-4 w-4" />
@@ -263,9 +273,9 @@ const Alerts = () => {
         </div>
 
         {filteredAlerts.length === 0 && (
-          <div className="text-center py-12">
+          <div className="text-center py-12 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg">
             <AlertTriangle className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No alerts found</h3>
+            <h3 className="text-lg font-medium text-blue-100 mb-2" style={{ textShadow: '0 2px 8px rgba(60,0,120,0.25)' }}>No alerts found</h3>
             <p className="text-gray-600">Try adjusting your search or filter criteria</p>
           </div>
         )}

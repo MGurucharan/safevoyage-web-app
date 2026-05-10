@@ -46,45 +46,59 @@ const Dashboard = () => {
     </div>
   );
 
-  return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Safety Dashboard</h1>
-          <p className="text-gray-600">Real-time monitoring and analytics for tourist safety</p>
-        </div>
+  const backgroundImageUrl = 'https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=';
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <StatCard
-            icon={Users}
-            title="Active Tourists"
-            value="12,847"
-            change={5.2}
-            color="bg-gradient-to-r from-blue-500 to-blue-600"
-          />
-          <StatCard
-            icon={AlertTriangle}
-            title="Open Alerts"
-            value="23"
-            change={-12.3}
-            color="bg-gradient-to-r from-red-500 to-red-600"
-          />
-          <StatCard
-            icon={Shield}
-            title="Safe Zones"
-            value="156"
-            change={2.1}
-            color="bg-gradient-to-r from-green-500 to-green-600"
-          />
-          <StatCard
-            icon={MapPin}
-            title="High-Risk Zones"
-            value="8"
-            change={-5.8}
-            color="bg-gradient-to-r from-orange-500 to-orange-600"
-          />
-        </div>
+  return (
+    <div
+      className="relative font-sans min-h-screen overflow-x-hidden"
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-white mb-2">Safety Dashboard</h1>
+            <p className="text-gray-200">Real-time monitoring and analytics for tourist safety</p>
+          </div>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <StatCard
+              icon={Users}
+              title="Active Tourists"
+              value="12,847"
+              change={5.2}
+              color="bg-gradient-to-r from-blue-500 to-blue-600"
+            />
+            <StatCard
+              icon={AlertTriangle}
+              title="Open Alerts"
+              value="23"
+              change={-12.3}
+              color="bg-gradient-to-r from-red-500 to-red-600"
+            />
+            <StatCard
+              icon={Shield}
+              title="Safe Zones"
+              value="156"
+              change={2.1}
+              color="bg-gradient-to-r from-green-500 to-green-600"
+            />
+            <StatCard
+              icon={MapPin}
+              title="High-Risk Zones"
+              value="8"
+              change={-5.8}
+              color="bg-gradient-to-r from-orange-500 to-orange-600"
+            />
+          </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* SOS Triggers Chart */}
@@ -223,6 +237,7 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </div>

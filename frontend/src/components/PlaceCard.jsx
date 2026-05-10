@@ -69,7 +69,7 @@ const PlaceCard = ({ place, onSelect }) => {
         </div>
 
         {/* AI Safety Score */}
-        <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+        <div className="mb-4 p-3 bg-gray-500 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center">
               <Shield className="h-4 w-4 mr-2 text-gray-600" />
