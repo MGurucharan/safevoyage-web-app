@@ -106,7 +106,7 @@ const TransportModal = ({ place, onClose }) => {
             /* Transport Options Display */
             <div className="space-y-6">
               {/* Current Route Info */}
-              <div className="bg-gray-50 p-4 rounded-xl">
+              <div className="bg-gray-500 p-4 rounded-xl">
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="flex items-center text-sm text-gray-600 mb-1">

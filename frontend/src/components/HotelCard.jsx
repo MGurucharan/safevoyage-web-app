@@ -90,6 +90,7 @@ const HotelCard = ({ hotel, onSelect }) => {
         </div>
         {/* AI Safety Score */}
         <div className="mb-4 p-3 bg-black/20 backdrop-blur-sm rounded-lg border border-white/10">
+          
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center">
               <Shield className="h-4 w-4 mr-2 text-gray-300" />

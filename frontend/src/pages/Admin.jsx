@@ -57,7 +57,7 @@ const Admin = () => {
                 </p>
                 <button
                   onClick={() => navigate('/admin/digital-id')}
-                  className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  className="w-full bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white py-3 px-4 rounded-lg transition-colors font-medium"
                 >
                   Issue Digital ID
                 </button>
@@ -86,17 +86,17 @@ const Admin = () => {
             </div>
             {/* Stats Row */}
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-white">1,247</div>
-                <div className="text-sm text-gray-400">IDs Issued Today</div>
+              <div className="bg-gray-500 rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold text-gray-900">1,247</div>
+                <div className="text-sm text-gray-600">IDs Issued Today</div>
               </div>
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-white">98.5%</div>
-                <div className="text-sm text-gray-400">Verification Success Rate</div>
+              <div className="bg-gray-500 rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold text-gray-900">98.5%</div>
+                <div className="text-sm text-gray-600">Verification Success Rate</div>
               </div>
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-white">24,891</div>
-                <div className="text-sm text-gray-400">Total Active IDs</div>
+              <div className="bg-gray-500 rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold text-gray-900">24,891</div>
+                <div className="text-sm text-gray-600">Total Active IDs</div>
               </div>
             </div>
           </div>

@@ -92,7 +92,7 @@ const DigitalID = () => {
   if (showSuccess) {
     return (
       <div
-        className="relative font-sans min-h-screen overflow-x-hidden flex items-center justify-center px-4"
+        className="relative min-h-screen overflow-x-hidden flex items-center justify-center px-4"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
           backgroundSize: 'cover',
@@ -139,7 +139,7 @@ const DigitalID = () => {
   if (hasDigitalID) {
     return (
       <div
-        className="relative font-sans min-h-screen overflow-x-hidden py-12 px-4 sm:px-6 lg:px-8"
+        className="relative min-h-screen overflow-x-hidden py-12 px-4 sm:px-6 lg:px-8"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
           backgroundSize: 'cover',
@@ -409,6 +409,12 @@ const DigitalID = () => {
                   required
                   className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
                 >
+                  <option value="" className="bg-gray-800">Select your nationality</option>
+                  <option value="United States" className="bg-gray-800">United States</option>
+                  <option value="Canada" className="bg-gray-800">Canada</option>
+                  <option value="United Kingdom" className="bg-gray-800">United Kingdom</option>
+                  <option value="India" className="bg-gray-800">India</option>
+                  <option value="Australia" className="bg-gray-800">Australia</option>
                   <option value="">Select your nationality</option>
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Australia">Australia</option>

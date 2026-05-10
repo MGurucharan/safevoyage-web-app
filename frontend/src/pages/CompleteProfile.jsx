@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { User, Mail, Phone, Calendar, MapPin, FileText, Heart, Route, Plane, CheckCircle, AlertCircle } from 'lucide-react';
+import { User, Mail, Phone, Calendar, MapPin, FileText, Heart, Route, Plane, CheckCircle, AlertCircle, CreditCard } from 'lucide-react';
 import { useUserAuth } from '../hooks/useUserAuth';
 import authService from '../services/authService';
 
@@ -206,8 +206,17 @@ const CompleteProfile = () => {
 
   if (showSuccess) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-950 flex items-center justify-center px-4">
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-12 max-w-md w-full text-center border border-white/20 shadow-2xl">
+      <div 
+        className="min-h-screen flex items-center justify-center px-4"
+        style={{
+          backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl shadow-xl p-12 max-w-md w-full text-center relative z-10">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="h-10 w-10 text-green-600" />
           </div>
@@ -228,9 +237,18 @@ const CompleteProfile = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-950 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
+    <div 
+      className="min-h-screen py-8 px-4"
+      style={{
+        backgroundImage: `url(https://media.istockphoto.com/id/1362422378/photo/abstract-blurred-purple-background-light-spot-on-dark-background.jpg?s=612x612&w=0&k=20&c=yFF6-7r_YZQ-r3rTgMPU5n4w-5x3qy0e0wZwZukM2c0=)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl shadow-xl p-8">
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-white mb-2">Complete Your Profile</h1>
@@ -281,106 +299,146 @@ const CompleteProfile = () => {
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your full name"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Full Name</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <User className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
                   {errors.fullName && <p className="mt-1 text-sm text-red-400">{errors.fullName}</p>}
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    disabled
-                    className="w-full px-4 py-3 bg-gray-600/50 border border-white/20 rounded-lg text-gray-400 cursor-not-allowed"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Email</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Mail className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      disabled
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm  border border-white/20 rounded-lg text-gray-400 cursor-not-allowed"
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your phone number"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Phone Number</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Phone className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
                   {errors.phone && <p className="mt-1 text-sm text-red-400">{errors.phone}</p>}
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Date of Birth</label>
-                  <input
-                    type="date"
-                    name="dateOfBirth"
-                    value={formData.dateOfBirth}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Date of Birth</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Calendar className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="date"
+                      name="dateOfBirth"
+                      value={formData.dateOfBirth}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                    />
+                  </div>
                   {errors.dateOfBirth && <p className="mt-1 text-sm text-red-400">{errors.dateOfBirth}</p>}
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Nationality</label>
-                  <input
-                    type="text"
-                    name="nationality"
-                    value={formData.nationality}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your nationality"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Nationality</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MapPin className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      name="nationality"
+                      value={formData.nationality}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="Enter your nationality"
+                    />
+                  </div>
                   {errors.nationality && <p className="mt-1 text-sm text-red-400">{errors.nationality}</p>}
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Passport Number</label>
-                  <input
-                    type="text"
-                    name="passportNumber"
-                    value={formData.passportNumber}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your passport number"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Passport Number</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <FileText className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      name="passportNumber"
+                      value={formData.passportNumber}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="Enter your passport number"
+                    />
+                  </div>
                   {errors.passportNumber && <p className="mt-1 text-sm text-red-400">{errors.passportNumber}</p>}
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Aadhaar Number</label>
-                  <input
-                    type="text"
-                    name="aadhaarNumber"
-                    value={formData.aadhaarNumber}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your Aadhaar number"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Aadhaar Number</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <FileText className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      name="aadhaarNumber"
+                      value={formData.aadhaarNumber}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="Enter your Aadhaar number"
+                    />
+                  </div>
                   {errors.aadhaarNumber && <p className="mt-1 text-sm text-red-400">{errors.aadhaarNumber}</p>}
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Address</label>
-                <textarea
-                  name="address"
-                  value={formData.address}
-                  onChange={handleInputChange}
-                  rows={3}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                  placeholder="Enter your full address"
-                />
+              <div className="relative">
+                <label className="block text-sm font-medium text-white mb-2">Address</label>
+                <div className="relative">
+                  <div className="absolute top-0 left-0 pl-3 pt-3 flex pointer-events-none">
+                    <MapPin className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <textarea
+                    name="address"
+                    value={formData.address}
+                    onChange={handleInputChange}
+                    rows={3}
+                    className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400 resize-none"
+                    placeholder="Enter your full address"
+                  />
+                </div>
                 {errors.address && <p className="mt-1 text-sm text-red-400">{errors.address}</p>}
               </div>
             </div>
@@ -396,16 +454,21 @@ const CompleteProfile = () => {
 
               {/* Favourite Places */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Favourite Places</label>
+                <label className="block text-sm font-medium text-white mb-2">Favourite Places</label>
                 <div className="flex space-x-2 mb-2">
-                  <input
-                    type="text"
-                    name="newFavouritePlace"
-                    value={formData.newFavouritePlace}
-                    onChange={handleInputChange}
-                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Add a favourite place"
-                  />
+                  <div className="relative flex-1">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Heart className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      name="newFavouritePlace"
+                      value={formData.newFavouritePlace}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="Add a favourite place"
+                    />
+                  </div>
                   <button
                     type="button"
                     onClick={addFavouritePlace}
@@ -455,42 +518,54 @@ const CompleteProfile = () => {
 
               {/* Accommodation Preference */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Accommodation Preference</label>
-                  <select
-                    name="travelPlanning.accommodationPreference"
-                    value={formData.travelPlanning.accommodationPreference}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <option value="Hotel">Hotel</option>
-                    <option value="Resort">Resort</option>
-                    <option value="Hostel">Hostel</option>
-                    <option value="Homestay">Homestay</option>
-                    <option value="Apartment">Apartment</option>
-                    <option value="Villa">Villa</option>
-                  </select>
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Accommodation Preference</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MapPin className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <select
+                      name="travelPlanning.accommodationPreference"
+                      value={formData.travelPlanning.accommodationPreference}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                      style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', color: 'white' }}
+                    >
+                      <option value="Hotel" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Hotel</option>
+                      <option value="Resort" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Resort</option>
+                      <option value="Hostel" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Hostel</option>
+                      <option value="Homestay" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Homestay</option>
+                      <option value="Apartment" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Apartment</option>
+                      <option value="Villa" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Villa</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
-                  <select
-                    name="travelPlanning.budgetRange"
-                    value={formData.travelPlanning.budgetRange}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <option value="Budget">Budget</option>
-                    <option value="Mid-range">Mid-range</option>
-                    <option value="Luxury">Luxury</option>
-                    <option value="Premium">Premium</option>
-                  </select>
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Budget Range</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <CreditCard className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <select
+                      name="travelPlanning.budgetRange"
+                      value={formData.travelPlanning.budgetRange}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                      style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', color: 'white' }}
+                    >
+                      <option value="Budget" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Budget</option>
+                      <option value="Mid-range" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Mid-range</option>
+                      <option value="Luxury" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Luxury</option>
+                      <option value="Premium" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Premium</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
               {/* Preferred Transport */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-3">Preferred Transport</label>
+                <label className="block text-sm font-medium text-white mb-3">Preferred Transport</label>
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
                   {['Flight', 'Train', 'Bus', 'Car', 'Ship'].map((transport) => (
                     <label key={transport} className="flex items-center space-x-2 cursor-pointer">
@@ -520,107 +595,148 @@ const CompleteProfile = () => {
 
               {/* Trip Itinerary Basic Info */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Travel Type</label>
-                  <select
-                    name="tripItinerary.travelType"
-                    value={formData.tripItinerary.travelType}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <option value="Solo">Solo</option>
-                    <option value="Family">Family</option>
-                    <option value="Friends">Friends</option>
-                    <option value="Business">Business</option>
-                    <option value="Honeymoon">Honeymoon</option>
-                    <option value="Adventure">Adventure</option>
-                    <option value="Leisure">Leisure</option>
-                  </select>
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Travel Type</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Route className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <select
+                      name="tripItinerary.travelType"
+                      value={formData.tripItinerary.travelType}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                      style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', color: 'white' }}
+                    >
+                      <option value="Solo" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Solo</option>
+                      <option value="Family" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Family</option>
+                      <option value="Friends" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Friends</option>
+                      <option value="Business" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Business</option>
+                      <option value="Honeymoon" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Honeymoon</option>
+                      <option value="Adventure" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Adventure</option>
+                      <option value="Leisure" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', color: 'white' }}>Leisure</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Budget</label>
-                  <input
-                    type="text"
-                    name="tripItinerary.budget"
-                    value={formData.tripItinerary.budget}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="e.g., $5000"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Budget</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <CreditCard className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      name="tripItinerary.budget"
+                      value={formData.tripItinerary.budget}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                      placeholder="e.g., $5000"
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Start Date</label>
-                  <input
-                    type="date"
-                    name="tripItinerary.startDate"
-                    value={formData.tripItinerary.startDate}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">Start Date</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Calendar className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="date"
+                      name="tripItinerary.startDate"
+                      value={formData.tripItinerary.startDate}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">End Date</label>
-                  <input
-                    type="date"
-                    name="tripItinerary.endDate"
-                    value={formData.tripItinerary.endDate}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+                <div className="relative">
+                  <label className="block text-sm font-medium text-white mb-2">End Date</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Calendar className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="date"
+                      name="tripItinerary.endDate"
+                      value={formData.tripItinerary.endDate}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* Destinations */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-3">Destinations</label>
+                <label className="block text-sm font-medium text-white mb-3">Destinations</label>
                 <div className="bg-white/5 rounded-lg p-4 mb-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <input
-                      type="text"
-                      name="place"
-                      value={formData.newDestination.place}
-                      onChange={(e) => setFormData(prev => ({
-                        ...prev,
-                        newDestination: { ...prev.newDestination, place: e.target.value }
-                      }))}
-                      className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Destination"
-                    />
-                    <input
-                      type="date"
-                      name="date"
-                      value={formData.newDestination.date}
-                      onChange={(e) => setFormData(prev => ({
-                        ...prev,
-                        newDestination: { ...prev.newDestination, date: e.target.value }
-                      }))}
-                      className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <input
-                      type="text"
-                      name="duration"
-                      value={formData.newDestination.duration}
-                      onChange={(e) => setFormData(prev => ({
-                        ...prev,
-                        newDestination: { ...prev.newDestination, duration: e.target.value }
-                      }))}
-                      className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Duration (e.g., 3 days)"
-                    />
-                    <input
-                      type="text"
-                      name="notes"
-                      value={formData.newDestination.notes}
-                      onChange={(e) => setFormData(prev => ({
-                        ...prev,
-                        newDestination: { ...prev.newDestination, notes: e.target.value }
-                      }))}
-                      className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Notes"
-                    />
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <MapPin className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        type="text"
+                        name="place"
+                        value={formData.newDestination.place}
+                        onChange={(e) => setFormData(prev => ({
+                          ...prev,
+                          newDestination: { ...prev.newDestination, place: e.target.value }
+                        }))}
+                        className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                        placeholder="Destination"
+                      />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <Calendar className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        type="date"
+                        name="date"
+                        value={formData.newDestination.date}
+                        onChange={(e) => setFormData(prev => ({
+                          ...prev,
+                          newDestination: { ...prev.newDestination, date: e.target.value }
+                        }))}
+                        className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white"
+                      />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <Calendar className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        type="text"
+                        name="duration"
+                        value={formData.newDestination.duration}
+                        onChange={(e) => setFormData(prev => ({
+                          ...prev,
+                          newDestination: { ...prev.newDestination, duration: e.target.value }
+                        }))}
+                        className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                        placeholder="Duration (e.g., 3 days)"
+                      />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <FileText className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        type="text"
+                        name="notes"
+                        value={formData.newDestination.notes}
+                        onChange={(e) => setFormData(prev => ({
+                          ...prev,
+                          newDestination: { ...prev.newDestination, notes: e.target.value }
+                        }))}
+                        className="w-full pl-10 pr-4 py-2.5 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors text-white placeholder-gray-400"
+                        placeholder="Notes"
+                      />
+                    </div>
                   </div>
                   <button
                     type="button"
